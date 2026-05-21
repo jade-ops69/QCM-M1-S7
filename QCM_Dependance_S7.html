@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="QCM Dépendance (S7)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>QCM — Droit de la Dépendance S7</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Serif 4', Georgia, serif; background: #f5f0e8; color: #1a1612; min-height: 100vh; }
+header { background: #1a1612; color: #f5f0e8; padding: 1.8rem 1.2rem 1.4rem; text-align: center; border-bottom: 4px solid #b8860b; }
+header .label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: #d4a843; margin-bottom: 0.35rem; }
+header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 5vw, 2.1rem); font-weight: 900; }
+header .sub { margin-top: 0.35rem; font-size: 0.8rem; color: #b0a898; font-style: italic; }
+#scorebar { background: #111; color: #f5f0e8; padding: 0.55rem 1rem; display: flex; justify-content: center; align-items: center; gap: 1rem; font-size: 0.78rem; border-bottom: 2px solid #b8860b; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
+.sc-item { display: flex; align-items: center; gap: 0.3rem; }
+.sc-num { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; }
+.sc-total { color: #d4a843; }
+.sc-ok-num { color: #5cb878; }
+.sc-ko-num { color: #e07070; }
+.sc-div { color: #444; }
+.progress-wrap { background: #2a2520; height: 4px; }
+.progress-fill { height: 4px; background: #b8860b; transition: width 0.4s ease; }
+main { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem 2rem; }
+.session-bar { background: #fff; border: 1px solid #d8cfc2; border-left: 4px solid #b8860b; padding: 0.8rem 1.1rem; margin-bottom: 1.3rem; font-size: 0.81rem; color: #7a6e62; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+.session-bar strong { color: #1a1612; }
+.btn-top { padding: 0.38rem 0.9rem; background: #1a1612; color: #d4a843; border: 1.5px solid #b8860b; font-family: 'Source Serif 4', serif; font-size: 0.76rem; cursor: pointer; letter-spacing: 0.04em; -webkit-appearance: none; border-radius: 0; }
+.chap-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.4rem; padding-bottom: 1rem; border-bottom: 1px solid #d8cfc2; }
+.chap-btn { background: transparent; border: 1.5px solid #d8cfc2; color: #7a6e62; padding: 0.38rem 0.8rem; font-family: 'Source Serif 4', serif; font-size: 0.74rem; cursor: pointer; letter-spacing: 0.03em; -webkit-appearance: none; border-radius: 0; }
+.chap-btn.active { background: #1a1612; color: #f5f0e8; border-color: #1a1612; }
+.chap-hdr { margin: 1.8rem 0 0.9rem; padding-bottom: 0.45rem; border-bottom: 2px solid #b8860b; display: flex; align-items: baseline; gap: 0.8rem; }
+.chap-hdr h2 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; }
+.chap-cnt { font-size: 0.7rem; color: #7a6e62; letter-spacing: 0.07em; text-transform: uppercase; }
+.q-card { background: #fff; border: 1px solid #d8cfc2; border-left: 4px solid #b8860b; margin-bottom: 1.3rem; padding: 1.2rem 1.3rem; }
+.q-meta { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+.t-chap { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; background: #1a1612; color: #d4a843; padding: 0.1rem 0.48rem; font-weight: 600; }
+.t-theme { font-size: 0.62rem; letter-spacing: 0.09em; text-transform: uppercase; background: #f5f0e8; border: 1px solid #d8cfc2; color: #7a6e62; padding: 0.1rem 0.45rem; }
+.t-diff { font-size: 0.62rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.1rem 0.48rem; border: 1.5px solid; font-weight: 600; }
+.df { color: #1a5c2e; border-color: #2d8a4e; background: #e8f5ee; }
+.dm { color: #b45309; border-color: #d97706; background: #fef3e2; }
+.dd { color: #9e1b1b; border-color: #c0392b; background: #fdf0ef; }
+.t-alert { font-size: 0.62rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.1rem 0.45rem; border: 1.5px solid #c0392b; color: #9e1b1b; background: #fdf0ef; font-weight: 700; }
+.q-num { font-size: 0.66rem; color: #7a6e62; letter-spacing: 0.07em; text-transform: uppercase; margin-left: auto; }
+.q-text { font-size: 0.93rem; line-height: 1.68; margin-bottom: 0.28rem; }
+.q-instr { font-size: 0.74rem; color: #7a6e62; font-style: italic; margin-bottom: 0.85rem; }
+.opts { display: flex; flex-direction: column; gap: 0.38rem; margin-bottom: 0.75rem; }
+.opt-btn { display: flex; align-items: flex-start; gap: 0.55rem; padding: 0.6rem 0.85rem; border: 1.5px solid #d8cfc2; background: #f5f0e8; font-family: 'Source Serif 4', serif; font-size: 0.87rem; line-height: 1.5; text-align: left; width: 100%; cursor: pointer; -webkit-appearance: none; border-radius: 0; }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.opt-sel { border-color: #1a1612; background: #ece7dc; }
+.opt-btn.opt-sel .ind { background: #1a1612; border-color: #1a1612; color: #f5f0e8; }
+.ind { min-width: 21px; height: 21px; border: 1.5px solid #7a6e62; display: flex; align-items: center; justify-content: center; font-size: 0.67rem; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.val-wrap { display: flex; justify-content: flex-end; margin-bottom: 0.45rem; }
+.btn-val { padding: 0.48rem 1.3rem; background: #1a1612; color: #f5f0e8; border: none; font-family: 'Source Serif 4', serif; font-size: 0.81rem; font-weight: 600; cursor: pointer; letter-spacing: 0.05em; -webkit-appearance: none; border-radius: 0; }
+.btn-val:disabled { background: #d8cfc2; color: #7a6e62; cursor: default; }
+.fb { margin-top: 0.65rem; padding: 0.8rem 0.95rem; font-size: 0.84rem; line-height: 1.62; border-left: 3px solid; display: none; }
+.fb.visible { display: block; }
+.fb-ok { border-color: #1a5c2e; background: #eef7f1; color: #1a3d26; }
+.fb-ko { border-color: #9e1b1b; background: #fdf0ef; color: #7a1414; }
+.fb-partial { border-color: #b8860b; background: #fdf6e3; color: #6b3d00; }
+.fb strong { font-weight: 700; }
+.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #1a1612; border-top: 3px solid #b8860b; display: flex; justify-content: center; gap: 0.8rem; padding: 0.75rem 1rem; z-index: 200; }
+.bottom-bar button { padding: 0.6rem 1.2rem; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 0.82rem; cursor: pointer; letter-spacing: 0.04em; -webkit-appearance: none; border-radius: 0; }
+.btn-recommencer { background: #b8860b; color: #1a1612; border: none; }
+.btn-nouvelle { background: transparent; color: #d4a843; border: 1.5px solid #b8860b; }
+.bottom-space { height: 70px; }
+#recap { display: none; background: #1a1612; color: #f5f0e8; padding: 2rem 1.5rem; text-align: center; margin: 1.5rem 0 0; border: 3px solid #b8860b; }
+#recap h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: #d4a843; margin-bottom: 0.4rem; }
+#recap .big { font-size: 2.8rem; font-family: 'Playfair Display', serif; color: #fff; margin: 0.4rem 0; }
+.cs-grid { margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; }
+.cs-item { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); padding: 0.55rem 0.9rem; }
+.cs-name { color: #d4a843; font-size: 0.62rem; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 0.15rem; }
+.cs-num { font-family: 'Playfair Display', serif; font-size: 1.2rem; }
+#recap p { font-size: 0.86rem; color: #c8bfb0; line-height: 1.72; max-width: 480px; margin: 0.8rem auto 0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="label">M1 Droit Civil · S7 · Mme Freyd</div>
+  <h1>Droit de la Dépendance</h1>
+  <div class="sub">QCM interactif — Révisions complètes</div>
+</header>
+<div id="scorebar">
+  <div class="sc-item">Répondues&nbsp;:&nbsp;<span class="sc-num sc-total" id="sc-done">0</span><span style="color:#555">&thinsp;/&thinsp;</span><span class="sc-num sc-total" id="sc-total">—</span></div>
+  <span class="sc-div">|</span>
+  <div class="sc-item">✓&nbsp;<span class="sc-num sc-ok-num" id="sc-ok">0</span></div>
+  <span class="sc-div">|</span>
+  <div class="sc-item">✗&nbsp;<span class="sc-num sc-ko-num" id="sc-ko">0</span></div>
+</div>
+<div class="progress-wrap"><div class="progress-fill" id="pbar" style="width:0%"></div></div>
+<main>
+  <div class="session-bar" id="sessbar">
+    <span>Chargement…</span>
+    <button class="btn-top" onclick="newSession()">⟳ Nouvelle session</button>
+  </div>
+  <div class="chap-nav" id="chapnav"></div>
+  <div id="qlist"></div>
+  <div id="recap">
+    <h2>Session terminée !</h2>
+    <div class="big" id="recap-score"></div>
+    <div class="cs-grid" id="recap-chaps"></div>
+    <p id="recap-msg"></p>
+  </div>
+  <div class="bottom-space"></div>
+</main>
+<div class="bottom-bar">
+  <button class="btn-recommencer" onclick="restartSession()">↺ Recommencer</button>
+  <button class="btn-nouvelle" onclick="newSession()">⟳ Nouvelle session</button>
+</div>
+<script>
+const POOL = [
+
+  { chap:"Introduction", theme:"Définitions", diff:"f", multi:false,
+    q:"Quelle est la définition de la dépendance en droit ?",
+    opts:["La perte d'autonomie physique uniquement, due à l'âge avancé de la personne concernée", "La perte d'autonomie physique ou mentale en raison de l'âge ou d'un trouble mental ou physique", "L'impossibilité totale pour une personne de s'exprimer verbalement ou par écrit dans toute situation", "Le placement sous tutelle ou curatelle décidé par le juge des contentieux de la protection"],
+    correct:1,
+    ok:"La dépendance = perte d'autonomie physique et mentale, en raison de l'âge ou d'un trouble mental ou physique. C'est la définition de départ du cours.",
+    ko:"La dépendance couvre la perte d'autonomie physique et mentale, pas seulement physique, et résulte de l'âge ou d'un trouble mental ou physique." },
+
+  { chap:"Introduction", theme:"Capacité", diff:"f", multi:false,
+    q:"Quelle distinction fait-on entre capacité de jouissance et capacité d'exercice ?",
+    opts:["La jouissance concerne les droits portant sur des biens / l'exercice concerne les droits attachés à la personne", "La jouissance = être titulaire de droits / l'exercice = exercer par soi-même le droit dont on est titulaire", "La jouissance = exercer par soi-même le droit dont on est titulaire / l'exercice = être titulaire de droits", "Elles sont synonymes depuis la réforme de 2007 qui a unifié les deux notions dans un seul régime de protection"],
+    correct:1,
+    ok:"Capacité de jouissance = être titulaire de droits. Capacité d'exercice = exercer par soi-même le droit dont on est titulaire. Un incapable d'exercice conserve ses droits (jouissance) mais ne peut les exercer seul.",
+    ko:"Jouissance = être titulaire de droits. Exercice = pouvoir les exercer par soi-même. Un majeur protégé conserve sa capacité de jouissance mais peut voir sa capacité d'exercice limitée." },
+
+  { chap:"Introduction", theme:"Incapacité", diff:"m", multi:false, alert:true,
+    q:"⚠ Quelle est la différence entre incapacité de jouissance et incapacité d'exercice ?",
+    opts:["Seule l'incapacité de jouissance est reconnue en droit français — l'incapacité d'exercice n'existe que dans les systèmes juridiques étrangers", "Incapacité de jouissance = privée de la titularité d'un droit (protection ou défiance) / incapacité d'exercice = toujours spéciale, toujours protectrice, prive d'accomplir seul certains actes", "L'incapacité de jouissance est toujours protectrice / l'incapacité d'exercice peut être une sanction prononcée contre la personne", "Elles ont le même effet : priver totalement la personne de tous ses droits civils et politiques"],
+    correct:1,
+    ok:"Distinction fondamentale. Incapacité de jouissance : privée de la titularité (protection ex : mineur et donations, ou défiance ex : art. 909 médecin/patient). Incapacité d'exercice : toujours spéciale, toujours protectrice — la personne a les mêmes droits mais ne peut les exercer seule.",
+    ko:"Incapacité de jouissance = ne peut pas être titulaire de certains droits (but : protection ou défiance). Incapacité d'exercice = toujours spéciale et protectrice — la personne garde ses droits mais ne peut les exercer seule." },
+
+  { chap:"Introduction", theme:"3 principes", diff:"m", multi:false,
+    q:"Quels sont les 3 principes gouvernant toute mesure de protection (art. 428 C.cv) ?",
+    opts:["Nécessité, proportionnalité, personnalisation (individualisation)", "Légalité, proportionnalité, publicité — trois principes inspirés du droit pénal et transposés en matière de protection des majeurs vulnérables", "Subsidiarité, temporalité, révocabilité — la mesure doit être subsidiaire aux protections naturelles, limitée dans le temps et révocable à tout moment", "Urgence, continuité, adaptation — principes inspirés du droit médical applicables à toute prise en charge d'une personne vulnérable"],
+    correct:0,
+    ok:"Les 3 principes de l'art. 428 : nécessité (toutes les protections plus légères doivent être insuffisantes) + proportionnalité (mesure proportionnée au degré d'altération) + personnalisation (mesure adaptée aux capacités du majeur).",
+    ko:"Les 3 principes de l'art. 428 : nécessité, proportionnalité, personnalisation. La proportionnalité implique par ex. que la tutelle n'est prononcée que si SDJ et curatelle sont insuffisantes." },
+
+  { chap:"Introduction", theme:"Réformes", diff:"m", multi:false,
+    q:"Quelle réforme a introduit l'habilitation familiale ?",
+    opts:["La loi du 16 février 2015 qui a introduit l'habilitation familiale", "La réforme du 5 mars 2007 qui a créé les trois régimes principaux de protection des majeurs vulnérables", "La loi du 3 janvier 1968 (Carbonnier) qui a réformé l'ensemble du droit des incapacités et créé les régimes modernes de protection", "La loi du 23 mars 2019 qui a diminué les interventions du juge et simplifié les procédures de protection"],
+    correct:0,
+    ok:"La loi du 16 février 2015 a introduit l'habilitation familiale. La réforme de 2007 a créé les 3 régimes principaux. La loi de 2019 a diminué les interventions du juge.",
+    ko:"L'habilitation familiale est issue de la loi du 16 février 2015. La réforme de 2007 (en vigueur 2009) avait consacré les 3 régimes principaux (SDJ, curatelle, tutelle)." },
+
+  { chap:"Introduction", theme:"Art. 425", diff:"m", multi:false,
+    q:"Selon l'art. 425 C.cv, quelle condition est requise pour bénéficier d'une mesure de protection ?",
+    opts:["Ne plus être capable d'effectuer les actes de la vie quotidienne sans l'aide d'une tierce personne présente à son domicile", "Être âgé de plus de 75 ans et présenter des signes cliniques d'une maladie neurodégénérative reconnue par la médecine", "Avoir fait l'objet d'un signalement préalable par un médecin au procureur de la République compétent", "Être dans l'impossibilité de pourvoir seule à ses intérêts en raison d'une altération médicalement constatée de ses facultés mentales ou corporelles"],
+    correct:3,
+    ok:"L'art. 425 C.cv exige : impossibilité de pourvoir seule à ses intérêts + altération médicalement constatée des facultés mentales ou corporelles de nature à empêcher l'expression de la volonté. Pas de condition d'âge.",
+    ko:"L'art. 425 exige une altération médicalement constatée des facultés mentales ou corporelles empêchant d'exprimer sa volonté. Il n'y a pas de condition d'âge." },
+
+  { chap:"Chap. 1 — Diversité des protections", theme:"Art. 414-1", diff:"f", multi:false,
+    q:"Quelle est la nature de la protection offerte par l'art. 414-1 C.cv (insanité d'esprit) ?",
+    opts:["Une protection permanente et générale couvrant l'ensemble des actes juridiques accomplis par la personne tout au long de sa vie", "Une protection préventive réservée aux personnes déjà placées sous un régime de tutelle ou de curatelle", "Une protection occasionnelle (cas par cas), a posteriori, en principe indépendante des régimes permanents", "Une protection automatique qui s'active dès l'ouverture d'une mesure de protection judiciaire"],
+    correct:2,
+    ok:"L'art. 414-1 offre une protection : occasionnelle (cas par cas) / a posteriori / en principe indépendante des régimes de protection permanents. Pour faire un acte valable, il faut être sain d'esprit.",
+    ko:"L'art. 414-1 est une protection ponctuelle (pas permanente) : occasionnelle, a posteriori, indépendante des régimes permanents. Elle s'applique au cas par cas." },
+
+  { chap:"Chap. 1 — Diversité des protections", theme:"Conditions annulation vivant", diff:"m", multi:false,
+    q:"Quelles sont les 2 conditions cumulatives pour annuler un acte du vivant de la personne (art. 414-1) ?",
+    opts:["Un trouble mental ET ce trouble présent au moment même de l'acte", "Un trouble mental ET une mise sous protection judiciaire préalable par le juge des contentieux de la protection", "L'insanité d'esprit ET la connaissance du trouble par le cocontractant au moment de la conclusion de l'acte", "Un trouble mental ET un préjudice économique subi par la personne du fait de l'acte accompli"],
+    correct:0,
+    ok:"2 conditions cumulatives : (1) un trouble mental (altération des facultés empêchant un consentement véritable) + (2) ce trouble au moment même de l'acte. La preuve est libre (fait juridique) : intrinsèque ou extrinsèque.",
+    ko:"Les 2 conditions cumulatives de l'art. 414-1 : trouble mental + trouble au moment de l'acte. La mise sous protection n'est pas requise." },
+
+  { chap:"Chap. 1 — Diversité des protections", theme:"Trouble mental notion", diff:"m", multi:false, alert:true,
+    q:"⚠ L'alcoolisme ou un simple état dépressif constituent-ils, en eux-mêmes, un trouble mental au sens de l'art. 414-1 ?",
+    opts:["Oui, ils suffisent à caractériser l'insanité d'esprit dès lors qu'ils sont médicalement attestés par un certificat du médecin traitant", "Oui, si le médecin traitant certifie que ces troubles affectent de manière permanente la capacité de discernement de la personne", "Non, ils ne constituent pas en eux-mêmes des troubles mentaux au sens de l'art. 414-1 — la jurisprudence est cependant un peu plus souple", "Non, seuls les troubles psychiatriques reconnus dans la classification internationale des maladies suffisent à caractériser l'insanité d'esprit"],
+    correct:2,
+    ok:"L'insanité d'esprit = altération grave des facultés mentales (trouble psychiatrique caractérisé, perte de conscience due à une maladie). L'alcoolisme ou un simple état dépressif ne suffisent pas en eux-mêmes. La jurisprudence est cependant un peu plus souple.",
+    ko:"L'alcoolisme ou un simple état dépressif ne suffisent pas à caractériser l'insanité d'esprit. Il faut une altération grave des facultés mentales. La jurisprudence tolère une certaine souplesse." },
+
+  { chap:"Chap. 1 — Diversité des protections", theme:"Après décès preuve", diff:"m", multi:false,
+    q:"Quelle règle s'applique à la preuve du trouble mental pour annuler un acte après le décès (art. 414-2) ?",
+    opts:["Même règle que du vivant : preuve libre admise par tous moyens, qu'elle soit intrinsèque ou extrinsèque", "Preuve intrinsèque exigée : l'acte doit porter en lui-même la preuve du trouble mental — exceptions pour testaments et donations", "Preuve extrinsèque uniquement (témoignages et dossiers médicaux), la preuve intrinsèque étant trop incertaine après le décès", "Aucune preuve du trouble mental n'est admise après le décès de la personne, sauf si elle était déjà sous protection judiciaire"],
+    correct:1,
+    ok:"Art. 414-2 : après le décès, la preuve intrinsèque est exigée — l'acte doit porter en lui-même la preuve du trouble mental. Exceptions : si déjà sous SDJ, si action ouverte, ou pour testaments et donations (actes dangereux à titre gratuit) où la preuve extrinsèque redevient admissible.",
+    ko:"Après le décès (art. 414-2) : preuve intrinsèque exigée (l'acte doit porter en lui-même la preuve). Exceptions notamment pour les testaments et donations où la preuve extrinsèque est admise." },
+
+  { chap:"Chap. 1 — Diversité des protections", theme:"Nature nullité", diff:"m", multi:false,
+    q:"Quelle est la nature de la nullité pour insanité d'esprit (art. 414-1) ?",
+    opts:["Nullité absolue car elle protège l'ordre public et l'intégrité du consentement dans tous les contrats conclus", "Inexistence de l'acte car l'absence totale de consentement prive l'acte de tout fondement juridique", "Nullité relative car conçue comme une nullité de protection — protéger la personne qui subit l'altération", "Inopposabilité aux tiers de bonne foi qui ignoraient le trouble mental de leur cocontractant"],
+    correct:2,
+    ok:"Nullité relative (art. 1179 C.cv) car conçue comme une nullité de protection — protéger la personne qui subit l'altération. Elle est susceptible de confirmation (la confirmation = acte de disposition selon le décret du 22 déc. 2008).",
+    ko:"Nullité relative : elle protège la personne qui subit l'altération (pas l'ordre public). Susceptible de confirmation." },
+
+  { chap:"Chap. 1 — Diversité des protections", theme:"Prescription nullité", diff:"d", multi:false,
+    q:"Quel est le délai de prescription de l'action en nullité pour insanité d'esprit, et quel est son point de départ pour un auteur vivant non protégé ?",
+    opts:["2 ans à compter de la date de l'acte — délai court pour garantir la stabilité des situations juridiques", "5 ans à compter de la date à laquelle la personne a retrouvé ses esprits", "3 ans à compter de la découverte du trouble mental par la personne ou ses proches", "5 ans à compter de la date de l'acte lui-même, quel que soit l'état de discernement de la personne"],
+    correct:1,
+    ok:"Prescription de 5 ans (art. 2224 C.cv). Pour un auteur vivant non protégé : point de départ = date à laquelle il a retrouvé ses esprits (avec possibilité de suspension en cas de rechute).",
+    ko:"5 ans de prescription. Point de départ pour auteur vivant non protégé : date à laquelle il a retrouvé ses esprits (pas la date de l'acte)." },
+
+  { chap:"Chap. 1 — Diversité des protections", theme:"Art. 414-3", diff:"m", multi:false,
+    q:"L'art. 414-3 C.cv dispose que celui qui cause un dommage sous l'empire d'un trouble mental :",
+    opts:["N'en est pas moins obligé à réparation — s'applique à la responsabilité extracontractuelle", "Est totalement exonéré de toute responsabilité civile et pénale, le trouble mental constituant une cause objective d'irresponsabilité", "Est exonéré uniquement si le trouble mental est permanent et médicalement attesté", "Est exonéré pour la responsabilité contractuelle mais reste tenu de la responsabilité extracontractuelle"],
+    correct:0,
+    ok:"Art. 414-3 : la personne sous l'empire d'un trouble mental n'en est pas moins obligée à réparation. S'applique à la responsabilité extracontractuelle (y compris du fait des choses, des animaux, des bâtiments). La question de la responsabilité contractuelle reste non tranchée.",
+    ko:"Art. 414-3 : obligation à réparation maintenue malgré le trouble mental. S'applique à la responsabilité civile extracontractuelle. La responsabilité contractuelle n'est pas tranchée." },
+
+  { chap:"Chap. 1 — Diversité des protections", theme:"Art. 464", diff:"d", multi:false, alert:true,
+    q:"⚠ L'art. 464 C.cv permet d'annuler des actes antérieurs à la mesure. Quelles sont les conditions ?",
+    opts:["Acte passé dans les 2 ans de l'ouverture (à compter de la publication du jugement) + inaptitude à défendre ses intérêts notoire ou connue du cocontractant", "Acte passé dans les 5 ans de l'ouverture de la mesure + preuve d'un trouble mental caractérisé au moment de l'acte", "Acte passé à n'importe quel moment avant l'ouverture + préjudice économique prouvé par expertise", "Acte passé dans les 2 ans + preuve d'un trouble mental au moment de l'acte (même condition que l'art. 414-1)"],
+    correct:0,
+    ok:"Art. 464 : acte passé dans les 2 ans de l'ouverture de la mesure (point de départ = date de publication du jugement) + inaptitude à défendre ses intérêts notoire ou connue du cocontractant. Différent de l'art. 414-1 : pas besoin de prouver un trouble mental, juste une inaptitude à défendre ses intérêts (preuve plus simple).",
+    ko:"Art. 464 : 2 ans avant la publicité du jugement + inaptitude notoire ou connue du cocontractant. Pas besoin de prouver un trouble mental (≠ art. 414-1) — preuve plus simple." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Juge des tutelles", diff:"f", multi:false,
+    q:"Qui assure les fonctions de juge des tutelles depuis 2020 ?",
+    opts:["Un juge d'instance désigné par le premier président de la cour d'appel dans chaque ressort", "Le président du tribunal judiciaire, qui délègue ses attributions à un magistrat spécialisé", "Le juge des affaires familiales, compétent pour toutes les questions touchant à la famille et aux personnes vulnérables", "Le juge des contentieux et de la protection au sein du tribunal judiciaire"],
+    correct:3,
+    ok:"Depuis 2020 : au sein du TJ, 1 ou plusieurs juges exercent les fonctions de juge des contentieux de la protection (art. L.213-4-1 COJ). C'est le pivot de la procédure.",
+    ko:"Depuis 2020, c'est le juge des contentieux de la protection au sein du tribunal judiciaire (TJ) qui assure les fonctions de juge des tutelles." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Rôle parquet", diff:"m", multi:false, alert:true,
+    q:"⚠ Le juge des tutelles peut-il se saisir d'office d'une procédure de protection ?",
+    opts:["Oui, mais seulement en cas d'urgence avérée nécessitant une mesure provisoire immédiate", "Oui, il peut se saisir d'office à tout moment s'il a connaissance d'une situation nécessitant une protection", "Non — c'est le ministère public qui saisit le juge, et le parquet doit être informé de toutes les procédures", "Non, seule la famille proche peut le saisir directement par une requête déposée au greffe"],
+    correct:2,
+    ok:"Le juge ne peut pas se saisir d'office → c'est le ministère public qui saisit le juge. Le parquet doit être informé de toutes les procédures. Si procédure non communiquée au parquet → cause d'invalidation.",
+    ko:"Le juge ne peut pas se saisir d'office. C'est le ministère public (parquet) qui saisit le juge. Procédure non communiquée au parquet = cause d'invalidation." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Certificat médical", diff:"m", multi:false, alert:true,
+    q:"⚠ Concernant le certificat médical requis pour l'ouverture d'une mesure, laquelle de ces affirmations est correcte ?",
+    opts:["Il ne peut pas être établi à partir des seules déclarations du requérant / pas de limite de date / si refus d'examen : peut être établi sur pièces médicales tierces", "Il doit dater de moins de 6 mois à la date du dépôt de la requête, car un certificat trop ancien ne reflète pas l'état actuel de la personne", "Il doit être établi obligatoirement par un psychiatre ou un neurologue spécialiste des troubles cognitifs", "Il doit être établi exclusivement par le médecin traitant de la personne à protéger"],
+    correct:0,
+    ok:"3 règles importantes : (1) le certificat ne peut pas être établi à partir des seules déclarations du requérant, (2) pas de limite de date (un certificat de 8 ans a été jugé valable), (3) si le majeur refuse l'examen : la Cass admet que le certificat peut être établi sur des pièces médicales tierces.",
+    ko:"À retenir : pas seulement sur déclarations du requérant, pas de limite de date, possible sur pièces tierces si refus d'examen. Le médecin n'a pas à être psychiatre ou neurologue." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Audition majeur", diff:"m", multi:false, alert:true,
+    q:"⚠ L'audition personnelle du majeur dans la procédure d'ouverture est-elle obligatoire ?",
+    opts:["Non, c'est une faculté laissée à l'appréciation souveraine du juge selon les circonstances de chaque espèce", "Oui, c'est une règle d'ordre public — dispense seulement si cela porterait atteinte à sa santé ou s'il est hors d'état de manifester sa volonté", "Non, le médecin peut y suppléer par un rapport détaillant l'état mental de la personne à la date de l'audience", "Oui, mais seulement pour l'ouverture d'une tutelle — la curatelle et la SDJ n'imposent pas cette audition"],
+    correct:1,
+    ok:"L'audition personnelle du majeur est une règle d'ordre public (art. 432 C.cv). Dispense uniquement si cela est de nature à porter atteinte à sa santé ou s'il est hors d'état de manifester sa volonté.",
+    ko:"Audition personnelle = règle d'ordre public. Dispense possible seulement si : atteinte à la santé ou impossibilité de manifester sa volonté." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Demandeurs ouverture", diff:"m", multi:false,
+    q:"Parmi ces personnes, lesquelles peuvent demander l'ouverture d'une mesure de protection (art. 430 C.cv) — liste limitative d'ordre public ?",
+    opts:["Toute personne intéressée, y compris le voisin ou l'employeur qui constate une altération des facultés", "Uniquement la famille proche (parents, enfants, conjoint) à l'exclusion de toute autre personne", "La personne à protéger, conjoint/partenaire/concubin, parents ou alliés, personne entretenant des liens étroits et stables, personne exerçant une mesure de protection, le procureur", "Uniquement le médecin traitant et le procureur de la République, en raison de leur rôle de protection"],
+    correct:2,
+    ok:"Art. 430 C.cv : liste limitative d'ordre public. Peuvent agir : la personne à protéger / conjoint-partenaire-concubin (sauf vie commune cessée) / parents ou alliés / personne entretenant des liens étroits et stables / personne exerçant une mesure de protection / procureur (d'office ou sur demande d'un tiers).",
+    ko:"Art. 430 : liste limitative d'ordre public. Le juge doit relever d'office le défaut de qualité. Un simple voisin ou employeur ne peut pas demander l'ouverture directement." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Durée SDJ", diff:"f", multi:false,
+    q:"Quelle est la durée de la sauvegarde de justice (SDJ) ?",
+    opts:["1 an, automatiquement caduque à l'issue faute de prolongation, renouvelable une fois (1 an)", "2 ans renouvelables une fois, soit 4 ans maximum avant d'envisager une mesure plus lourde", "5 ans maximum, comme pour la curatelle et la tutelle, avec possibilité de renouvellement", "6 mois renouvelables indéfiniment tant que les conditions médicales et juridiques sont réunies"],
+    correct:0,
+    ok:"SDJ : 1 an. Automatiquement caduque à l'issue faute de prolongation. Renouvelable une fois (1 an). C'est la mesure la plus légère et la plus temporaire.",
+    ko:"SDJ : 1 an, caduque automatiquement, renouvelable 1 fois. C'est la mesure la plus courte." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Durée curatelle/tutelle", diff:"m", multi:false,
+    q:"Quelle est la durée maximale de la curatelle ou tutelle, et dans quel cas peut-elle être portée à 10 ans ?",
+    opts:["Max 5 ans / renouvelable indéfiniment par périodes de 5 ans sans condition particulière", "Max 3 ans / jamais prolongée au-delà, même si l'état de la personne est irréversible", "Max 10 ans dans tous les cas, quelle que soit l'évolution prévisible de l'état de la personne", "Max 5 ans / jusqu'à 10 ans si amélioration manifestement impossible"],
+    correct:3,
+    ok:"Curatelle/Tutelle : maximum 5 ans. Inférieure si amélioration possible. Si amélioration manifestement impossible : peut aller jusqu'à 10 ans (art. 441).",
+    ko:"Curatelle/Tutelle : max 5 ans. Max 10 ans si amélioration manifestement impossible. Pas de renouvellement automatique." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Publicité opposabilité", diff:"m", multi:false,
+    q:"À compter de quand les jugements de curatelle/tutelle sont-ils opposables aux tiers ?",
+    opts:["Dès le prononcé du jugement par le juge des contentieux de la protection, sans délai ni formalité complémentaire", "2 mois après que la mention ait été portée en marge de l'acte de naissance du majeur protégé", "Dès la notification aux parties par le greffe du tribunal judiciaire compétent", "1 mois après la date du jugement, délai pendant lequel le jugement peut encore faire l'objet d'un appel"],
+    correct:1,
+    ok:"Art. 444 C.cv : les jugements d'ouverture, modification ou main levée de la curatelle/tutelle ne sont opposables aux tiers que 2 mois après la mention en marge de l'acte de naissance. Opposables immédiatement aux tiers qui en ont personnellement connaissance.",
+    ko:"Art. 444 : opposables aux tiers 2 mois après la mention en marge de l'acte de naissance. Mais opposables dès lors que le tiers en a personnellement connaissance." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Désignation organes", diff:"d", multi:false,
+    q:"Dans quel ordre les organes de protection sont-ils désignés ?",
+    opts:["1° mandataire judiciaire → 2° parents → 3° conjoint → 4° majeur lui-même", "1° parents → 2° conjoint → 3° majeur lui-même → 4° mandataire judiciaire", "1° désignation préalable par le majeur lui-même → 2° parents → 3° conjoint/partenaire/concubin → 4° entourage proche → 5° mandataire judiciaire", "1° conjoint → 2° enfants → 3° parents → 4° autres → 5° mandataire judiciaire"],
+    correct:2,
+    ok:"Ordre : 1° désignation préalable par le majeur lui-même (s'impose au juge sauf refus/impossibilité/intérêt contraire) → 2° parents → 3° conjoint/partenaire/concubin (sauf vie commune cessée) → 4° parent, allié, personne résidant avec le majeur ou liens étroits → 5° mandataire judiciaire.",
+    ko:"L'ordre est : 1° le majeur lui-même (anticipation) → 2° parents → 3° conjoint/partenaire/concubin → 4° entourage proche → 5° mandataire judiciaire." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Responsabilité intervenants", diff:"m", multi:false, alert:true,
+    q:"⚠ Sur quel fondement repose la responsabilité des organes de la mesure de protection (art. 421 C.cv) ?",
+    opts:["Responsabilité présumée renversable, l'organe devant prouver qu'il a accompli sa mission avec toute la diligence requise", "Responsabilité sans faute (risque) car la mission de protection crée objectivement un risque pour les biens du majeur", "Responsabilité contractuelle pour faute, le mandat judiciaire créant un lien contractuel entre la personne protégée et son organe", "Responsabilité pour faute prouvée, de nature extracontractuelle — prescription de 5 ans à compter de la fin de la mesure"],
+    correct:3,
+    ok:"Art. 421 : responsabilité pour faute prouvée. Nature extracontractuelle (pas de contrat entre la personne protégée et les organes désignés en justice). Prescription de 5 ans à compter de la fin de la mesure.",
+    ko:"Art. 421 : faute prouvée + nature extracontractuelle. Fautes possibles : actes interdits passés, fautes de gestion, ouverture du courrier du majeur. Prescription : 5 ans à compter de la fin de la mesure." },
+
+  { chap:"Chap. 2 — Règles communes", theme:"Délai appel", diff:"d", multi:false,
+    q:"Quel est le délai d'appel contre les ordonnances du juge des tutelles ?",
+    opts:["30 jours à compter de la notification, avec possibilité de prorogation en cas d'empêchement", "1 mois à compter de la notification de l'ordonnance au majeur protégé et à ses représentants légaux", "2 mois à compter du prononcé du jugement, délai aligné sur le droit commun de la procédure civile", "15 jours à compter de la notification (pour les ordonnances) ou de la délibération (pour le conseil de famille)"],
+    correct:3,
+    ok:"Délai d'appel de 15 jours. Point de départ : notification (pour les ordonnances) ou date de délibération (pour le conseil de famille). Pourvoi en cassation : 2 mois, sans dispense d'avocat.",
+    ko:"Délai d'appel : 15 jours. Pourvoi en cassation : 2 mois. L'appel est possible sans avocat." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Actes strictement personnels", diff:"m", multi:false,
+    q:"Quels sont les actes réputés 'strictement personnels' (art. 458 C.cv) qui ne peuvent jamais faire l'objet d'une assistance ou représentation ?",
+    opts:["Testament, mariage et divorce — actes d'état civil et personnels par excellence ne pouvant être accomplis que par la personne elle-même", "Actes médicaux graves et directives anticipées pour la fin de vie, en raison de leur caractère hautement personnel", "Déclaration de naissance, reconnaissance, actes d'autorité parentale relatifs à la personne d'un enfant, consentement à l'adoption", "Mariage, PACS et divorce — les actes relatifs au statut matrimonial du majeur sont toujours strictement personnels"],
+    correct:2,
+    ok:"Art. 458 : actes strictement personnels (liste non limitative) = déclaration de naissance / reconnaissance / actes d'autorité parentale relatifs à la personne d'un enfant / déclaration du choix ou changement du nom d'un enfant / consentement à sa propre adoption ou à celle de son enfant.",
+    ko:"Art. 458 : actes strictement personnels = déclaration de naissance, reconnaissance, actes d'AP relatifs à la personne de l'enfant, consentement à l'adoption. La liste n'est pas limitative." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Choix du logement", diff:"m", multi:false,
+    q:"À qui appartient le choix de la résidence du majeur protégé (art. 459-2 C.cv) ?",
+    opts:["Au juge des tutelles, qui statue sur avis médical et en tenant compte de l'avis de la famille proche", "Au tuteur ou curateur, avec l'accord préalable du juge des contentieux de la protection", "À la personne protégée elle-même, si elle est apte à manifester sa volonté", "À la famille, par vote à la majorité des membres du conseil de famille sous présidence du juge"],
+    correct:2,
+    ok:"Art. 459-2 : le choix de la résidence appartient à la personne protégée. Doit être respecté si elle est apte à manifester sa volonté. En cas de difficulté (conflit familial, intérêt contraire), le juge ou le conseil de famille statue.",
+    ko:"Art. 459-2 : le choix appartient à la personne protégée elle-même (si apte à manifester sa volonté). Ce n'est pas le tuteur ou le juge qui choisit." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Protection logement", diff:"m", multi:false,
+    q:"L'art. 426 C.cv sur la protection du logement s'applique-t-il uniquement aux propriétaires ?",
+    opts:["Oui, uniquement aux propriétaires car seul le droit de propriété justifie une protection renforcée du logement", "Non, il concerne aussi les usufruitiers, titulaires d'un droit d'usage et d'habitation et les locataires", "Oui, sauf en tutelle où la protection s'étend aux locataires par dérogation expresse au droit commun", "Non, mais uniquement pour la tutelle et la curatelle — la SDJ n'est pas visée par l'art. 426"],
+    correct:1,
+    ok:"Art. 426 : s'applique aux propriétaires, usufruitiers, titulaires d'un droit d'usage et d'habitation et aux locataires. Couvre toutes les mesures (SDJ, curatelle, tutelle, habilitation familiale).",
+    ko:"Art. 426 : pas seulement les propriétaires — aussi les locataires et titulaires de droits réels. S'applique à toutes les mesures de protection." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Départ définitif logement", diff:"d", multi:false, alert:true,
+    q:"⚠ Qu'est-ce qui est requis si le logement du majeur protégé doit être vendu ou résilié de façon définitive ?",
+    opts:["L'accord seul du majeur si celui-ci est apte à exprimer sa volonté de manière libre et éclairée", "L'autorisation du juge ou du conseil de famille (acte de disposition) — si placement en établissement : avis préalable d'un médecin n'exerçant pas dans cet établissement", "L'accord du tuteur seul suffit, sans autorisation judiciaire, s'il s'agit d'un acte nécessaire dans l'intérêt du majeur", "L'accord de la famille par vote à la majorité des membres du conseil de famille, sans intervention du juge"],
+    correct:1,
+    ok:"Départ définitif = acte de disposition → autorisation du juge ou du conseil de famille obligatoire. Si le but est un placement en établissement : avis préalable d'un médecin n'exerçant pas dans cet établissement. Dans tous les cas : souvenirs, objets personnels, objets pour handicapés/malades restent à disposition.",
+    ko:"Acte de disposition → autorisation du juge ou conseil de famille. + avis médical extérieur si placement en établissement. Les objets personnels et médicaux du majeur sont toujours conservés à sa disposition." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Mariage majeur protégé", diff:"m", multi:false,
+    q:"Le majeur protégé peut-il décider seul de son mariage (art. 460 C.cv, loi 23 mars 2019) ?",
+    opts:["Non, le tuteur ou curateur peut s'y opposer directement et interdire la célébration", "Non, il faut l'autorisation du juge ou du conseil de famille avant toute célébration du mariage", "Oui, sans aucune formalité particulière — le mariage est un acte strictement personnel", "Oui, il décide seul mais doit informer préalablement la personne chargée de sa protection"],
+    correct:3,
+    ok:"Art. 460 (modifié loi 2019) : le majeur protégé décide seul de son mariage. Il doit informer préalablement la personne chargée de sa protection. Cette information permet à l'organe de former opposition (art. 175 C.cv — vise tuteur et curateur).",
+    ko:"Art. 460 : décision seule + information préalable obligatoire. L'organe peut former opposition mais ne peut pas interdire directement le mariage." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Divorce majeur protégé", diff:"m", multi:false, alert:true,
+    q:"⚠ Le divorce par consentement mutuel est-il accessible aux majeurs protégés ?",
+    opts:["Non, sauf en curatelle simple où le majeur conserve suffisamment d'autonomie pour divorcer par consentement mutuel", "Oui, comme pour tout majeur, la protection n'affectant pas le droit au divorce amiable", "Oui, avec l'autorisation préalable du juge des contentieux de la protection", "Non, il est exclu pour les majeurs protégés (art. 249-4 C.cv) — seuls les divorces contentieux sont accessibles"],
+    correct:3,
+    ok:"Le divorce par consentement mutuel est exclu pour les majeurs protégés (art. 249-4 C.cv). Pour le divorce pour faute ou altération définitive du lien : tutelle → représenté par son tuteur / curatelle → agit lui-même avec assistance du curateur.",
+    ko:"Divorce par consentement mutuel = exclu pour les majeurs protégés. Seul le divorce pour faute ou altération définitive est possible." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Personne de confiance", diff:"m", multi:false,
+    q:"En tutelle, le majeur peut-il désigner seul sa personne de confiance (art. L.1111-6 CSP) ?",
+    opts:["Non, c'est le tuteur qui désigne la personne de confiance parmi les proches du majeur", "Oui, toujours seul, quel que soit le régime de protection dont il fait l'objet", "Non, il faut l'autorisation du juge ou du conseil de famille pour désigner la personne de confiance en tutelle", "Oui, mais uniquement si la désignation est antérieure au prononcé de la tutelle"],
+    correct:2,
+    ok:"En tutelle : le majeur peut désigner sa personne de confiance avec autorisation du juge ou du conseil de famille. Si désignation antérieure à la tutelle : le juge peut confirmer ou révoquer. En curatelle : le majeur peut désigner seul.",
+    ko:"En tutelle : autorisation du juge ou conseil de famille requise. En curatelle : le majeur peut désigner seul. C'est une distinction importante." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Directives anticipées", diff:"m", multi:false,
+    q:"Un majeur protégé peut-il rédiger des directives anticipées pour sa fin de vie ?",
+    opts:["Non, c'est réservé aux personnes juridiquement capables — la protection judiciaire emporte incapacité de rédiger des directives anticipées", "Oui, mais seulement en curatelle simple — la tutelle exclut toute rédaction de directives anticipées", "Oui — en tutelle avec autorisation du juge ou conseil de famille / en assistance (curatelle) : rédige seul si apte", "Oui, mais uniquement si le médecin traitant certifie que le majeur est apte à exprimer une volonté éclairée"],
+    correct:2,
+    ok:"Loi du 2 fév. 2016 permet aux majeurs protégés de rédiger des directives anticipées. En tutelle : avec autorisation du juge ou du conseil de famille. Le représentant ne peut ni assister ni représenter pour cet acte. En assistance (curatelle) : si apte à exprimer sa volonté → rédige seul.",
+    ko:"Les majeurs protégés peuvent rédiger des directives anticipées. En tutelle : autorisation du juge. En curatelle (assistance) : seul si apte. Dans les deux cas, le représentant ne peut pas intervenir à la place du majeur." },
+
+  { chap:"Chap. 3 — Protection de la personne", theme:"Don d'organes vivant", diff:"d", multi:false, alert:true,
+    q:"⚠ Le don d'organes par une personne vivante est-il autorisé pour un majeur sous représentation à la personne ?",
+    opts:["Oui, avec l'autorisation du juge des contentieux de la protection qui vérifie le consentement éclairé du majeur", "Oui, avec l'accord écrit du tuteur qui se substitue au consentement du majeur protégé", "Oui, si la personne était inscrite au registre des donneurs avant le prononcé de la mesure de protection", "Non, il est interdit si représentation à la personne (art. L.1231-2 CSP)"],
+    correct:3,
+    ok:"Don d'organes par personne vivante : interdit si représentation à la personne (art. L.1231-2 CSP). Pour les dons après décès : si tutelle → accord écrit du tuteur/titulaires AP. Si assistance → consentement présumé sauf refus exprimé de son vivant.",
+    ko:"Don d'organe vivant = interdit en cas de représentation à la personne. Distinction importante avec le don après décès (où des règles spécifiques s'appliquent selon le régime)." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Classification actes", diff:"m", multi:false,
+    q:"Quelle est la différence entre acte d'administration et acte de disposition (décret du 22 déc. 2008) ?",
+    opts:["L'acte d'administration est toujours gratuit et sans contrepartie / l'acte de disposition est toujours onéreux et implique une contrepartie économique", "L'acte d'administration = exploitation/mise en valeur du patrimoine sans risque anormal / l'acte de disposition = modifie importamment le patrimoine, le déprécie ou altère durablement les prérogatives", "La distinction dépend uniquement de la valeur de l'acte, un seuil fixé par décret déterminant la catégorie applicable", "L'acte d'administration porte sur les biens meubles / l'acte de disposition porte exclusivement sur les biens immobiliers"],
+    correct:1,
+    ok:"Actes d'administration = exploitation ou mise en valeur du patrimoine dénués de risque anormal. Actes de disposition = engagent le patrimoine par une modification importante de son contenu, une dépréciation significative de sa valeur en capital ou une altération durable des prérogatives.",
+    ko:"Acte d'administration = sans risque anormal. Acte de disposition = modifie significativement le patrimoine (valeur, contenu ou prérogatives). Cette classification est commune aux mineurs et majeurs protégés." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"SDJ sauvegarde simple", diff:"m", multi:false,
+    q:"Sous sauvegarde de justice simple, le majeur peut-il passer des actes de la vie courante ?",
+    opts:["Oui, mais seulement avec l'accord préalable d'un mandataire spécial désigné par le juge", "Non, tous ses actes sont suspendus le temps de la mesure pour éviter tout acte préjudiciable", "Non, il ne peut accomplir que les actes d'administration, les actes de disposition étant tous interdits", "Oui, il conserve tous ses droits et peut faire tous les actes de la vie courante — contrôle a posteriori seulement"],
+    correct:3,
+    ok:"Sous SDJ simple : le majeur conserve tous ses droits et peut faire tous les actes de la vie courante. On a même admis la validité d'un testament après placement sous SDJ. La protection est a posteriori : les actes peuvent être rescindés pour lésion ou réduits en cas d'excès.",
+    ko:"SDJ simple : le majeur conserve tous ses droits. La protection est a posteriori (rescision pour lésion ou réduction pour excès, pas d'incapacité préalable)." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Lésion SDJ", diff:"d", multi:false, alert:true,
+    q:"⚠ L'action en rescision pour lésion (art. 435 C.cv) s'applique-t-elle aux testaments d'un majeur sous SDJ ?",
+    opts:["Non, seulement pour les actes à titre onéreux — les libéralités sont soumises à des règles différentes", "Oui, comme pour tous les actes, le testament pouvant être rescindé s'il est clairement préjudiciable aux intérêts du majeur", "Oui, mais seulement si le testament est clairement préjudiciable et manifestement déséquilibré", "Non — le testament produit ses effets après le décès, la lésion est refusée car on ne peut apprécier un déséquilibre au moment de la rédaction"],
+    correct:3,
+    ok:"La lésion est refusée pour les testaments : le testament produit des effets après le décès et non au moment de sa rédaction → impossible d'apprécier la lésion au moment de l'acte.",
+    ko:"La lésion ne s'applique pas aux testaments car ils produisent leurs effets après le décès. On ne peut pas apprécier un déséquilibre économique au moment de la rédaction." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Mandataire spécial SDJ", diff:"m", multi:false, alert:true,
+    q:"⚠ Le mandataire spécial nommé en SDJ peut-il recevoir un mandat général ou exercer des actions judiciaires ?",
+    opts:["Non — il ne peut pas recevoir de mandat général ni exercer des actions judiciaires / il peut agir pour des actes déterminés (administration et disposition)", "Oui dans les deux cas — le mandataire spécial peut recevoir tous pouvoirs du juge pour représenter le majeur", "Non pour le mandat général / oui pour les actions judiciaires, le juge pouvant le mandater spécialement pour agir en justice", "Oui pour le mandat général / non pour les actions judiciaires qui restent réservées au majeur lui-même"],
+    correct:0,
+    ok:"Le mandataire spécial ne peut pas recevoir de mandat général ni exercer des actions judiciaires. Mais il peut concerner des actes d'administration et de disposition (même des actes de disposition).",
+    ko:"Mandataire spécial SDJ : pas de mandat général, pas d'actions judiciaires. Mais peut agir pour des actes déterminés de tout type (administration ou disposition)." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Curatelle principe", diff:"f", multi:false,
+    q:"En quoi consiste le mécanisme de la curatelle ?",
+    opts:["Une protection légère sans incapacité spécifique, avec contrôle uniquement a posteriori des actes accomplis", "La représentation totale du majeur par le curateur pour tous les actes de la vie civile", "Un système d'assistance — double consentement requis : le curateur ne peut pas non plus agir seul", "Une délégation au curateur des pouvoirs de gestion pour les seuls actes de disposition importants"],
+    correct:2,
+    ok:"Curatelle = système d'assistance. Double consentement requis : le majeur doit être assisté mais le curateur ne peut pas non plus agir seul. Le majeur garde certains droits mais doit être assisté pour les actes les plus graves.",
+    ko:"Curatelle = assistance = double consentement. Ni le majeur seul, ni le curateur seul ne peuvent agir pour les actes nécessitant assistance." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Curatelle actes seul", diff:"m", multi:false, alert:true,
+    q:"⚠ En curatelle simple, quels actes le majeur peut-il faire seul ?",
+    opts:["Tous les actes sans exception, la curatelle simple étant la mesure la plus légère qui ne crée aucune incapacité", "Uniquement les actes de la vie quotidienne (courses, alimentation) car tous les actes juridiques nécessitent l'assistance du curateur", "Les actes conservatoires + actes d'administration + testament (sous réserve insanité d'esprit) + exercice d'une activité professionnelle", "Uniquement les actes d'administration — les actes conservatoires et le testament nécessitent l'assistance du curateur"],
+    correct:2,
+    ok:"En curatelle simple, le majeur peut faire seul : actes conservatoires + actes d'administration + testament (sous réserve de l'insanité d'esprit) + exercer une activité professionnelle (y compris commerçant). Mais il devra être assisté de son curateur pour tout acte de disposition, même relevant de son activité professionnelle.",
+    ko:"En curatelle simple : actes conservatoires + administration + testament + activité professionnelle = seul. Mais tout acte de disposition (même professionnel) nécessite l'assistance du curateur." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Curatelle renforcée", diff:"m", multi:false,
+    q:"Quel est l'objectif principal de la curatelle renforcée (art. 472 C.cv) ?",
+    opts:["Permettre au curateur de contrôler l'utilisation des revenus du majeur — le curateur perçoit seul les revenus et assure le règlement des dépenses", "Permettre au majeur de gérer seul ses revenus sous le contrôle a posteriori du curateur", "Transformer progressivement la curatelle en tutelle lorsque l'état du majeur se dégrade", "Permettre au juge de nommer un mandataire judiciaire professionnel à la place d'un proche"],
+    correct:0,
+    ok:"Curatelle renforcée : le curateur perçoit seul les revenus du majeur sur un compte ouvert au nom de ce dernier. Assure le règlement des dépenses. Dépose l'excédent à disposition du majeur. C'est une obligation (pas une faculté), avec des adaptations possibles (ex : carte bancaire plafonnée).",
+    ko:"Curatelle renforcée : le curateur perçoit seul les revenus et gère les dépenses. C'est une obligation, pas une faculté. L'objectif est d'éviter que le majeur dilapide ses ressources." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Actes curatelle après ouverture", diff:"d", multi:false, alert:true,
+    q:"⚠ En curatelle, quelles sont les sanctions si le majeur accomplit seul un acte nécessitant l'assistance du curateur (acte de disposition) ?",
+    opts:["L'acte est valable mais le majeur doit indemniser le cocontractant de bonne foi pour le trouble causé", "L'acte est nul de plein droit sans qu'il soit nécessaire de prouver un quelconque préjudice", "L'acte est annulable uniquement si un préjudice est prouvé (art. 465 2° C.cv)", "L'acte est inopposable au curateur qui peut le rejeter sans avoir à saisir le juge"],
+    correct:2,
+    ok:"Art. 465 2° C.cv : majeur en curatelle ayant accompli seul un acte nécessitant assistance (acte de disposition) → nullité uniquement si préjudice prouvé. Différent du cas où l'acte nécessite une représentation : là c'est nul de plein droit sans besoin de prouver un préjudice.",
+    ko:"Art. 465 2° : nullité si préjudice prouvé (pas de nullité automatique). Comparer avec : acte nécessitant représentation (non-assistance) → nul de plein droit sans preuve de préjudice." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Tutelle principe", diff:"f", multi:false,
+    q:"Quand la tutelle est-elle prononcée ?",
+    opts:["Uniquement si la SDJ et la curatelle ne peuvent assurer une protection suffisante", "Dès qu'une altération des facultés mentales ou corporelles est médicalement constatée chez le majeur", "Dès que le majeur ne peut plus gérer seul ses affaires courantes et a besoin d'aide quotidienne", "Dès l'âge de 75 ans si la personne vit seule et ne bénéficie d'aucune aide familiale ou professionnelle"],
+    correct:0,
+    ok:"La tutelle n'est prononcée que si SDJ et curatelle ne peuvent assurer une protection suffisante. C'est le régime le plus lourd : le tuteur représente le majeur dans tous les actes de la vie civile.",
+    ko:"Tutelle = dernier recours. Prononcée uniquement si ni SDJ ni curatelle ne peuvent protéger suffisamment. C'est le régime le plus lourd." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Tutelle actes interdits", diff:"d", multi:false,
+    q:"Parmi ces actes, lequel le tuteur ne peut jamais accomplir, même avec autorisation (art. 509 C.cv) ?",
+    opts:["Effectuer des actes emportant aliénation gratuite (ex : remise de dette, renonciation à un droit acquis)", "Accepter une succession au nom du majeur protégé lorsqu'elle présente un actif positif", "Vendre un immeuble appartenant au majeur protégé pour financer son hébergement en établissement", "Louer les biens immobiliers du majeur protégé à des tiers avec un bail de droit commun"],
+    correct:0,
+    ok:"Art. 509 : le tuteur ne peut jamais, même avec autorisation : actes emportant aliénation gratuite (remise de dette, renonciation à un droit acquis, renonciation anticipée à l'action en réduction, mainlevée d'hypothèque sans paiement, constitution gratuite de sûreté pour garantir la dette d'un tiers) / acquérir d'un tiers un droit contre la personne protégée / exercer le commerce au nom du majeur / acheter les biens du majeur / transférer dans un patrimoine fiduciaire.",
+    ko:"Art. 509 : le tuteur ne peut jamais (même avec autorisation) faire des actes d'aliénation gratuite (remise de dette, renonciation à un droit…). Ce sont des interdictions absolues." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Tutelle testament", diff:"m", multi:false,
+    q:"Un majeur sous tutelle peut-il faire un testament ?",
+    opts:["Non, c'est totalement interdit sous tutelle — l'incapacité d'exercice est totale pour les actes à cause de mort", "Oui, avec l'autorisation du juge ou du conseil de famille — toute intervention du tuteur est exclue / le majeur peut révoquer seul", "Oui, avec l'assistance du tuteur qui s'assure que le testament reflète la volonté réelle du majeur", "Non, sauf si le juge autorise exceptionnellement le majeur à agir seul pour cet acte"],
+    correct:1,
+    ok:"Art. 476 : testament = autorisation du juge ou du conseil de famille. Toute intervention du tuteur est exclue (ni assistance ni représentation). Le majeur peut révoquer seul son testament.",
+    ko:"Testament en tutelle : autorisation du juge ou conseil de famille. Le tuteur ne peut pas intervenir (ni assister ni représenter). Révocation : le majeur peut la faire seul." },
+
+  { chap:"Chap. 4 — Protection du patrimoine", theme:"Comptes bancaires", diff:"m", multi:false,
+    q:"Depuis la loi du 23 mars 2019 (art. 427 C.cv), où doivent être réalisées les opérations bancaires du majeur protégé ?",
+    opts:["Sur un compte commun géré conjointement par la personne chargée de la protection et le majeur", "Exclusivement sur des comptes ouverts au nom du majeur lui-même", "Sur un compte géré exclusivement par le mandataire judiciaire professionnel désigné par le juge", "Sur tout compte au choix de l'organe de protection, dès lors qu'un relevé trimestriel est transmis au juge"],
+    correct:1,
+    ok:"Art. 427 (modifié 2019) : les opérations bancaires doivent être réalisées exclusivement sur des comptes ouverts au nom du majeur. Met fin aux pratiques de regroupement de tous les avoirs sur un compte unique.",
+    ko:"Art. 427 : comptes au nom du majeur uniquement. Fin des pratiques de regroupement sur un compte unique." },
+
+  { chap:"Chap. 5 — Habilitation familiale", theme:"Définition", diff:"f", multi:false,
+    q:"Qu'est-ce que l'habilitation familiale ?",
+    opts:["Un régime similaire à la tutelle, administré par un mandataire judiciaire professionnel désigné parmi une liste nationale", "Un régime plus souple que tutelle et curatelle, permettant à un proche de représenter ou assister un majeur dont les facultés sont altérées — mission gratuite", "Un régime intermédiaire entre la SDJ et la curatelle, créé pour les situations d'altération modérée des facultés", "Un contrat passé entre le majeur et sa famille avant l'altération des facultés, en prévision d'une future protection"],
+    correct:1,
+    ok:"Habilitation familiale = régime plus souple que tutelle et curatelle. Permet à un proche (famille) de représenter ou d'assister un majeur dont les facultés sont altérées, pour des actes relatifs à ses biens ou sa personne. Mission gratuite (solidarité familiale).",
+    ko:"L'habilitation familiale est un régime souple, réservé à la famille proche, gratuit, introduit par la loi de 2015." },
+
+  { chap:"Chap. 5 — Habilitation familiale", theme:"Personnes habilitées", diff:"m", multi:false,
+    q:"Qui peut être désigné dans le cadre de l'habilitation familiale (art. 494-4 al. 2) ?",
+    opts:["Toute personne nommée par le juge, y compris un mandataire professionnel si aucun proche n'est disponible", "Toute personne de confiance choisie librement par le majeur, y compris des amis ou voisins proches", "Uniquement les enfants et le conjoint, à l'exclusion des autres membres de la famille", "Nécessairement : ascendants, descendants, frères et sœurs, conjoint/partenaire/concubin (sauf vie commune cessée) — plusieurs personnes possibles"],
+    correct:3,
+    ok:"Art. 494-4 al. 2 : la personne habilitée est nécessairement choisie parmi : ascendants, descendants, frères et sœurs, conjoint/partenaire/concubin (sauf vie commune cessée). Plusieurs personnes peuvent être désignées. Pas de subrogé habilité. Empêchements minimaux.",
+    ko:"Habilitation familiale : limitée à la famille proche (ascendants, descendants, frères/sœurs, conjoint/partenaire/concubin). Plusieurs personnes possibles. Pas de subrogé habilité." },
+
+  { chap:"Chap. 5 — Habilitation familiale", theme:"Types habilitation", diff:"m", multi:false,
+    q:"Quelle est la durée maximale d'une habilitation générale, et dans quel cas peut-elle être renouvelée 20 ans ?",
+    opts:["Max 10 ans / renouvelable 10 ans (ou 20 ans si aucune amélioration possible)", "Max 5 ans / renouvelable 20 ans si amélioration médicalement impossible", "Max 10 ans / non renouvelable au-delà quelle que soit l'évolution de l'état de la personne", "Max 20 ans directement si le médecin atteste que l'amélioration de l'état est impossible"],
+    correct:0,
+    ok:"Habilitation générale : max 10 ans. Renouvelable 10 ans. Si aucune amélioration possible : renouvelable 20 ans. L'habilitation spéciale prend fin quand les actes autorisés ont été accomplis.",
+    ko:"Habilitation générale : max 10 ans, renouvelable 10 ans (ou 20 ans si aucune amélioration possible). Habilitation spéciale : prend fin à l'accomplissement des actes autorisés." },
+
+  { chap:"Chap. 5 — Habilitation familiale", theme:"Rôle du juge", diff:"m", multi:false, alert:true,
+    q:"⚠ Quelle est la particularité du rôle du juge dans l'habilitation familiale par rapport aux autres régimes ?",
+    opts:["Le juge n'intervient en principe qu'au moment du prononcé — les proches ou le procureur peuvent le saisir en cas de difficultés", "Le juge intervient beaucoup plus que dans la tutelle, avec des comptes rendus annuels et des autorisations pour chaque acte important", "Le juge est remplacé par le conseil de famille qui assure l'ensemble du contrôle de la mesure", "Le juge nomme toujours un subrogé habilité pour contrôler l'action de la personne habilitée"],
+    correct:0,
+    ok:"Dans l'habilitation familiale, le juge n'intervient en principe qu'au moment du prononcé (≠ tutelle où le juge intervient à l'ouverture, pendant le fonctionnement et à la main levée). Les proches ou le procureur peuvent le saisir en cas de difficultés. Pas de subrogé habilité.",
+    ko:"Le juge n'intervient qu'au moment du prononcé dans l'habilitation familiale (contrairement à la tutelle où il est présent tout au long). Pas de subrogé habilité." },
+
+  { chap:"Chap. 5 — Habilitation familiale", theme:"Fin mesure", diff:"m", multi:false,
+    q:"Comment prend fin l'habilitation familiale ?",
+    opts:["Elle est irrévocable une fois prononcée — seule une nouvelle mesure de protection peut la modifier", "Uniquement par le décès du majeur ou de la personne habilitée, la mesure étant irrévocable une fois prononcée", "Uniquement par décision du juge sur demande de la famille ou du procureur de la République", "Décès / expiration du délai / main levée / placement sous SDJ-curatelle-tutelle / accomplissement des actes prévus (habilitation spéciale)"],
+    correct:3,
+    ok:"Fin de l'habilitation familiale : décès / expiration du délai / main levée / placement sous SDJ-curatelle-tutelle / accomplissement des actes prévus (pour l'habilitation spéciale).",
+    ko:"Fin de l'habilitation familiale : plusieurs causes possibles dont le placement sous une autre mesure de protection (tutelle, curatelle, SDJ)." }
+];
+
+const CHAPTER_ORDER = [
+  "Introduction",
+  "Chap. 1 — Diversité des protections",
+  "Chap. 2 — Règles communes",
+  "Chap. 3 — Protection de la personne",
+  "Chap. 4 — Protection du patrimoine",
+  "Chap. 5 — Habilitation familiale"
+];
+const N = 30;
+
+let sessionQ = [], state = [], currentFilter = 'all';
+
+function shuffle(a) {
+  const b = [...a];
+  for (let i = b.length-1; i>0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [b[i],b[j]] = [b[j],b[i]];
+  }
+  return b;
+}
+
+function pickSession() {
+  const byChap = {};
+  CHAPTER_ORDER.forEach(ch => { byChap[ch] = []; });
+  POOL.forEach(q => { if (byChap[q.chap]) byChap[q.chap].push(q); });
+  let picked = [];
+  CHAPTER_ORDER.forEach(ch => {
+    const pool = shuffle(byChap[ch]||[]);
+    const quota = Math.round((pool.length/POOL.length)*N);
+    picked = picked.concat(pool.slice(0, quota));
+  });
+  const remaining = shuffle(POOL.filter(q=>!picked.includes(q)));
+  while (picked.length<N && remaining.length>0) picked.push(remaining.shift());
+  picked.sort((a,b)=>CHAPTER_ORDER.indexOf(a.chap)-CHAPTER_ORDER.indexOf(b.chap));
+  return picked;
+}
+
+document.addEventListener('DOMContentLoaded', newSession);
+
+function newSession() {
+  sessionQ = pickSession();
+  state = sessionQ.map(()=>({answered:false,selected:[],isCorrect:false}));
+  currentFilter = 'all';
+  document.getElementById('recap').style.display = 'none';
+  document.getElementById('sessbar').innerHTML =
+    `<span>Session en cours · <strong>${sessionQ.length} questions</strong> tirées sur ${POOL.length} disponibles</span>
+     <button class="btn-top" onclick="newSession()">⟳ Nouvelle session</button>`;
+  buildNav(); renderAll(); updateScore();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function restartSession() {
+  state = sessionQ.map(()=>({answered:false,selected:[],isCorrect:false}));
+  document.getElementById('recap').style.display = 'none';
+  currentFilter = 'all';
+  buildNav(); renderAll(); updateScore();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function buildNav() {
+  const nav = document.getElementById('chapnav');
+  nav.innerHTML = '';
+  ['all',...CHAPTER_ORDER.filter(ch=>sessionQ.some(q=>q.chap===ch))].forEach(ch=>{
+    const btn = document.createElement('button');
+    btn.className = 'chap-btn'+(ch===currentFilter?' active':'');
+    btn.textContent = ch==='all'?'📋 Toutes':ch;
+    btn.onclick = ()=>{currentFilter=ch;buildNav();renderAll();};
+    nav.appendChild(btn);
+  });
+}
+
+function renderAll() {
+  const container = document.getElementById('qlist');
+  container.innerHTML = '';
+  document.getElementById('sc-total').textContent = sessionQ.length;
+  const filtered = sessionQ.map((q,i)=>({...q,idx:i})).filter(q=>currentFilter==='all'||q.chap===currentFilter);
+  const byChap = {};
+  CHAPTER_ORDER.forEach(ch=>{byChap[ch]=[];});
+  filtered.forEach(q=>{byChap[q.chap].push(q);});
+  let num = 0;
+  CHAPTER_ORDER.forEach(ch=>{
+    const qs = byChap[ch];
+    if (!qs||!qs.length) return;
+    if (currentFilter==='all') {
+      const hdr = document.createElement('div');
+      hdr.className = 'chap-hdr';
+      hdr.innerHTML = `<h2>${ch}</h2><span class="chap-cnt">${qs.length} question${qs.length>1?'s':''}</span>`;
+      container.appendChild(hdr);
+    }
+    qs.forEach(q=>{num++;container.appendChild(buildCard(q,num));});
+  });
+  updateProgress();
+}
+
+function buildCard(q,num) {
+  const s = state[q.idx];
+  const card = document.createElement('div');
+  card.className = 'q-card';
+  card.id = 'c'+q.idx;
+  const dc={f:'df',m:'dm',d:'dd'}[q.diff]||'';
+  const dl={f:'● Facile',m:'● Moyen',d:'● Difficile'}[q.diff]||'';
+  card.innerHTML = `
+    <div class="q-meta">
+      <span class="t-chap">${q.chap}</span>
+      <span class="t-theme">${q.theme}</span>
+      <span class="t-diff ${dc}">${dl}</span>
+      ${q.alert?'<span class="t-alert">⚠ À retenir</span>':''}
+      <span class="q-num">Q${num}</span>
+    </div>
+    <div class="q-text">${q.q}</div>
+    <div class="q-instr">${q.multi?'📝 Plusieurs bonnes réponses — cochez tout ce qui est juste, puis validez.':'📝 Une seule bonne réponse — choisissez, puis validez.'}</div>
+    <div class="opts" id="opts${q.idx}">
+      ${q.opts.map((o,oi)=>`
+        <button class="opt-btn" id="o${q.idx}_${oi}" onclick="toggle(${q.idx},${oi},${q.multi})" ${s.answered?'disabled':''}>
+          <span class="ind">${String.fromCharCode(65+oi)}</span>
+          <span>${o}</span>
+        </button>`).join('')}
+    </div>
+    <div class="val-wrap">
+      <button class="btn-val" id="v${q.idx}" onclick="validate(${q.idx})" ${s.answered||s.selected.length===0?'disabled':''}>Valider ma réponse</button>
+    </div>
+    <div class="fb" id="fb${q.idx}"></div>`;
+  if (s.answered) applyCard(q.idx, q, s);
+  return card;
+}
+
+function toggle(qi,oi,multi) {
+  const s = state[qi];
+  if (s.answered) return;
+  s.selected = multi
+    ? (s.selected.includes(oi)?s.selected.filter(x=>x!==oi):[...s.selected,oi])
+    : [oi];
+  sessionQ[qi].opts.forEach((_,i)=>{
+    const b = document.getElementById(`o${qi}_${i}`);
+    if (!b) return;
+    const sel = s.selected.includes(i);
+    b.className = 'opt-btn'+(sel?' opt-sel':'');
+    const ind = b.querySelector('.ind');
+    ind.style.cssText = sel?'background:#1a1612;border-color:#1a1612;color:#f5f0e8':'';
+  });
+  const v = document.getElementById('v'+qi);
+  if (v) v.disabled = s.selected.length===0;
+}
+
+function validate(qi) {
+  const s = state[qi];
+  if (s.answered||s.selected.length===0) return;
+  s.answered = true;
+  const q = sessionQ[qi];
+  const corrects = Array.isArray(q.correct)?q.correct:[q.correct];
+  const selSet = new Set(s.selected);
+  const corSet = new Set(corrects);
+  s.isCorrect = [...selSet].every(i=>corSet.has(i))&&[...corSet].every(i=>selSet.has(i));
+  q.opts.forEach((_,oi)=>{
+    const b = document.getElementById(`o${qi}_${oi}`);
+    if (b) b.disabled = true;
+  });
+  const v = document.getElementById('v'+qi);
+  if (v) v.disabled = true;
+  applyCard(qi, q, s);
+  updateScore(); updateProgress(); checkComplete();
+}
+
+function isPartial(q,s) {
+  if (!q.multi) return false;
+  const c = Array.isArray(q.correct)?q.correct:[q.correct];
+  return s.selected.filter(i=>c.includes(i)).length>0 && s.selected.filter(i=>c.includes(i)).length<c.length;
+}
+
+function applyCard(qi,q,s) {
+  const corrects = Array.isArray(q.correct)?q.correct:[q.correct];
+  q.opts.forEach((_,oi)=>{
+    const b = document.getElementById(`o${qi}_${oi}`);
+    if (!b) return;
+    const ind = b.querySelector('.ind');
+    b.removeAttribute('style');
+    if (ind) ind.removeAttribute('style');
+    if (corrects.includes(oi)&&s.selected.includes(oi)) {
+      b.style.setProperty('border-color','#1a5c2e');
+      b.style.setProperty('background-color','#eef7f1');
+      b.style.setProperty('color','#1a5c2e');
+      if (ind){ind.style.setProperty('background','#1a5c2e');ind.style.setProperty('border-color','#1a5c2e');ind.style.setProperty('color','#fff');}
+    } else if (!corrects.includes(oi)&&s.selected.includes(oi)) {
+      b.style.setProperty('border-color','#9e1b1b');
+      b.style.setProperty('background-color','#fdf0ef');
+      b.style.setProperty('color','#9e1b1b');
+      if (ind){ind.style.setProperty('background','#9e1b1b');ind.style.setProperty('border-color','#9e1b1b');ind.style.setProperty('color','#fff');}
+    } else if (corrects.includes(oi)&&!s.selected.includes(oi)) {
+      b.style.setProperty('border-color','#b8860b');
+      b.style.setProperty('background-color','#fffbf0');
+      b.style.setProperty('color','#7a4800');
+      if (ind){ind.style.setProperty('background','#b8860b');ind.style.setProperty('border-color','#b8860b');ind.style.setProperty('color','#fff');}
+    }
+  });
+  const fb = document.getElementById(`fb${qi}`);
+  if (fb) {
+    const partial = isPartial(q,s);
+    let cls,txt;
+    if (s.isCorrect){cls='fb-ok';txt=`<strong>✓ Bonne réponse !</strong> ${q.ok}`;}
+    else if (partial){cls='fb-partial';txt=`<strong>⚠ Réponse incomplète.</strong> ${q.ko}`;}
+    else{cls='fb-ko';txt=`<strong>✗ Mauvaise réponse.</strong> ${q.ko}`;}
+    fb.className='fb visible '+cls;
+    fb.innerHTML=txt;
+  }
+}
+
+function updateScore() {
+  const done = state.filter(s=>s.answered).length;
+  const ok = state.filter(s=>s.answered&&s.isCorrect).length;
+  document.getElementById('sc-done').textContent=done;
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-ko').textContent=done-ok;
+}
+
+function updateProgress() {
+  const done = state.filter(s=>s.answered).length;
+  document.getElementById('pbar').style.width=(done/sessionQ.length*100)+'%';
+}
+
+function checkComplete() {
+  if (state.filter(s=>s.answered).length<sessionQ.length) return;
+  const ok = state.filter(s=>s.isCorrect).length;
+  const pct = Math.round(ok/sessionQ.length*100);
+  let chapHTML = '';
+  CHAPTER_ORDER.forEach(ch=>{
+    const cqs = sessionQ.map((q,i)=>({...q,idx:i})).filter(q=>q.chap===ch);
+    if (!cqs.length) return;
+    const cok = cqs.filter(q=>state[q.idx].isCorrect).length;
+    chapHTML+=`<div class="cs-item"><div class="cs-name">${ch}</div><div class="cs-num">${cok} / ${cqs.length}</div></div>`;
+  });
+  document.getElementById('recap-chaps').innerHTML=chapHTML;
+  document.getElementById('recap-score').textContent=`${ok} / ${sessionQ.length} (${pct}%)`;
+  const msgs=['Il faut retravailler la fiche en profondeur. Commence par les définitions de base (SDJ, curatelle, tutelle) et les 3 principes.','Résultat moyen. Revois les distinctions entre régimes, les actes pouvant être faits seul/avec assistance/avec représentation, et les ⚠ À retenir.','Bon résultat ! Concentre-toi sur les points délicats : sanctions des actes irréguliers, habilitation familiale, droits relatifs à la santé.','Excellent ! Tu maîtrises très bien ce cours. Revois les quelques points manqués avant l\'exam.'];
+  document.getElementById('recap-msg').textContent=msgs[pct>=85?3:pct>=70?2:pct>=50?1:0];
+  document.getElementById('recap').style.display='block';
+  setTimeout(()=>document.getElementById('recap').scrollIntoView({behavior:'smooth',block:'start'}),200);
+}
+</script>
+</body>
+</html>

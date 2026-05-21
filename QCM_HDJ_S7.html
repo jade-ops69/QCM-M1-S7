@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="QCM Histoire Justice (S7)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>QCM — Histoire de la Justice S7</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Serif 4', Georgia, serif; background: #f5f0e8; color: #1a1612; min-height: 100vh; }
+header { background: #1a1612; color: #f5f0e8; padding: 1.8rem 1.2rem 1.4rem; text-align: center; border-bottom: 4px solid #b8860b; }
+header .label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: #d4a843; margin-bottom: 0.35rem; }
+header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 5vw, 2.1rem); font-weight: 900; }
+header .sub { margin-top: 0.35rem; font-size: 0.8rem; color: #b0a898; font-style: italic; }
+#scorebar { background: #111; color: #f5f0e8; padding: 0.55rem 1rem; display: flex; justify-content: center; align-items: center; gap: 1rem; font-size: 0.78rem; border-bottom: 2px solid #b8860b; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
+.sc-item { display: flex; align-items: center; gap: 0.3rem; }
+.sc-num { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; }
+.sc-total { color: #d4a843; }
+.sc-ok-num { color: #5cb878; }
+.sc-ko-num { color: #e07070; }
+.sc-div { color: #444; }
+.progress-wrap { background: #2a2520; height: 4px; }
+.progress-fill { height: 4px; background: #b8860b; transition: width 0.4s ease; }
+main { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem 2rem; }
+.session-bar { background: #fff; border: 1px solid #d8cfc2; border-left: 4px solid #b8860b; padding: 0.8rem 1.1rem; margin-bottom: 1.3rem; font-size: 0.81rem; color: #7a6e62; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+.session-bar strong { color: #1a1612; }
+.btn-top { padding: 0.38rem 0.9rem; background: #1a1612; color: #d4a843; border: 1.5px solid #b8860b; font-family: 'Source Serif 4', serif; font-size: 0.76rem; cursor: pointer; letter-spacing: 0.04em; -webkit-appearance: none; border-radius: 0; }
+.chap-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.4rem; padding-bottom: 1rem; border-bottom: 1px solid #d8cfc2; }
+.chap-btn { background: transparent; border: 1.5px solid #d8cfc2; color: #7a6e62; padding: 0.38rem 0.8rem; font-family: 'Source Serif 4', serif; font-size: 0.74rem; cursor: pointer; letter-spacing: 0.03em; -webkit-appearance: none; border-radius: 0; }
+.chap-btn.active { background: #1a1612; color: #f5f0e8; border-color: #1a1612; }
+.chap-hdr { margin: 1.8rem 0 0.9rem; padding-bottom: 0.45rem; border-bottom: 2px solid #b8860b; display: flex; align-items: baseline; gap: 0.8rem; }
+.chap-hdr h2 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; }
+.chap-cnt { font-size: 0.7rem; color: #7a6e62; letter-spacing: 0.07em; text-transform: uppercase; }
+.q-card { background: #fff; border: 1px solid #d8cfc2; border-left: 4px solid #b8860b; margin-bottom: 1.3rem; padding: 1.2rem 1.3rem; }
+.q-meta { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+.t-chap { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; background: #1a1612; color: #d4a843; padding: 0.1rem 0.48rem; font-weight: 600; }
+.t-theme { font-size: 0.62rem; letter-spacing: 0.09em; text-transform: uppercase; background: #f5f0e8; border: 1px solid #d8cfc2; color: #7a6e62; padding: 0.1rem 0.45rem; }
+.t-diff { font-size: 0.62rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.1rem 0.48rem; border: 1.5px solid; font-weight: 600; }
+.df { color: #1a5c2e; border-color: #2d8a4e; background: #e8f5ee; }
+.dm { color: #b45309; border-color: #d97706; background: #fef3e2; }
+.dd { color: #9e1b1b; border-color: #c0392b; background: #fdf0ef; }
+.t-alert { font-size: 0.62rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.1rem 0.45rem; border: 1.5px solid #c0392b; color: #9e1b1b; background: #fdf0ef; font-weight: 700; }
+.q-num { font-size: 0.66rem; color: #7a6e62; letter-spacing: 0.07em; text-transform: uppercase; margin-left: auto; }
+.q-text { font-size: 0.93rem; line-height: 1.68; margin-bottom: 0.28rem; }
+.q-instr { font-size: 0.74rem; color: #7a6e62; font-style: italic; margin-bottom: 0.85rem; }
+.opts { display: flex; flex-direction: column; gap: 0.38rem; margin-bottom: 0.75rem; }
+.opt-btn { display: flex; align-items: flex-start; gap: 0.55rem; padding: 0.6rem 0.85rem; border: 1.5px solid #d8cfc2; background: #f5f0e8; font-family: 'Source Serif 4', serif; font-size: 0.87rem; line-height: 1.5; text-align: left; width: 100%; cursor: pointer; -webkit-appearance: none; border-radius: 0; }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.opt-sel { border-color: #1a1612; background: #ece7dc; }
+.opt-btn.opt-sel .ind { background: #1a1612; border-color: #1a1612; color: #f5f0e8; }
+.ind { min-width: 21px; height: 21px; border: 1.5px solid #7a6e62; display: flex; align-items: center; justify-content: center; font-size: 0.67rem; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.val-wrap { display: flex; justify-content: flex-end; margin-bottom: 0.45rem; }
+.btn-val { padding: 0.48rem 1.3rem; background: #1a1612; color: #f5f0e8; border: none; font-family: 'Source Serif 4', serif; font-size: 0.81rem; font-weight: 600; cursor: pointer; letter-spacing: 0.05em; -webkit-appearance: none; border-radius: 0; }
+.btn-val:disabled { background: #d8cfc2; color: #7a6e62; cursor: default; }
+.fb { margin-top: 0.65rem; padding: 0.8rem 0.95rem; font-size: 0.84rem; line-height: 1.62; border-left: 3px solid; display: none; }
+.fb.visible { display: block; }
+.fb-ok { border-color: #1a5c2e; background: #eef7f1; color: #1a3d26; }
+.fb-ko { border-color: #9e1b1b; background: #fdf0ef; color: #7a1414; }
+.fb-partial { border-color: #b8860b; background: #fdf6e3; color: #6b3d00; }
+.fb strong { font-weight: 700; }
+.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #1a1612; border-top: 3px solid #b8860b; display: flex; justify-content: center; gap: 0.8rem; padding: 0.75rem 1rem; z-index: 200; }
+.bottom-bar button { padding: 0.6rem 1.2rem; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 0.82rem; cursor: pointer; letter-spacing: 0.04em; -webkit-appearance: none; border-radius: 0; }
+.btn-recommencer { background: #b8860b; color: #1a1612; border: none; }
+.btn-nouvelle { background: transparent; color: #d4a843; border: 1.5px solid #b8860b; }
+.bottom-space { height: 70px; }
+#recap { display: none; background: #1a1612; color: #f5f0e8; padding: 2rem 1.5rem; text-align: center; margin: 1.5rem 0 0; border: 3px solid #b8860b; }
+#recap h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: #d4a843; margin-bottom: 0.4rem; }
+#recap .big { font-size: 2.8rem; font-family: 'Playfair Display', serif; color: #fff; margin: 0.4rem 0; }
+.cs-grid { margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; }
+.cs-item { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); padding: 0.55rem 0.9rem; }
+.cs-name { color: #d4a843; font-size: 0.62rem; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 0.15rem; }
+.cs-num { font-family: 'Playfair Display', serif; font-size: 1.2rem; }
+#recap p { font-size: 0.86rem; color: #c8bfb0; line-height: 1.72; max-width: 480px; margin: 0.8rem auto 0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="label">M1 Droit Civil · S7 · M. Moncassin</div>
+  <h1>Histoire de la Justice</h1>
+  <div class="sub">QCM interactif — Révisions complètes</div>
+</header>
+<div id="scorebar">
+  <div class="sc-item">Répondues&nbsp;:&nbsp;<span class="sc-num sc-total" id="sc-done">0</span><span style="color:#555">&thinsp;/&thinsp;</span><span class="sc-num sc-total" id="sc-total">—</span></div>
+  <span class="sc-div">|</span>
+  <div class="sc-item">✓&nbsp;<span class="sc-num sc-ok-num" id="sc-ok">0</span></div>
+  <span class="sc-div">|</span>
+  <div class="sc-item">✗&nbsp;<span class="sc-num sc-ko-num" id="sc-ko">0</span></div>
+</div>
+<div class="progress-wrap"><div class="progress-fill" id="pbar" style="width:0%"></div></div>
+<main>
+  <div class="session-bar" id="sessbar">
+    <span>Chargement…</span>
+    <button class="btn-top" onclick="newSession()">⟳ Nouvelle session</button>
+  </div>
+  <div class="chap-nav" id="chapnav"></div>
+  <div id="qlist"></div>
+  <div id="recap">
+    <h2>Session terminée !</h2>
+    <div class="big" id="recap-score"></div>
+    <div class="cs-grid" id="recap-chaps"></div>
+    <p id="recap-msg"></p>
+  </div>
+  <div class="bottom-space"></div>
+</main>
+<div class="bottom-bar">
+  <button class="btn-recommencer" onclick="restartSession()">↺ Recommencer</button>
+  <button class="btn-nouvelle" onclick="newSession()">⟳ Nouvelle session</button>
+</div>
+<script>
+const POOL = [
+
+  { chap:"Introduction", theme:"Les 3 sens de la justice", diff:"f", multi:false,
+    q:"Quels sont les 3 sens du mot 'justice' tels que définis dans le cours ?",
+    opts:["Vertu / idéal de vie collective / ensemble des cours et tribunaux chargés d'appliquer le droit", "Justice civile, pénale et administrative — les trois branches de la juridiction étatique chargées de trancher les litiges selon leur nature", "Justice distributive, commutative et pénale — les trois formes de justice selon la doctrine classique d'Aristote et de Thomas d'Aquin", "Justice légale, équitable et arbitrale — les trois modes de règlement des litiges reconnus par le droit positif français"],
+    correct:0,
+    ok:"Les 3 sens : (1) vertu — volonté constante de rendre à chacun ce qui lui appartient (Ulpien) ; (2) idéal de vie collective — but à poursuivre (St Augustin : 'sans la justice, que sont les royaumes, sinon vaste brigandage') ; (3) ensemble des cours et tribunaux chargés d'appliquer le droit.",
+    ko:"Les 3 sens de la justice : vertu (Ulpien), idéal de vie collective (St Augustin), et institution judiciaire (cours et tribunaux). Les formes distributive/commutative/pénale sont les 3 formes de la justice, pas ses 3 sens." },
+
+  { chap:"Introduction", theme:"3 formes de justice", diff:"m", multi:false,
+    q:"Quels sont les symboles associés aux 3 formes de la justice (rétributive, commutative, pénale) ?",
+    opts:["La balance (rétributive) / les yeux bandés (commutative) / l'épée (pénale)", "La balance (rétributive) / l'épée (commutative) / les yeux bandés (pénale)", "L'épée (rétributive) / la balance (commutative) / le marteau (pénale)", "Les yeux bandés (rétributive) / la balance (commutative) / la flamme (pénale)"],
+    correct:0,
+    ok:"Justice rétributive (distributive) → la balance (rétribuer selon les mérites). Justice commutative → les yeux bandés (assurer la régularité des échanges sans favoritisme). Justice pénale → l'épée (sanctionner les comportements déviants).",
+    ko:"Justice rétributive = balance / Justice commutative = yeux bandés / Justice pénale = épée. Les yeux bandés symbolisent l'impartialité des échanges, pas la justice en général." },
+
+  { chap:"Introduction", theme:"Césure historique", diff:"f", multi:false,
+    q:"Quelle est la grande césure historique en matière de justice selon le cours ?",
+    opts:["La rédaction du Code civil en 1804, qui a unifié le droit privé français et mis fin à la pluralité des coutumes régionales", "La chute de Rome en 476 qui a mis fin à l'Empire romain d'Occident et ouvert la période du droit barbare", "La Révolution française — avant : souveraineté du Roi / après : souveraineté du législateur", "La Constitution de 1958, qui a créé le Conseil constitutionnel et instauré un contrôle de constitutionnalité des lois"],
+    correct:2,
+    ok:"La césure historique est la Révolution. Avant : la justice = expression de la souveraineté royale. Après : souveraineté du législateur, qui cherche à endiguer la justice comme institution pendant ~150 ans. L'État de droit (né en Allemagne fin 19e s.) n'arrive en France qu'en 1958 avec le contrôle de la loi.",
+    ko:"La grande césure est la Révolution française. Avant : le Roi rend la justice (souveraineté royale). Après : souveraineté du législateur — la justice perd sa place de premier pouvoir pendant ~150 ans." },
+
+  { chap:"Chap. 1 — Rome républicaine", theme:"Périodes romaines", diff:"f", multi:false,
+    q:"Dans quel ordre se succèdent les périodes politiques romaines ?",
+    opts:["République (-509) → Royauté → Empire (-27) — les Romains ont d'abord institué la République avant de revenir à un régime monarchique", "Empire → République → Royauté — l'Empire précède la République dans la tradition historiographique romaine", "Royauté → République (-509) → Empire (-27)", "République (-509) → Royauté → Empire (-27) — la Royauté est rétablie brièvement entre la République et l'Empire"],
+    correct:2,
+    ok:"Royauté (Romulus, 1er roi) → République en -509 (Tarquin le Superbe écarté, 3 institutions : Comices, Magistratures, Sénat) → Empire en -27 (Octave/Auguste après la bataille d'Actium en -31 : Haut Empire/Principat puis Bas Empire/Dominat).",
+    ko:"L'ordre est : Royauté → République (-509) → Empire (-27). Tarquin le Superbe est écarté en -509 pour fonder la République. Auguste proclame l'Empire en -27 après la bataille d'Actium (-31)." },
+
+  { chap:"Chap. 1 — Rome républicaine", theme:"Loi des XII Tables", diff:"m", multi:false,
+    q:"Qu'est-ce que la loi des XII Tables et quand a-t-elle été rédigée ?",
+    opts:["Un recueil de jurisprudence rédigé par les préteurs au IIe siècle av. J.-C., rassemblant les décisions rendues dans les principales affaires civiles et criminelles de Rome", "Une codification réalisée par Justinien au VIe siècle ap. J.-C., rassemblant le droit romain classique en un corpus unique servant de référence pour tout l'Empire", "Un édit du préteur listant toutes les formules de procédure utilisées devant les juridictions civiles sous la République romaine", "Un texte fondateur rédigé en -451/-450 par une commission de 10 hommes (5 plébéiens, 5 patriciens), contenant droit public, droit privé et actions de la loi"],
+    correct:3,
+    ok:"La loi des XII Tables (-451/-450) est rédigée par une commission de 10 hommes (5 plébéiens, 5 patriciens), affichée sur le forum. Elle contient : droit public, droit privé, actions de la loi (procédures). Référence pendant des siècles, en vigueur jusqu'à la compilation de Justinien (530).",
+    ko:"Loi des XII Tables : -451/-450, commission de 10 hommes (5 plébéiens, 5 patriciens), affichée sur le forum. Contient droit public + privé + procédures. Reste en vigueur jusqu'à Justinien (530)." },
+
+  { chap:"Chap. 1 — Rome républicaine", theme:"Actions de la loi — 2 phases", diff:"m", multi:false,
+    q:"Quelles sont les 2 phases du procès sous les actions de la loi ?",
+    opts:["Phase accusatoire (devant les Comices centuriates) + phase inquisitoire (devant le Sénat romain réuni en chambre secrète)", "Phase in iure (devant le préteur) + phase apud iudicem (devant le juge privé)", "Phase de conciliation amiable (obligatoire devant le magistrat) + phase de jugement (devant les Comices)", "Phase écrite (dépôt de la plainte et des preuves) + phase orale (plaidoiries contradictoires devant le préteur)"],
+    correct:1,
+    ok:"Phase in iure (devant le préteur) : procédure très formaliste, parties présentes, paroles et gestes rituels, nomination d'un juge privé par la litis attestatio. Phase apud iudicem (devant le juge) : le juge est un citoyen privé choisi parmi les notables, entend les arguments et rend sa décision le jour même.",
+    ko:"Les 2 phases : in iure (devant le préteur — formalisme, provocatio, litis attestatio) + apud iudicem (devant le juge privé choisi parmi les notables — décision le jour même)." },
+
+  { chap:"Chap. 1 — Rome républicaine", theme:"Procédure formulaire", diff:"m", multi:false,
+    q:"Qu'est-ce que la 'formule' dans la procédure formulaire et quel texte a aboli les actions de la loi ?",
+    opts:["Un acte écrit rédigé par l'accusé lui-même, reconnaissant les faits et demandant à bénéficier de la procédure formulaire ; supprimé par un décret de Sylla", "Un discours oral du demandeur exposant ses prétentions devant le préteur ; les actions de la loi sont supprimées par l'édit d'Auguste en -27", "Un contrat passé entre les parties avant le procès, fixant les termes du litige et la peine acceptée en cas de perte ; supprimé par les XII Tables", "Une instruction rédigée par le préteur, transmise au demandeur puis au juge, contenant désignation du juge, résumé des prétentions et condamnation éventuelle — les actions de la loi sont abolies par la loi Aebutia (-149/-126)"],
+    correct:3,
+    ok:"La formule = instruction rédigée par le préteur, transmise au demandeur puis au juge. Elle contient : désignation du juge, résumé des prétentions, condamnation éventuelle. Le juge est lié par ses termes. La loi Aebutia (-149/-126) a aboli les anciennes actions de la loi.",
+    ko:"La formule est rédigée par le préteur et lie le juge dans ses termes. C'est la loi Aebutia (-149/-126) qui abolit les anciennes actions de la loi et lance la procédure formulaire." },
+
+  { chap:"Chap. 1 — Rome républicaine", theme:"Droit prétorien", diff:"m", multi:false,
+    q:"Qu'est-ce que le droit prétorien et comment est-il publié ?",
+    opts:["Le droit élaboré par le Sénat romain, publié dans le Digeste de Justinien sous forme de constitutions impériales réunies en un corpus systématique", "Le droit civil rédigé par les Pontifes de Rome, gardiens des formules sacrées et de l'interprétation du droit dans la période républicaine", "Le droit criminel défini par les Comices centuriates pour les affaires jugées par les assemblées populaires romaines", "Le droit élaboré par le préteur en marge de la loi, consacré dans l'édit du préteur (texte publié au début de son mandat, en constante évolution)"],
+    correct:3,
+    ok:"Droit prétorien = droit élaboré par le préteur en marge de la loi. Consacré dans l'édit du préteur (texte à portée générale publié au début de son mandat). Chaque nouveau préteur reprend les règles de ses prédécesseurs et peut y ajouter de nouvelles. Texte en constante évolution.",
+    ko:"Droit prétorien = droit du préteur, en marge de la loi, consacré dans l'édit du préteur. Publication en début de mandat, évolution continue. À distinguer du droit du Sénat ou des Pontifes." },
+
+  { chap:"Chap. 1 — Rome républicaine", theme:"Justice criminelle républicaine", diff:"m", multi:false,
+    q:"Que sont les Quaestiones perpetuae et quand ont-elles été créées ?",
+    opts:["Des juridictions d'appel créées par César pour permettre aux sénateurs condamnés de contester les décisions rendues par les assemblées populaires", "Des chambres d'instruction permanentes présidées par le préteur, avec jury de 300 citoyens nobles — première loi en -149 pour les détournements de fonds", "Des tribunaux civils itinérants créés sous la République tardive pour juger les affaires des provinces en l'absence de magistrats permanents", "Des procédures d'enquête préliminaire créées par Auguste en -15 pour instruire les affaires avant leur renvoi devant le tribunal criminel compétent"],
+    correct:1,
+    ok:"Quaestiones perpetuae = chambre d'instruction permanente. Présidées par le préteur (compétence criminelle). Jury de 300 citoyens nobles. 1ère loi = -149 (détournements de fonds des magistrats). -103 : crimes de trahison. Sylla : meurtres, faux testaments. Fin République : 11 quaestiones.",
+    ko:"Quaestiones perpetuae : chambres permanentes, préteur, jury de 300 citoyens. Créées à partir de -149. Évolution : -103 (trahison), Sylla (meurtres), jusqu'à 11 à la fin de la République." },
+
+  { chap:"Chap. 1 — Rome républicaine", theme:"Procédure accusatoire", diff:"m", multi:false,
+    q:"Pourquoi l'accusation était-elle considérée comme un 'devoir civique' sous la République romaine ?",
+    opts:["Car seuls les citoyens nobles et les magistrats en exercice pouvaient accuser, ce qui en faisait un privilège social réservé à l'élite romaine", "Car l'accusation était rémunérée par l'État selon un tarif fixe, ce qui incitait les citoyens à dénoncer les infractions commises dans leur voisinage", "Car le préteur désignait obligatoirement un citoyen comme accusateur parmi les volontaires, rendant cette fonction contraignante et inévitable", "Car l'accusateur ne pouvait pas abandonner l'accusation sous peine d'être lui-même condamné, et il prêtait un serment de calomnie l'engageant totalement"],
+    correct:3,
+    ok:"L'accusateur (tout citoyen peut l'être) ne peut pas abandonner l'accusation sous peine d'être lui-même condamné. Il prête le serment de calomnie (jure de ne pas agir par vengeance). S'il viole ce serment → subit la même peine que l'accusé. La plaidoirie est limitée à 3H. Le jury vote à la majorité simple (151 voix).",
+    ko:"Devoir civique car l'accusateur ne peut pas abandonner (sinon condamné lui-même). Il prête un serment de calomnie. S'il le viole → même peine que l'accusé. C'est un engagement total et irréversible." },
+
+  { chap:"Chap. 2 — Rome impériale", theme:"Procédure extraordinaire", diff:"m", multi:false,
+    q:"En quoi consiste la procédure extraordinaire sous l'Empire romain ?",
+    opts:["Le retour aux anciennes actions de la loi pour les affaires les plus importantes, afin de garantir le respect du formalisme hérité de la République romaine", "Une procédure où le préteur n'intervient plus — le juge représente l'autorité impériale, dispose d'un pouvoir coercitif, mène des enquêtes, décide la sentence et veille à son exécution", "Une procédure réservée aux crimes politiques jugés par le Sénat en session plénière, sous la présidence de l'empereur ou de son représentant désigné", "Une procédure orale simplifiée pour les petites affaires civiles, permettant au préteur de trancher rapidement sans recourir au formalisme habituel"],
+    correct:1,
+    ok:"Procédure extraordinaire : le préteur n'intervient plus. Le juge représente l'autorité impériale, dispose d'un pouvoir coercitif, étudie librement l'affaire, mène des enquêtes, accorde des délais, décide de la sentence, veille à son exécution. Justice pleinement étatique, non publique (secrétarium), procédure bureaucratique écrite.",
+    ko:"Procédure extraordinaire : fin du préteur, juge agent de l'État avec pouvoir coercitif. Tout est écrit. Justice étatique et secrète (secrétarium)." },
+
+  { chap:"Chap. 2 — Rome impériale", theme:"Conseil impérial", diff:"m", multi:false,
+    q:"Quel est le rôle du Conseil impérial (2e siècle ap. J.-C.) dans la justice romaine ?",
+    opts:["Composé des plus grands jurisconsultes, il permet à l'empereur de juger par décret qui fait jurisprudence et impose l'unité de jugement dans toutes les juridictions impériales", "Il remplace le Sénat pour juger les crimes politiques et les affaires de lèse-majesté impliquant des sénateurs ou d'anciens magistrats", "Il supervise uniquement la justice administrative des provinces et contrôle les décisions rendues par les gouverneurs provinciaux", "Il est chargé de rédiger les édits du préteur et de codifier les règles de procédure applicables dans l'ensemble de l'Empire romain"],
+    correct:0,
+    ok:"Le Conseil impérial est composé des plus grands jurisconsultes. L'empereur peut le saisir. Il rend un décret qui fait jurisprudence et impose l'unité de jugement. Plus de juges privés : seuls des hauts fonctionnaires nommés et révocables exercent la justice. Juge le plus élevé = préfet de Rome.",
+    ko:"Conseil impérial : grands jurisconsultes, décrets faisant jurisprudence, unité de jugement. Fin des juges privés. Le préfet de Rome est le juge le plus élevé. Spécialisation et hiérarchisation de la justice." },
+
+  { chap:"Chap. 2 — Rome impériale", theme:"Torture et aveu", diff:"m", multi:false, alert:true,
+    q:"À partir de quand la torture devient-elle une procédure ordinaire dans la justice criminelle romaine, et dans quel but ?",
+    opts:["Sous la République, dès -200 av. J.-C., pour punir les esclaves ayant commis des infractions contre leurs maîtres ou contre l'ordre public romain", "Sous Auguste en -15, introduite pour les délits de droit commun afin d'accélérer les procédures et de désengorger les tribunaux criminels romains", "À partir du 3e siècle ap. J.-C., procédure ordinaire pour obtenir l'aveu (reine des preuves), systématique en matière de crime politique", "Depuis les XII Tables, prévue uniquement pour les crimes capitaux impliquant la peine de mort, avec garanties strictes encadrant son utilisation"],
+    correct:2,
+    ok:"À partir du 3e siècle → procédure ordinaire. Objectif : obtenir l'aveu = reine des preuves. Systématique en matière de crime politique. Progressivement étendue aux crimes de magie et d'adultère. Permet aussi de connaître les complices.",
+    ko:"Torture = procédure ordinaire à partir du 3e siècle ap. J.-C. But : l'aveu (reine des preuves). Systématique pour les crimes politiques, étendue ensuite à d'autres crimes." },
+
+  { chap:"Chap. 2 — Rome impériale", theme:"Crime de lèse-majesté", diff:"d", multi:false,
+    q:"Quelles sont les caractéristiques du crime de lèse-majesté (maiestas) sous l'Empire romain ?",
+    opts:["Crime contre l'autorité impériale, puni de mort + confiscation des biens + perte des droits civiques des descendants — jugé par le Sénat contrôlé par l'empereur", "Crime contre la propriété privée des sénateurs, jugé par les Comices centuriates avec un jury populaire de 300 citoyens", "Crime religieux jugé par les Pontifes, puni du bannissement avec confiscation des biens, touchant uniquement les citoyens romains", "Crime jugé par le préteur, puni d'exil temporaire, ne touchant que l'accusé et non ses descendants"],
+    correct:0,
+    ok:"Lèse-majesté (maiestas) = crime contre l'autorité impériale. Puni de mort + confiscation des biens + perte des droits civiques des descendants. Jugé par le Sénat (contrôlé par l'empereur, vote non secret). En dehors de Rome : préfets et gouverneurs.",
+    ko:"Lèse-majesté : crime contre l'autorité impériale. Peine : mort + confiscation + perte des droits civiques des descendants (portée au-delà de l'accusé). Jugé par le Sénat contrôlé par l'empereur." },
+
+  { chap:"Chap. 3 — Monarchie médiévale", theme:"Formule clé du 13e s.", diff:"f", multi:false,
+    q:"Quelle formule clé de la fin du 13e siècle résume la vision de la justice royale ?",
+    opts:["'Le droit est l'art du bon et du juste' — formule attribuée à Ulpien dans ses Institutes, reprise par les juristes médiévaux pour fonder la légitimité royale", "'La justice ne connaît pas de maître' — formule des parlementaires affirmant l'indépendance de la justice vis-à-vis du pouvoir royal", "'Toute justice émane du Roi' — le Roi est perçu comme débiteur de justice envers ses sujets, mission divine reçue au sacre", "'Le Roi est serviteur de la loi' — formule théologico-politique affirmant que le monarque est soumis aux règles qu'il promulgue"],
+    correct:2,
+    ok:"Formule clé de la fin du 13e s. : 'Toute justice émane du Roi'. Le Roi est perçu comme débiteur de justice (mission divine). Au sacre : promesse de rendre la justice + remise de la main de justice. Autre formule : 'Le Roi de France est empereur en son royaume.'",
+    ko:"La formule est 'Toute justice émane du Roi'. Le Roi a une mission divine de justice — au sacre, il promet de la rendre et reçoit la main de justice. 'Le droit est l'art du bon et du juste' est d'Ulpien." },
+
+  { chap:"Chap. 3 — Monarchie médiévale", theme:"Bailliages et Parlement", diff:"m", multi:false,
+    q:"Quelle est la différence entre les bailliages et le Parlement dans l'organisation judiciaire royale médiévale ?",
+    opts:["Les bailliages sont des juridictions d'appel recevant les pourvois contre les décisions des sénéchaussées / le Parlement juge uniquement en première instance les grandes affaires civiles", "Les bailliages (Nord) / sénéchaussées (Sud) sont les juridictions de droit commun de 1ère instance / le Parlement est la cour souveraine qui juge en appel de toutes les juridictions inférieures", "Les bailliages jugent exclusivement les crimes et les affaires pénales / le Parlement traite uniquement les affaires civiles et les conflits de propriété", "Les deux institutions sont équivalentes dans leur compétence mais situées dans des régions différentes du royaume"],
+    correct:1,
+    ok:"Bailliages (Nord) / sénéchaussées (Sud) : juridictions royales de droit commun, présidées par un bailli/sénéchal, créées sous Philippe Auguste (1190). Parlement : cour souveraine, juge en appel de toutes les juridictions inférieures, rend des arrêts en dernier ressort, siège à Paris (Palais de Justice).",
+    ko:"Bailliages/sénéchaussées = juridictions de DC de 1ère instance. Parlement = cour souveraine en appel. À ne pas confondre. Extension des Parlements provinciaux : 1444 Toulouse, 1462 Bordeaux, 1477 Dijon." },
+
+  { chap:"Chap. 3 — Monarchie médiévale", theme:"Procédure romano-canonique", diff:"m", multi:false,
+    q:"Qu'est-ce que la procédure romano-canonique adoptée au 13e siècle par les bailliages ?",
+    opts:["Une procédure savante et scientifique où le juge est maître de bout en bout : cite les parties, fixe les délais, instruit, examine les témoignages, prononce la sentence par écrit, susceptible d'appel", "Une procédure orale fondée sur le duel judiciaire et les ordalies, héritée du droit germanique et maintenue par l'Église dans ses tribunaux ecclésiastiques", "Une procédure simplifiée réservée aux petites affaires civiles de moins de 5 sous, permettant une résolution rapide sans formalisme excessif", "Une procédure spéciale réservée aux procès criminels graves jugés par les cours souveraines, incompatible avec la procédure civile ordinaire"],
+    correct:0,
+    ok:"Procédure romano-canonique = procédure savante (inspirée de l'Église, réforme grégorienne). Le juge est maître de bout en bout : cite parties/témoins, fixe délais, instruit, examine témoignages, prononce la sentence par écrit, susceptible d'appel jusqu'au Pape. Adoptée par les bailliages et sénéchaussées au 13e s.",
+    ko:"Procédure romano-canonique : le juge contrôle tout, procédure écrite, sentence écrite susceptible d'appel. Inspirée de l'Église (réforme grégorienne) et du Bas-Empire romain." },
+
+  { chap:"Chap. 3 — Monarchie médiévale", theme:"St Louis et la preuve", diff:"m", multi:false,
+    q:"Quelle réforme St Louis a-t-il opérée en matière de preuves en 1254 et 1258 ?",
+    opts:["Il a rendu le témoignage oral irrecevable au profit de l'écrit authentique, imposant la rédaction notariée pour tous les actes juridiques importants", "Il a introduit la torture judiciaire comme seul mode de preuve valable dans les affaires criminelles graves", "Il a interdit le duel judiciaire, abandonnant les preuves irrationnelles au profit du témoignage puis de l'écrit", "Il a créé les notaires royaux chargés d'authentifier tous les actes juridiques et de centraliser les preuves écrites"],
+    correct:2,
+    ok:"St Louis interdit le duel judiciaire en 1254 et 1258. C'est un abandon des preuves irrationnelles. Le témoignage prévaut d'abord (minimum 2 témoins de visu et auditoque), puis l'écrit prévaut au 14e s. Les notaires authentifient les actes. L'aveu devient la reine des preuves → torture dès le 14e s.",
+    ko:"St Louis interdit le duel judiciaire (1254, 1258) = abandon des preuves irrationnelles. Puis : témoignage → écrit → aveu (reine des preuves) → torture pour obtenir l'aveu (14e s.)." },
+
+  { chap:"Chap. 3 — Monarchie médiévale", theme:"Ordonnance avocat 1274", diff:"d", multi:false,
+    q:"Quelles sont les 6 obligations imposées par l'ordonnance royale de 1274 pour exercer la profession d'avocat ?",
+    opts:["Licence de droit + inscription au tableau + serment professionnel + aide aux pauvres + limitation des honoraires + interdiction du pacte de quota litis", "Doctorat en droit + agrément du Roi + serment devant le Parlement + honoraires fixes + résidence dans le ressort du tribunal + probité morale", "Expérience de 5 ans + serment + licence de droit + caution + enregistrement au greffe + moralité vérifiée par le bailli", "Maîtrise de droit + serment professionnel + formation de 3 ans minimum + inscription au barreau + résidence dans le ressort + constitution d'une caution financière"],
+    correct:0,
+    ok:"Ordonnance de 1274 : 6 obligations pour être avocat : licence de droit + inscription au tableau + serment professionnel + aide aux pauvres + limitation des honoraires + interdiction du pacte de quota litis (rémunération en pourcentage des sommes obtenues).",
+    ko:"6 obligations (1274) : licence de droit, inscription au tableau, serment, aide aux pauvres, limitation des honoraires, interdiction du pacte de quota litis. Ce sont les bases de la déontologie des avocats." },
+
+  { chap:"Chap. 3 — Monarchie médiévale", theme:"Cas royaux", diff:"m", multi:false,
+    q:"Que sont les 'cas royaux' permettant à la justice royale de supplanter les autres ?",
+    opts:["Les affaires de succession royale traitées directement par le Parlement de Paris en tant que cour souveraine compétente pour les questions dynastiques", "Les dossiers envoyés directement au Roi par lettres de cachet signées par le ministre de la justice", "Les affaires religieuses transférées du juge ecclésiastique au juge royal par l'appel comme d'abus devant le Parlement", "Les causes civiles et criminelles intéressant directement la royauté, réservées à la compétence exclusive des juges royaux"],
+    correct:3,
+    ok:"Cas royaux = causes civiles et criminelles intéressant la royauté → compétence exclusive des juges royaux. En matière criminelle : lèse-majesté, atteinte à un officier royal, violation d'une ordonnance, atteinte à la paix. En matière civile : toute infraction accompagnée de violence.",
+    ko:"Cas royaux : compétence exclusive des juges royaux. Criminal : lèse-majesté, atteinte à officier royal, violation d'ordonnance, atteinte à la paix. Civil : toute infraction avec violence. Mécanisme clé d'absorption des autres justices." },
+
+  { chap:"Chap. 3 — Monarchie médiévale", theme:"Justices ecclésiastiques", diff:"m", multi:false,
+    q:"Qu'est-ce que l''appel comme d'abus' utilisé pour limiter les justices ecclésiastiques ?",
+    opts:["Un recours devant le Parlement contre les décisions abusives des autorités ecclésiastiques — le Parlement peut casser toute décision d'un évêque", "Un recours du clerc accusé devant la curie papale pour contester la compétence du juge royal à l'égard des personnes ecclésiastiques", "Un mécanisme permettant au Pape de casser les décisions des tribunaux royaux qui empiétaient sur les prérogatives des juridictions ecclésiastiques", "Un appel du justiciable contre une décision injuste d'un tribunal royal, permettant de saisir le Parlement pour violation des règles de procédure"],
+    correct:0,
+    ok:"Appel comme d'abus (14e s.) : recours contre les décisions abusives des autorités ecclésiastiques devant le Parlement. Le Parlement peut casser toute décision d'un évêque. Si acte administratif → retrait. Si décision juridictionnelle → rejuger. Amende + saisie des biens en cas d'inexécution.",
+    ko:"Appel comme d'abus : recours devant le Parlement contre les décisions ecclésiastiques abusives. Le Parlement peut casser les décisions des évêques. Instrument clé d'affaiblissement de la justice d'Église." },
+
+  { chap:"Chap. 4 — Ancien Régime", theme:"Justice retenue/déléguée", diff:"m", multi:false,
+    q:"Quelle est la différence entre justice retenue et justice déléguée sous l'Ancien Régime ?",
+    opts:["La justice retenue est réservée aux affaires criminelles graves / la justice déléguée s'applique aux affaires civiles et commerciales ordinaires", "La justice retenue est exercée par les bailliages et sénéchaussées / la justice déléguée est exercée par le Parlement de Paris en tant que cour souveraine", "La justice déléguée = justice des cours ordinaires rendue par les officiers royaux / la justice retenue = justice rendue directement par le Roi, libre de reprendre une affaire à tout moment", "Elles sont synonymes sous Louis XIV — la centralisation royale a supprimé toute distinction pratique entre les deux formes de justice"],
+    correct:2,
+    ok:"Justice déléguée : justice des cours ordinaires, rendue par les officiers royaux. Mission complète. Justice retenue : rendue directement par le Roi — il confie l'exercice aux magistrats mais reste libre de reprendre une affaire à tout moment. Mécanismes : placets, évocations, chambres ardentes, lettres de cachet…",
+    ko:"Justice déléguée = cours ordinaires. Justice retenue = le Roi reprend la main directement. Mécanismes de la justice retenue : placets, évocations, chambres ardentes, lettres de cachet, grâce royale." },
+
+  { chap:"Chap. 4 — Ancien Régime", theme:"Lettres de cachet", diff:"m", multi:false,
+    q:"Que sont les lettres de cachet et qui pouvait en demander l'usage ?",
+    opts:["Des lettres portant le cachet du Roi, fermées et secrètes, ordonnant souvent l'emprisonnement — fréquemment demandées par les pères de famille pour éviter la publicité d'un procès", "Des lettres de grâce envoyées par le Roi aux condamnés pour commuer leur peine ou accorder une remise de peine après révision du dossier", "Des ordres du Parlement de Paris suspendant une procédure judiciaire en cours et renvoyant l'affaire devant une commission royale", "Des lettres du procureur autorisant une arrestation préventive en attendant l'ouverture formelle d'une procédure judiciaire"],
+    correct:0,
+    ok:"Lettres de cachet : portent le cachet du Roi, fermées et secrètes (seul l'intendant peut les lire). Ordonnent souvent l'emprisonnement. Fréquemment demandées par les pères de famille pour éviter la publicité d'un procès. Exemple : affaire Mirabeau.",
+    ko:"Lettres de cachet : cachet du Roi, secrètes, souvent pour emprisonner sans procès public. Demandées par des pères de famille pour gérer des affaires familiales discrètement (ex : affaire Mirabeau)." },
+
+  { chap:"Chap. 4 — Ancien Régime", theme:"Vénalité des offices", diff:"m", multi:false, alert:true,
+    q:"⚠ Quel est le paradoxe de la vénalité des offices judiciaires sous l'Ancien Régime ?",
+    opts:["Elle permet au Roi de nommer des juges compétents et fidèles en sélectionnant les meilleurs juristes parmi les candidats fortunés", "Elle est la source de l'indépendance totale de la justice vis-à-vis du pouvoir royal, créant un conflit permanent avec le Roi", "Elle empêche la transmission héréditaire des offices en imposant à chaque successeur de payer le prix de sa charge sans bénéficier de la Paulette", "Elle garantit la gratuité de la justice pour les justiciables car les juges ayant payé leur charge n'ont plus besoin de percevoir d'honoraires"],
+    correct:1,
+    ok:"Paradoxe fondamental : la vénalité des offices = source de l'indépendance totale de la justice vis-à-vis du pouvoir royal → conflit permanent. Les juges achètent leur charge (voire la transmettent héréditairement grâce à la Paulette de 1604) → deviennent irrévocables en pratique.",
+    ko:"La vénalité = indépendance totale et conflictuelle. Les juges ayant acheté leur charge sont inamovibles en pratique. La Paulette (1604) : 1/60 de la valeur de l'office par an → transmissibilité héréditaire." },
+
+  { chap:"Chap. 4 — Ancien Régime", theme:"Procédure civile d'AR", diff:"d", multi:false,
+    q:"L'adage 'les 3 sacs du plaideur' résume les défauts de la procédure civile d'Ancien Régime. Quels sont ces 3 sacs ?",
+    opts:["Sac de preuves (difficiles à réunir) + sac de témoins (impossibles à faire comparaître) + sac d'argent (pour corrompre les juges)", "Sac de papier (paperasse) + sac d'argent (très cher) + sac de patience (très long)", "Sac de lois (incompréhensibles) + sac de jugements (contradictoires) + sac d'appels (interminables)", "Sac de plaintes (inutiles) + sac de délibérations (secrètes) + sac de sentences (inéquitables)"],
+    correct:1,
+    ok:"Adage de l'époque : '3 sacs pour le plaideur → sac de papier (paperasse) + sac d'argent (très cher) + sac de patience (très long)'. Les cahiers de doléances parlent de 'lourdeur meurtrière des procédures'. Les procès pouvaient durer 60 ans voire un siècle.",
+    ko:"3 sacs du plaideur : papier (paperasse) + argent (très cher) + patience (très long). Les procès duraient parfois 60 ans ou plus. Les juges (rémunérés par les épices) avaient intérêt à multiplier les appels." },
+
+  { chap:"Chap. 4 — Ancien Régime", theme:"Théorie de la représentation", diff:"d", multi:false, alert:true,
+    q:"⚠ Qu'est-ce que la 'théorie de la représentation' développée par les magistrats pour déposséder le Roi de sa justice ?",
+    opts:["Une théorie selon laquelle le Roi délègue ses pouvoirs aux magistrats mais les conserve, pouvant les reprendre à tout moment sans justification", "Les magistrats représentent le Roi — transfert/abandon du pouvoir, les juges incarnent 'l'image présente d'une royauté absente' → le Roi est 'mort' → le Parlement le représente → ne peut plus intervenir", "Une théorie permettant aux avocats de représenter les plaideurs absents lors des audiences et de plaider en leur nom sans procuration spéciale", "Une théorie justifiant l'appel systématique des décisions du Roi par les cours souveraines estimant contraires aux lois fondamentales du royaume"],
+    correct:1,
+    ok:"Théorie clé. Représentation ≠ délégation. Les magistrats représentent le Roi = transfert/abandon du pouvoir. Les juges incarnent 'l'image présente d'une royauté absente'. Le Roi est donc 'mort' → le Parlement le représente → le Roi ne peut plus intervenir dans le cours normal de la justice. Les juges peuvent se placer au-dessus des lois.",
+    ko:"Représentation (≠ délégation) = transfert du pouvoir. Roi 'mort' → Parlement le représente → le Roi ne peut plus intervenir. Les juges peuvent se placer au-dessus des lois si conforme à l'idéal de justice." },
+
+  { chap:"Chap. 4 — Ancien Régime", theme:"Fronde", diff:"m", multi:false,
+    q:"Que proclame la Fronde des conseillers en juin 1648 ?",
+    opts:["La suppression de toutes les taxes sans le consentement préalable des Parlements, imposant au Roi de soumettre tout prélèvement à leur vérification", "La dissolution du Parlement de Paris et l'élection de nouveaux juges par les États généraux pour renouveler entièrement le corps judiciaire", "Une charte : art. 1er interdit toute justice retenue (droit de grâce, commissions, cassation) / art. 3 : aucune imposition sans vérification par les cours souveraines", "L'égalité des magistrats et des nobles d'épée, revendiquant pour les parlementaires les mêmes prérogatives militaires et fiscales que la noblesse"],
+    correct:2,
+    ok:"Fronde (juin 1648) : soulèvement des conseillers contre le Parlement de Paris. Proclamation d'une charte : art. 1er interdit toute justice retenue (droit de grâce, commissions des intendants, cassation) ; art. 3 : aucune imposition sans vérification par les cours souveraines. Réprimée en 1651 par la régente Anne d'Autriche et Mazarin.",
+    ko:"La Fronde (1648) proclame une charte : art. 1er → fin de la justice retenue ; art. 3 → aucun impôt sans vérification par les cours souveraines. Réprimée en 1651." },
+
+  { chap:"Chap. 5 — Réformes Louis XIV", theme:"Ordonnance civile 1667", diff:"m", multi:false,
+    q:"Combien de titres et d'articles comporte l'ordonnance civile de 1667, et pourquoi est-elle surnommée 'le 1er Code civil' ?",
+    opts:["35 titres et 551 articles, rédigée en français limpide — surnommée '1er Code civil' car elle unifie la procédure civile pour tous les juges civils du royaume", "20 titres et 300 articles — surnommée '1er Code civil' car elle supprime les coutumes régionales et impose un droit commun à toutes les provinces", "50 titres et 1000 articles — surnommée '1er Code civil' car elle codifie toutes les branches du droit dans un seul texte promulgué sous l'autorité royale", "10 titres et 200 articles — surnommée '1er Code civil' car elle codifie pour la première fois le droit de la famille dans un texte unique applicable à tout le royaume"],
+    correct:0,
+    ok:"35 titres, 551 articles, rédigée en français limpide. Surnommée '1er Code civil' car elle unifie la procédure civile pour tous les juges civils du royaume. CPC de 1806 calqué dessus. Rédigée par Pussort + Lamoignon. Publiée sans lit de justice (pression sur les Parlements).",
+    ko:"Ordonnance civile 1667 : 35 titres, 551 articles, en français. '1er Code civil' car unification de la procédure civile. CPC 1806 calqué dessus. Rédacteurs : Pussort + Lamoignon." },
+
+  { chap:"Chap. 5 — Réformes Louis XIV", theme:"Ordonnance criminelle 1670", diff:"m", multi:false, alert:true,
+    q:"⚠ Sur la question des droits à la défense lors de la rédaction de l'ordonnance criminelle de 1670, qui s'est opposé à qui et qui a gagné ?",
+    opts:["Le Parlement (pour les droits de la défense) s'oppose au Roi (contre) — compromis : l'avocat est admis seulement en appel devant le Parlement", "Colbert (pour l'avocat) s'oppose à Lamoignon (contre les droits de la défense) — Colbert gagne, l'avocat est admis pendant toute la procédure criminelle", "Lamoignon s'oppose à Louis XIV qui veut supprimer l'avocat — Louis XIV gagne, les avocats sont expulsés des prétoires pour les affaires criminelles graves", "Pussort et Colbert (contre l'avocat pour les grands criminels) s'opposent à Lamoignon (pour) — Pussort gagne, l'accusé est privé d'avocat pendant l'instruction"],
+    correct:3,
+    ok:"Pussort et Colbert sont contre l'avocat pour les grands criminels. Lamoignon est pour. Pussort gagne. Résultat : l'accusé ne peut pas bénéficier d'un avocat pendant l'instruction. Les factums (écrits publics des avocats) sont diffusés à l'extérieur mais sans valeur dans la procédure.",
+    ko:"Pussort (+ Colbert) contre l'avocat pour les grands criminels vs Lamoignon pour. Pussort gagne. L'accusé est privé d'avocat pendant l'instruction. Les avocats peuvent écrire des factums (pamphlets publics) sans valeur procédurale." },
+
+  { chap:"Chap. 5 — Réformes Louis XIV", theme:"Torture judiciaire 1670", diff:"d", multi:false, alert:true,
+    q:"⚠ Sous l'ordonnance criminelle de 1670, quelles sont les 2 conditions cumulatives pour décider la torture, et que se passe-t-il s'il n'y a pas d'aveu ?",
+    opts:["Crime grave + récidive prouvée — sans aveu, la peine est réduite de moitié, l'individu pouvant être condamné à une peine inférieure à celle prévue par la loi", "Présomption considérable de culpabilité + crime capital — sans aveu, l'individu est relaxé en théorie, mais à partir du 16e s. mauvaise habitude de condamner sur une demi-preuve", "Aveu partiel de l'accusé + complicité prouvée d'un tiers — sans aveu complet, l'individu est expulsé du territoire mais sans peine capitale", "Accusation formelle + témoignage + crime capital — sans aveu, l'individu est maintenu en prison préventive jusqu'à ce qu'une preuve complémentaire soit apportée"],
+    correct:1,
+    ok:"2 conditions cumulatives : présomption considérable de culpabilité + crime capital (peine de mort). 2 types : question préparatoire (obtenir l'aveu) + question préalable (au moment de l'exécution, démasquer les complices). Sans aveu → l'individu est relaxé. Mais à partir du 16e s. : mauvaise habitude de condamner sur une demi-preuve.",
+    ko:"Torture : présomption considérable + crime capital. Sans aveu → relaxé en théorie. Mais déviance à partir du 16e s. : condamnation sur demi-preuve. Louis XVI supprime la question préparatoire (1780) et préalable (1788)." },
+
+  { chap:"Chap. 5 — Réformes Louis XIV", theme:"Réforme Maupeou", diff:"m", multi:false,
+    q:"Quelles sont les 3 décisions de la réforme Maupeou (février 1771) ?",
+    opts:["Suppression des Parlements et création de cours d'appel dans les principales villes + nomination royale des juges + maintien des épices comme mode de rémunération", "Fusion des bailliages en tribunaux de grande instance + création d'un tribunal unique pour tout le royaume + suppression de la torture judiciaire", "Rétablissement du jury populaire dans les affaires criminelles + suppression des épices + instauration d'un appel obligatoire en matière criminelle", "Division du ressort du Parlement de Paris en 6 circonscriptions + nomination royale des magistrats + suppression de la vénalité des offices + traitement versé par l'État + gratuité de la justice"],
+    correct:3,
+    ok:"3 décisions Maupeou (1771) : (1) division du ressort du Parlement de Paris en 6 circonscriptions avec Cours supérieures de Justice (sans droit de remontrance) / (2) nomination royale des magistrats + suppression de la vénalité des offices / (3) traitement versé par l'État + gratuité de la justice.",
+    ko:"Réforme Maupeou : 6 circonscriptions (sans remontrances) + nomination royale des magistrats + suppression de la vénalité + gratuité. Mort de Louis XV → Louis XVI succède → rétablit les Parlements." },
+
+  { chap:"Chap. 6 — Révolution française", theme:"DDHC et justice", diff:"m", multi:false,
+    q:"Quels articles de la DDHC (1789) concernent directement la justice ?",
+    opts:["Art. 1 (égalité devant la loi) + art. 6 (loi expression de la volonté générale) + art. 17 (droit à la propriété)", "Art. 2 (droits naturels) + art. 11 (liberté d'expression) + art. 14 (consentement à l'impôt)", "Art. 9 (présomption d'innocence) + art. 16 (séparation des pouvoirs — le Roi n'est que chef du pouvoir exécutif)", "Art. 4 (liberté) + art. 5 (loi) + art. 7 (sûreté)"],
+    correct:2,
+    ok:"Art. 9 : présomption d'innocence. Art. 16 : toute société sans séparation des pouvoirs n'a pas de Constitution → le Roi n'est que chef du pouvoir exécutif. La justice ne sera plus rendue au nom du Roi mais au nom du peuple. Plus de justice retenue.",
+    ko:"DDHC et justice : art. 9 (présomption d'innocence) + art. 16 (séparation des pouvoirs, Roi = seul pouvoir exécutif). Justice rendue au nom du peuple, fin de la justice retenue." },
+
+  { chap:"Chap. 6 — Révolution française", theme:"Recrutement des juges", diff:"m", multi:false, alert:true,
+    q:"⚠ Comment les juges sont-ils recrutés pendant la Révolution, et qu'est-ce qui change sous Bonaparte ?",
+    opts:["Nommés par le Roi pendant la Révolution avec maintien de la vénalité des offices / élus au suffrage universel après Bonaparte pour démocratiser la justice", "Désignés par le Parlement pendant la Révolution selon leur rang et leur ancienneté / élus localement sous Bonaparte par les assemblées de département", "Élus par les citoyens pendant la Révolution (déprofessionnalisation) / nommés par le pouvoir exécutif sous Bonaparte (Constitution de l'An 8)", "Hérédité maintenue pendant la Révolution par continuité avec l'Ancien Régime / supprimée sous Bonaparte au profit d'un recrutement fondé sur le mérite"],
+    correct:2,
+    ok:"Révolution : élection de tous les juges à tous les niveaux (2, 4 ou 6 ans selon la juridiction). Déprofessionnalisation. Mais ça échoue : 1793, le pouvoir politique truque les élections et nomme directement. Constitution de l'An 8 (Bonaparte) : les juges sont nommés par le pouvoir exécutif → mainmise.",
+    ko:"Révolution = élection de tous les juges (principe démocratique). Échec rapide : 1793 le pouvoir truque les élections. Bonaparte (An 8) : nomination par l'exécutif. Le système électif ne convient pas à une France en révolution." },
+
+  { chap:"Chap. 6 — Révolution française", theme:"Justice de paix", diff:"m", multi:false, alert:true,
+    q:"⚠ Pourquoi la justice de paix est-elle une institution essentielle de la Révolution et quand est-elle supprimée ?",
+    opts:["Car elle juge tous les crimes au nom du peuple avec jury populaire / supprimée en 1804 lors de la rédaction du Code civil par Napoléon Bonaparte", "Car elle remplace les bailliages pour toutes les affaires civiles et pénales de première instance / supprimée en 1870 avec la chute du Second Empire", "Car elle incarne 'l'homme de bien' avec 2 missions (conciliation obligatoire + petites affaires), juge élu au scrutin direct / supprimée en 1958 (remplacée par les tribunaux d'instance)", "Car elle est la première juridiction à pratiquer l'appel systématique devant le tribunal de district / supprimée en 1832 lors de la réorganisation judiciaire"],
+    correct:2,
+    ok:"Justice de paix : 1 par canton (6000 cantons). Juge élu au scrutin direct pour 2 ans. Seule condition : certificat de civisme. L'incarnation de 'l'homme de bien' (dévouement, responsabilité, bon sens). 2 missions : conciliation obligatoire + jugement des petites affaires. Supprimée en 1958 (remplacée par tribunaux d'instance).",
+    ko:"Justice de paix = institution essentielle de la Révolution. Juge élu, conciliation obligatoire + petites affaires. Supprimée en 1958 (tribunaux d'instance). À retenir absolument." },
+
+  { chap:"Chap. 6 — Révolution française", theme:"Tribunal de cassation", diff:"m", multi:false,
+    q:"Quelle est la mission première du Tribunal de cassation créé par la Révolution et comment évolue-t-il ?",
+    opts:["Contrôler la constitutionnalité des lois votées par l'Assemblée nationale constituante et par la Convention nationale", "Juger les crimes politiques les plus graves commis pendant la Révolution, notamment les délits contre la sûreté de l'État et les conspirations contre la Convention", "Remplacer les Parlements provinciaux pour recevoir les appels des décisions rendues par les tribunaux de district", "Uniformiser l'application du droit (légicentrisme) — sentinelle de la loi / en 1837 : la Cass. se libère de la tutelle législative, la décision des chambres réunies s'impose à la 3e décision de renvoi"],
+    correct:3,
+    ok:"Tribunal de cassation : uniformiser l'application du droit (légicentrisme). Sentinelle de la loi. La loi = volonté du peuple, source unique du droit. Le juge ne peut plus juger en équité ni interpréter la loi. En 1837 : la Cass. se libère de la tutelle législative → décision des chambres réunies s'impose → Assemblée plénière → JP s'imposant à toutes les CA.",
+    ko:"Tribunal de cassation : uniformiser le droit (légicentrisme). 1837 : la Cass. se libère, la décision des chambres réunies s'impose à la 3e décision de renvoi (Assemblée plénière). Développement d'une JP s'imposant à toutes les CA." },
+
+  { chap:"Chap. 6 — Révolution française", theme:"Code pénal 1791", diff:"m", multi:false,
+    q:"Quels sont les 3 éléments caractéristiques du Code pénal de septembre 1791 ?",
+    opts:["Aggravation des peines pour les crimes les plus graves + retour des châtiments corporels pour les récidivistes + maintien du rôle de l'Église dans la justice pénale", "Suppression définitive de la peine de mort + introduction du jury populaire dans tous les procès + élection des procureurs au suffrage direct", "Égalité des peines pour tous les citoyens + gratuité de la justice + suppression de toute forme d'emprisonnement au profit des peines alternatives", "Laïcisation des peines (abandon des crimes religieux) + fixité des peines (légalité des délits et peines) + nouvelles peines privatives de liberté (maintien peine de mort, abandon des mutilations)"],
+    correct:3,
+    ok:"Code pénal 1791 : (1) laïcisation radicale (abandon blasphème, sorcellerie, impiété, magie — art. 10 DDHC). (2) Fixité des peines (chaque délit = peine précise, légalité des délits et peines, juge simple exécutant). (3) Durée et dureté : abandon des mutilations, maintien de la peine de mort (guillotine), nouvelles peines privatives de liberté (fers, emprisonnement max 24 ans, gêne, maison de force, déportation, pilori).",
+    ko:"Code pénal 1791 : laïcisation (abandon crimes religieux) + fixité des peines (légalité) + nouvelles peines privatives de liberté (maintien peine de mort + abandon mutilations)." },
+
+  { chap:"Chap. 6 — Révolution française", theme:"Droit de grâce", diff:"m", multi:false, alert:true,
+    q:"⚠ Que fait la Révolution avec le droit de grâce et pourquoi ?",
+    opts:["Elle l'étend à tous les condamnés pour humaniser la justice et permettre la réintégration sociale des criminels", "Elle le supprime car il contrevient à la fixité des peines et à l'égalité devant la loi", "Elle le confie au Tribunal de cassation à la place du Roi, afin de garantir une application uniforme sur tout le territoire", "Elle le maintient mais l'encadre par une loi spéciale soumettant chaque grâce à l'accord préalable de l'Assemblée nationale"],
+    correct:1,
+    ok:"Le droit de grâce est supprimé par la Révolution car il contrevient à 2 principes révolutionnaires : la fixité des peines (légalité des peines) et l'égalité devant la loi. Rappel : les peines sont allégées pour femmes et mineurs.",
+    ko:"Droit de grâce supprimé : incompatible avec la fixité des peines et l'égalité devant la loi. Deux principes révolutionnaires fondamentaux." },
+
+  { chap:"Chap. 7 — Terreur judiciaire", theme:"Tribunal révolutionnaire", diff:"m", multi:false,
+    q:"Quand le Tribunal révolutionnaire est-il créé et qui en fait la demande ?",
+    opts:["Le 5 septembre 1793, sur demande de Robespierre qui souhaitait disposer d'un instrument pour éliminer les ennemis politiques de la Convention", "Le 27 juillet 1793, sur demande du Comité de salut public présidé par Robespierre", "Le 14 juillet 1793, sur demande de la Convention nationale réunie en session extraordinaire", "Le 10 mars 1793, sur demande de Danton (9 mars 1793)"],
+    correct:3,
+    ok:"Créé le 10 mars 1793, sur demande de Danton (9 mars 1793). Citation de Danton : 'Faisons ce que n'a pas fait l'Assemblée législative, soyons terribles pour dispenser le peuple de l'être...'",
+    ko:"Tribunal révolutionnaire : créé le 10 mars 1793, demandé par Danton le 9 mars 1793. Ne pas confondre avec Robespierre (qui le contrôle ensuite mais n'en demande pas la création)." },
+
+  { chap:"Chap. 7 — Terreur judiciaire", theme:"Loi du 22 prairial", diff:"d", multi:false, alert:true,
+    q:"⚠ Que prévoit la loi du 10 juin 1794 (loi du 22 prairial) ?",
+    opts:["Elle rétablit les droits de la défense suspendus depuis le début de la Terreur et supprime le Tribunal révolutionnaire, jugé contraire aux principes de 1789", "Elle retire tous les droits de l'accusé (témoins, interrogatoire, défenseur) — sans preuve physique, les preuves de moralité suffisent — seule peine possible : la mort", "Elle crée des commissions populaires révolutionnaires dans les 83 départements pour décentraliser la Terreur judiciaire", "Elle supprime les jurés du Tribunal révolutionnaire et confie le jugement aux seuls juges professionnels nommés par le Comité de salut public"],
+    correct:1,
+    ok:"Loi du 22 prairial : retire tous les droits de l'accusé (audition des témoins, témoignages, interrogatoire avant audience, défenseur). Si pas de preuve physique → preuves de moralité suffisent. Seule peine possible : la mort. Votée en pleine Grande Terreur (10 juin → 27 juillet 1794).",
+    ko:"Loi du 22 prairial = anéantissement de tous les droits de la défense. Pas de preuves physiques → preuves de moralité suffisent. Une seule peine : la mort. Paroxysme de la Terreur judiciaire." },
+
+  { chap:"Chap. 7 — Terreur judiciaire", theme:"Loi des suspects", diff:"m", multi:false,
+    q:"La loi des suspects (17 septembre 1793) définit qui comme suspect ?",
+    opts:["Partisans de la tyrannie ou du fédéralisme / sans justification de moyens d'existence / sans certificat de civisme / fonctionnaires suspendus / nobles et émigrés non-engagés", "Uniquement les nobles et les prêtres réfractaires ayant refusé de prêter serment à la Constitution civile du clergé", "Les étrangers présents sur le territoire français depuis le début de la Révolution en 1789 sans justification de leur présence", "Les magistrats et officiers ministériels ayant refusé de prêter serment à la Constitution de 1791"],
+    correct:0,
+    ok:"Loi des suspects (17 sept. 1793) : définition extensive. Suspects = partisans de la tyrannie ou du fédéralisme / sans justification de moyens d'existence / sans certificat de civisme / fonctionnaires suspendus / nobles et émigrés n'ayant pas manifesté leur attachement à la Révolution / émigrés rentrés entre juillet 1789 et avril 1792. → Arrestation immédiate.",
+    ko:"Définition extensive des suspects : royalistes, fédéralistes, sans moyens d'existence, sans certificat de civisme, fonctionnaires suspendus, nobles non-engagés, émigrés rentrés entre 1789 et 1792. Arrestation immédiate." },
+
+  { chap:"Chap. 7 — Terreur judiciaire", theme:"Bilan de la Terreur", diff:"m", multi:false,
+    q:"Quel est le bilan chiffré approximatif de la Terreur judiciaire (1792-1794) ?",
+    opts:["10 000 personnes emprisonnées, 500 condamnations à mort, essentiellement parmi les prêtres réfractaires", "500 000 personnes emprisonnées, environ 17 000 condamnations à mort, 200 000 victimes des colonnes infernales", "50 000 personnes emprisonnées, 3 000 exécutées, principalement dans les villes où la résistance aux armées révolutionnaires était la plus forte", "100 000 personnes emprisonnées, 5 000 exécutées, avec une forte concentration dans les départements de l'Ouest en révolte"],
+    correct:1,
+    ok:"Bilan : 500 000 personnes emprisonnées (1792-1794). ~17 000 condamnations à mort. 200 000 victimes des colonnes infernales. Surtout nobles, prêtres, aristocrates. 6 départements sur 80 sans aucune condamnation. Plus de condamnations dans les villes. La Terreur a creusé le fossé entre les Français. Chute de Robespierre le 27 juillet 1794 (Thermidor).",
+    ko:"Terreur : 500 000 emprisonnés, ~17 000 condamnations à mort, 200 000 victimes des colonnes infernales. Chute de Robespierre le 27 juillet 1794 (9 Thermidor)." },
+
+  { chap:"Chap. 7 — Terreur judiciaire", theme:"Crime d'émigration", diff:"d", multi:false,
+    q:"Que prévoit la loi du 28 mars 1793 sur le crime d'émigration ?",
+    opts:["Tout Français ayant quitté le territoire depuis le 1er juillet 1789 est banni et ses biens sont confisqués — s'il rentre, il est condamné à mort", "L'emprisonnement de 5 ans pour tout Français parti depuis 1792, avec possibilité de rentrée sur demande gracieuse accordée par le Comité de salut public", "Le bannissement définitif sans confiscation de biens pour les émigrés partis depuis le début de la Révolution en juillet 1789", "La déchéance de la nationalité française et l'exil forcé de tous les membres des familles d'émigrés restés sur le territoire national"],
+    correct:0,
+    ok:"Loi 28 mars 1793 : est émigré tout Français ayant quitté le territoire depuis le 1er juillet 1789. Bannissement + confiscation des biens. Listes dressées dans chaque commune. S'il rentre → condamné à mort.",
+    ko:"Crime d'émigration : quitter la France depuis le 1er juillet 1789 = bannissement + confiscation des biens. Retour = peine de mort. Listes dressées commune par commune." }
+];
+
+const CHAPTER_ORDER = [
+  "Introduction",
+  "Chap. 1 — Rome républicaine",
+  "Chap. 2 — Rome impériale",
+  "Chap. 3 — Monarchie médiévale",
+  "Chap. 4 — Ancien Régime",
+  "Chap. 5 — Réformes Louis XIV",
+  "Chap. 6 — Révolution française",
+  "Chap. 7 — Terreur judiciaire"
+];
+const N = 30;
+let sessionQ = [], state = [], currentFilter = 'all';
+
+function shuffle(a) {
+  const b=[...a];
+  for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}
+  return b;
+}
+function pickSession() {
+  const byChap={};
+  CHAPTER_ORDER.forEach(ch=>{byChap[ch]=[];});
+  POOL.forEach(q=>{if(byChap[q.chap])byChap[q.chap].push(q);});
+  let picked=[];
+  CHAPTER_ORDER.forEach(ch=>{
+    const pool=shuffle(byChap[ch]||[]);
+    const quota=Math.round((pool.length/POOL.length)*N);
+    picked=picked.concat(pool.slice(0,quota));
+  });
+  const remaining=shuffle(POOL.filter(q=>!picked.includes(q)));
+  while(picked.length<N&&remaining.length>0)picked.push(remaining.shift());
+  picked.sort((a,b)=>CHAPTER_ORDER.indexOf(a.chap)-CHAPTER_ORDER.indexOf(b.chap));
+  return picked;
+}
+document.addEventListener('DOMContentLoaded', newSession);
+function newSession(){
+  sessionQ=pickSession();
+  state=sessionQ.map(()=>({answered:false,selected:[],isCorrect:false}));
+  currentFilter='all';
+  document.getElementById('recap').style.display='none';
+  document.getElementById('sessbar').innerHTML=
+    `<span>Session en cours · <strong>${sessionQ.length} questions</strong> tirées sur ${POOL.length} disponibles</span>
+     <button class="btn-top" onclick="newSession()">⟳ Nouvelle session</button>`;
+  buildNav();renderAll();updateScore();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function restartSession(){
+  state=sessionQ.map(()=>({answered:false,selected:[],isCorrect:false}));
+  document.getElementById('recap').style.display='none';
+  currentFilter='all';buildNav();renderAll();updateScore();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function buildNav(){
+  const nav=document.getElementById('chapnav');nav.innerHTML='';
+  ['all',...CHAPTER_ORDER.filter(ch=>sessionQ.some(q=>q.chap===ch))].forEach(ch=>{
+    const btn=document.createElement('button');
+    btn.className='chap-btn'+(ch===currentFilter?' active':'');
+    btn.textContent=ch==='all'?'📋 Toutes':ch;
+    btn.onclick=()=>{currentFilter=ch;buildNav();renderAll();};
+    nav.appendChild(btn);
+  });
+}
+function renderAll(){
+  const container=document.getElementById('qlist');container.innerHTML='';
+  document.getElementById('sc-total').textContent=sessionQ.length;
+  const filtered=sessionQ.map((q,i)=>({...q,idx:i})).filter(q=>currentFilter==='all'||q.chap===currentFilter);
+  const byChap={};CHAPTER_ORDER.forEach(ch=>{byChap[ch]=[];});
+  filtered.forEach(q=>{byChap[q.chap].push(q);});
+  let num=0;
+  CHAPTER_ORDER.forEach(ch=>{
+    const qs=byChap[ch];if(!qs||!qs.length)return;
+    if(currentFilter==='all'){
+      const hdr=document.createElement('div');hdr.className='chap-hdr';
+      hdr.innerHTML=`<h2>${ch}</h2><span class="chap-cnt">${qs.length} question${qs.length>1?'s':''}</span>`;
+      container.appendChild(hdr);
+    }
+    qs.forEach(q=>{num++;container.appendChild(buildCard(q,num));});
+  });
+  updateProgress();
+}
+function buildCard(q,num){
+  const s=state[q.idx];
+  const card=document.createElement('div');card.className='q-card';card.id='c'+q.idx;
+  const dc={f:'df',m:'dm',d:'dd'}[q.diff]||'';
+  const dl={f:'● Facile',m:'● Moyen',d:'● Difficile'}[q.diff]||'';
+  card.innerHTML=`
+    <div class="q-meta">
+      <span class="t-chap">${q.chap}</span>
+      <span class="t-theme">${q.theme}</span>
+      <span class="t-diff ${dc}">${dl}</span>
+      ${q.alert?'<span class="t-alert">⚠ À retenir</span>':''}
+      <span class="q-num">Q${num}</span>
+    </div>
+    <div class="q-text">${q.q}</div>
+    <div class="q-instr">${q.multi?'📝 Plusieurs bonnes réponses — cochez tout ce qui est juste, puis validez.':'📝 Une seule bonne réponse — choisissez, puis validez.'}</div>
+    <div class="opts" id="opts${q.idx}">
+      ${q.opts.map((o,oi)=>`
+        <button class="opt-btn" id="o${q.idx}_${oi}" onclick="toggle(${q.idx},${oi},${q.multi})" ${s.answered?'disabled':''}>
+          <span class="ind">${String.fromCharCode(65+oi)}</span><span>${o}</span>
+        </button>`).join('')}
+    </div>
+    <div class="val-wrap">
+      <button class="btn-val" id="v${q.idx}" onclick="validate(${q.idx})" ${s.answered||s.selected.length===0?'disabled':''}>Valider ma réponse</button>
+    </div>
+    <div class="fb" id="fb${q.idx}"></div>`;
+  if(s.answered)applyCard(q.idx,q,s);
+  return card;
+}
+function toggle(qi,oi,multi){
+  const s=state[qi];if(s.answered)return;
+  s.selected=multi?(s.selected.includes(oi)?s.selected.filter(x=>x!==oi):[...s.selected,oi]):[oi];
+  sessionQ[qi].opts.forEach((_,i)=>{
+    const b=document.getElementById(`o${qi}_${i}`);if(!b)return;
+    const sel=s.selected.includes(i);
+    b.className='opt-btn'+(sel?' opt-sel':'');
+    const ind=b.querySelector('.ind');
+    ind.style.cssText=sel?'background:#1a1612;border-color:#1a1612;color:#f5f0e8':'';
+  });
+  const v=document.getElementById('v'+qi);if(v)v.disabled=s.selected.length===0;
+}
+function validate(qi){
+  const s=state[qi];if(s.answered||s.selected.length===0)return;
+  s.answered=true;
+  const q=sessionQ[qi];
+  const corrects=Array.isArray(q.correct)?q.correct:[q.correct];
+  const selSet=new Set(s.selected),corSet=new Set(corrects);
+  s.isCorrect=[...selSet].every(i=>corSet.has(i))&&[...corSet].every(i=>selSet.has(i));
+  q.opts.forEach((_,oi)=>{const b=document.getElementById(`o${qi}_${oi}`);if(b)b.disabled=true;});
+  const v=document.getElementById('v'+qi);if(v)v.disabled=true;
+  applyCard(qi,q,s);updateScore();updateProgress();checkComplete();
+}
+function isPartial(q,s){
+  if(!q.multi)return false;
+  const c=Array.isArray(q.correct)?q.correct:[q.correct];
+  return s.selected.filter(i=>c.includes(i)).length>0&&s.selected.filter(i=>c.includes(i)).length<c.length;
+}
+function applyCard(qi,q,s){
+  const corrects=Array.isArray(q.correct)?q.correct:[q.correct];
+  q.opts.forEach((_,oi)=>{
+    const b=document.getElementById(`o${qi}_${oi}`);if(!b)return;
+    const ind=b.querySelector('.ind');
+    b.removeAttribute('style');if(ind)ind.removeAttribute('style');
+    if(corrects.includes(oi)&&s.selected.includes(oi)){
+      b.style.setProperty('border-color','#1a5c2e');b.style.setProperty('background-color','#eef7f1');b.style.setProperty('color','#1a5c2e');
+      if(ind){ind.style.setProperty('background','#1a5c2e');ind.style.setProperty('border-color','#1a5c2e');ind.style.setProperty('color','#fff');}
+    }else if(!corrects.includes(oi)&&s.selected.includes(oi)){
+      b.style.setProperty('border-color','#9e1b1b');b.style.setProperty('background-color','#fdf0ef');b.style.setProperty('color','#9e1b1b');
+      if(ind){ind.style.setProperty('background','#9e1b1b');ind.style.setProperty('border-color','#9e1b1b');ind.style.setProperty('color','#fff');}
+    }else if(corrects.includes(oi)&&!s.selected.includes(oi)){
+      b.style.setProperty('border-color','#b8860b');b.style.setProperty('background-color','#fffbf0');b.style.setProperty('color','#7a4800');
+      if(ind){ind.style.setProperty('background','#b8860b');ind.style.setProperty('border-color','#b8860b');ind.style.setProperty('color','#fff');}
+    }
+  });
+  const fb=document.getElementById(`fb${qi}`);
+  if(fb){
+    const partial=isPartial(q,s);
+    let cls,txt;
+    if(s.isCorrect){cls='fb-ok';txt=`<strong>✓ Bonne réponse !</strong> ${q.ok}`;}
+    else if(partial){cls='fb-partial';txt=`<strong>⚠ Réponse incomplète.</strong> ${q.ko}`;}
+    else{cls='fb-ko';txt=`<strong>✗ Mauvaise réponse.</strong> ${q.ko}`;}
+    fb.className='fb visible '+cls;fb.innerHTML=txt;
+  }
+}
+function updateScore(){
+  const done=state.filter(s=>s.answered).length,ok=state.filter(s=>s.answered&&s.isCorrect).length;
+  document.getElementById('sc-done').textContent=done;
+  document.getElementById('sc-ok').textContent=ok;
+  document.getElementById('sc-ko').textContent=done-ok;
+}
+function updateProgress(){
+  document.getElementById('pbar').style.width=(state.filter(s=>s.answered).length/sessionQ.length*100)+'%';
+}
+function checkComplete(){
+  if(state.filter(s=>s.answered).length<sessionQ.length)return;
+  const ok=state.filter(s=>s.isCorrect).length,pct=Math.round(ok/sessionQ.length*100);
+  let chapHTML='';
+  CHAPTER_ORDER.forEach(ch=>{
+    const cqs=sessionQ.map((q,i)=>({...q,idx:i})).filter(q=>q.chap===ch);if(!cqs.length)return;
+    const cok=cqs.filter(q=>state[q.idx].isCorrect).length;
+    chapHTML+=`<div class="cs-item"><div class="cs-name">${ch}</div><div class="cs-num">${cok} / ${cqs.length}</div></div>`;
+  });
+  document.getElementById('recap-chaps').innerHTML=chapHTML;
+  document.getElementById('recap-score').textContent=`${ok} / ${sessionQ.length} (${pct}%)`;
+  const msgs=['Reprends la fiche depuis le début. Commence par les grandes périodes (Rome, Moyen Âge, AR, Révolution) et les dates clés.','Résultat moyen. Revois les procédures (actions de la loi, formulaire, inquisitoire) et les réformes des ordonnances de 1667 et 1670.','Bon travail ! Consolide les points délicats : théorie de la représentation, vénalité des offices, loi du 22 prairial.','Excellent ! Tu maîtrises très bien ce cours. Revois les quelques points manqués avant l\'exam.'];
+  document.getElementById('recap-msg').textContent=msgs[pct>=85?3:pct>=70?2:pct>=50?1:0];
+  document.getElementById('recap').style.display='block';
+  setTimeout(()=>document.getElementById('recap').scrollIntoView({behavior:'smooth',block:'start'}),200);
+}
+</script>
+</body>
+</html>

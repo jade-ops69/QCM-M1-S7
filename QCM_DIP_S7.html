@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="QCM DIP (S7)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>QCM — Droit International Privé S7</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Serif 4', Georgia, serif; background: #f5f0e8; color: #1a1612; min-height: 100vh; }
+header { background: #1a1612; color: #f5f0e8; padding: 1.8rem 1.2rem 1.4rem; text-align: center; border-bottom: 4px solid #b8860b; }
+header .label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: #d4a843; margin-bottom: 0.35rem; }
+header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 5vw, 2.1rem); font-weight: 900; }
+header .sub { margin-top: 0.35rem; font-size: 0.8rem; color: #b0a898; font-style: italic; }
+#scorebar { background: #111; color: #f5f0e8; padding: 0.55rem 1rem; display: flex; justify-content: center; align-items: center; gap: 1rem; font-size: 0.78rem; border-bottom: 2px solid #b8860b; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
+.sc-item { display: flex; align-items: center; gap: 0.3rem; }
+.sc-num { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; }
+.sc-total { color: #d4a843; }
+.sc-ok-num { color: #5cb878; }
+.sc-ko-num { color: #e07070; }
+.sc-div { color: #444; }
+.progress-wrap { background: #2a2520; height: 4px; }
+.progress-fill { height: 4px; background: #b8860b; transition: width 0.4s ease; }
+main { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem 2rem; }
+.session-bar { background: #fff; border: 1px solid #d8cfc2; border-left: 4px solid #b8860b; padding: 0.8rem 1.1rem; margin-bottom: 1.3rem; font-size: 0.81rem; color: #7a6e62; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+.session-bar strong { color: #1a1612; }
+.btn-top { padding: 0.38rem 0.9rem; background: #1a1612; color: #d4a843; border: 1.5px solid #b8860b; font-family: 'Source Serif 4', serif; font-size: 0.76rem; cursor: pointer; letter-spacing: 0.04em; -webkit-appearance: none; border-radius: 0; }
+.chap-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.4rem; padding-bottom: 1rem; border-bottom: 1px solid #d8cfc2; }
+.chap-btn { background: transparent; border: 1.5px solid #d8cfc2; color: #7a6e62; padding: 0.38rem 0.8rem; font-family: 'Source Serif 4', serif; font-size: 0.74rem; cursor: pointer; letter-spacing: 0.03em; -webkit-appearance: none; border-radius: 0; }
+.chap-btn.active { background: #1a1612; color: #f5f0e8; border-color: #1a1612; }
+.chap-hdr { margin: 1.8rem 0 0.9rem; padding-bottom: 0.45rem; border-bottom: 2px solid #b8860b; display: flex; align-items: baseline; gap: 0.8rem; }
+.chap-hdr h2 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; }
+.chap-cnt { font-size: 0.7rem; color: #7a6e62; letter-spacing: 0.07em; text-transform: uppercase; }
+.q-card { background: #fff; border: 1px solid #d8cfc2; border-left: 4px solid #b8860b; margin-bottom: 1.3rem; padding: 1.2rem 1.3rem; }
+.q-meta { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+.t-chap { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; background: #1a1612; color: #d4a843; padding: 0.1rem 0.48rem; font-weight: 600; }
+.t-theme { font-size: 0.62rem; letter-spacing: 0.09em; text-transform: uppercase; background: #f5f0e8; border: 1px solid #d8cfc2; color: #7a6e62; padding: 0.1rem 0.45rem; }
+.t-diff { font-size: 0.62rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.1rem 0.48rem; border: 1.5px solid; font-weight: 600; }
+.df { color: #1a5c2e; border-color: #2d8a4e; background: #e8f5ee; }
+.dm { color: #b45309; border-color: #d97706; background: #fef3e2; }
+.dd { color: #9e1b1b; border-color: #c0392b; background: #fdf0ef; }
+.t-alert { font-size: 0.62rem; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.1rem 0.45rem; border: 1.5px solid #c0392b; color: #9e1b1b; background: #fdf0ef; font-weight: 700; }
+.q-num { font-size: 0.66rem; color: #7a6e62; letter-spacing: 0.07em; text-transform: uppercase; margin-left: auto; }
+.q-text { font-size: 0.93rem; line-height: 1.68; margin-bottom: 0.28rem; }
+.q-instr { font-size: 0.74rem; color: #7a6e62; font-style: italic; margin-bottom: 0.85rem; }
+.opts { display: flex; flex-direction: column; gap: 0.38rem; margin-bottom: 0.75rem; }
+.opt-btn { display: flex; align-items: flex-start; gap: 0.55rem; padding: 0.6rem 0.85rem; border: 1.5px solid #d8cfc2; background: #f5f0e8; font-family: 'Source Serif 4', serif; font-size: 0.87rem; line-height: 1.5; text-align: left; width: 100%; cursor: pointer; -webkit-appearance: none; border-radius: 0; }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.opt-sel { border-color: #1a1612; background: #ece7dc; }
+.opt-btn.opt-sel .ind { background: #1a1612; border-color: #1a1612; color: #f5f0e8; }
+.ind { min-width: 21px; height: 21px; border: 1.5px solid #7a6e62; display: flex; align-items: center; justify-content: center; font-size: 0.67rem; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.val-wrap { display: flex; justify-content: flex-end; margin-bottom: 0.45rem; }
+.btn-val { padding: 0.48rem 1.3rem; background: #1a1612; color: #f5f0e8; border: none; font-family: 'Source Serif 4', serif; font-size: 0.81rem; font-weight: 600; cursor: pointer; letter-spacing: 0.05em; -webkit-appearance: none; border-radius: 0; }
+.btn-val:disabled { background: #d8cfc2; color: #7a6e62; cursor: default; }
+.fb { margin-top: 0.65rem; padding: 0.8rem 0.95rem; font-size: 0.84rem; line-height: 1.62; border-left: 3px solid; display: none; }
+.fb.visible { display: block; }
+.fb-ok { border-color: #1a5c2e; background: #eef7f1; color: #1a3d26; }
+.fb-ko { border-color: #9e1b1b; background: #fdf0ef; color: #7a1414; }
+.fb-partial { border-color: #b8860b; background: #fdf6e3; color: #6b3d00; }
+.fb strong { font-weight: 700; }
+.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #1a1612; border-top: 3px solid #b8860b; display: flex; justify-content: center; gap: 0.8rem; padding: 0.75rem 1rem; z-index: 200; }
+.bottom-bar button { padding: 0.6rem 1.2rem; font-family: 'Source Serif 4', serif; font-weight: 600; font-size: 0.82rem; cursor: pointer; letter-spacing: 0.04em; -webkit-appearance: none; border-radius: 0; }
+.btn-recommencer { background: #b8860b; color: #1a1612; border: none; }
+.btn-nouvelle { background: transparent; color: #d4a843; border: 1.5px solid #b8860b; }
+.bottom-space { height: 70px; }
+#recap { display: none; background: #1a1612; color: #f5f0e8; padding: 2rem 1.5rem; text-align: center; margin: 1.5rem 0 0; border: 3px solid #b8860b; }
+#recap h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: #d4a843; margin-bottom: 0.4rem; }
+#recap .big { font-size: 2.8rem; font-family: 'Playfair Display', serif; color: #fff; margin: 0.4rem 0; }
+.cs-grid { margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; }
+.cs-item { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); padding: 0.55rem 0.9rem; }
+.cs-name { color: #d4a843; font-size: 0.62rem; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 0.15rem; }
+.cs-num { font-family: 'Playfair Display', serif; font-size: 1.2rem; }
+#recap p { font-size: 0.86rem; color: #c8bfb0; line-height: 1.72; max-width: 480px; margin: 0.8rem auto 0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="label">M1 Droit Civil · S7 · M. Klotgen</div>
+  <h1>Droit International Privé</h1>
+  <div class="sub">QCM interactif — Révisions complètes</div>
+</header>
+<div id="scorebar">
+  <div class="sc-item">Répondues&nbsp;:&nbsp;<span class="sc-num sc-total" id="sc-done">0</span><span style="color:#555">&thinsp;/&thinsp;</span><span class="sc-num sc-total" id="sc-total">—</span></div>
+  <span class="sc-div">|</span>
+  <div class="sc-item">✓&nbsp;<span class="sc-num sc-ok-num" id="sc-ok">0</span></div>
+  <span class="sc-div">|</span>
+  <div class="sc-item">✗&nbsp;<span class="sc-num sc-ko-num" id="sc-ko">0</span></div>
+</div>
+<div class="progress-wrap"><div class="progress-fill" id="pbar" style="width:0%"></div></div>
+<main>
+  <div class="session-bar" id="sessbar">
+    <span>Chargement…</span>
+    <button class="btn-top" onclick="newSession()">⟳ Nouvelle session</button>
+  </div>
+  <div class="chap-nav" id="chapnav"></div>
+  <div id="qlist"></div>
+  <div id="recap">
+    <h2>Session terminée !</h2>
+    <div class="big" id="recap-score"></div>
+    <div class="cs-grid" id="recap-chaps"></div>
+    <p id="recap-msg"></p>
+  </div>
+  <div class="bottom-space"></div>
+</main>
+<div class="bottom-bar">
+  <button class="btn-recommencer" onclick="restartSession()">↺ Recommencer</button>
+  <button class="btn-nouvelle" onclick="newSession()">⟳ Nouvelle session</button>
+</div>
+<script>
+const POOL = [
+
+  { chap:"Introduction", theme:"Définition DIP", diff:"f", multi:false,
+    q:"Quelles sont les 3 questions fondamentales du droit international privé ?",
+    opts:["Loi applicable aux contrats / forme des actes juridiques / exécution forcée des obligations dans les relations privées internationales", "Nationalité des parties / capacité juridique des individus / représentation des personnes morales dans les litiges présentant un élément d'extranéité", "Compétence territoriale du tribunal / compétence d'attribution selon la matière / voies de recours disponibles contre les décisions rendues en matière internationale", "Conflit de juridiction (quel juge est compétent ?) / conflit de loi (quelle loi appliquer ?) / effets des jugements étrangers (reconnaissance et exécution)"],
+    correct:3,
+    ok:"Les 3 questions du DIP : (1) conflit de juridiction (quel juge est compétent ?), (2) conflit de loi (quelle loi appliquer ?), (3) effets des jugements étrangers (reconnaissance et exécution). Parfois aussi la nationalité des individus ou des sociétés.",
+    ko:"Les 3 questions du DIP : conflit de juridiction / conflit de loi / effets des jugements étrangers. C'est le cadre de raisonnement à appliquer dès qu'il y a un élément d'extranéité dans un rapport de droit privé." },
+
+  { chap:"Introduction", theme:"OP international vs loi de police", diff:"m", multi:false, alert:true,
+    q:"⚠ Quelle est la distinction fondamentale entre l'ordre public international français et la loi de police ?",
+    opts:["L'ordre public s'oppose au résultat de l'application de la loi étrangère et intervient en fin de raisonnement / la loi de police s'applique immédiatement quel que soit la loi normalement applicable et intervient au début du raisonnement", "Il n'y a pas de différence réelle entre les deux mécanismes — ce sont deux expressions désignant le même dispositif permettant au juge d'écarter une loi étrangère dont l'application serait indésirable", "L'ordre public international est d'origine européenne et s'applique à tous les États membres / la loi de police est d'origine nationale et ne s'applique que dans l'ordre interne", "L'ordre public s'applique au début du raisonnement avant même de déterminer la loi applicable / la loi de police intervient en fin de raisonnement après avoir constaté le résultat choquant de la loi étrangère désignée"],
+    correct:0,
+    ok:"Distinction fondamentale. Ordre public international FR : s'oppose au résultat de l'application de la loi étrangère → intervient en fin de raisonnement. Loi de police : s'applique immédiatement, court-circuite le conflit de loi → intervient au début du raisonnement, avant même de se demander quelle est la loi applicable.",
+    ko:"Ordre public : fin du raisonnement, s'oppose au résultat choquant. Loi de police : début du raisonnement, s'applique directement quel que soit la loi normalement applicable. Ne pas confondre." },
+
+  { chap:"Introduction", theme:"Principe d'équivalence", diff:"m", multi:false,
+    q:"Quel est le principe fondateur du DIP depuis Savigny (19e s.) et quelle en est la conséquence pratique ?",
+    opts:["La suprématie du droit français sur les droits étrangers — le juge français applique toujours le droit français aux litiges présentant un élément d'extranéité, sauf exceptions conventionnelles", "L'équivalence des systèmes juridiques : les droits étrangers ont une valeur égale au droit français, ce qui permet au juge français d'appliquer le droit étranger — exception : l'ordre public international", "La liberté totale pour les parties de choisir n'importe quelle loi applicable à leur rapport de droit, y compris des lois de pays avec lesquels elles n'ont aucun lien objectif", "La primauté du droit européen sur les droits nationaux — le juge français doit toujours vérifier la compatibilité de la loi étrangère avec les principes du droit de l'Union européenne"],
+    correct:1,
+    ok:"Principe d'équivalence des systèmes juridiques (Savigny, 19e s.) : les systèmes juridiques étrangers ont une valeur égale au droit français. Le DIP n'existe que parce qu'on accepte cette équivalence. Conséquence : le juge français peut appliquer le droit étranger. Exception : l'ordre public international français.",
+    ko:"Principe d'équivalence (Savigny) : droits étrangers = valeur égale au droit français → le juge français peut appliquer un droit étranger. Exception : l'ordre public international français écarte le résultat choquant." },
+
+  { chap:"Introduction", theme:"Arrêt Cornelissen", diff:"m", multi:false,
+    q:"Quelles sont les 3 conditions posées par l'arrêt Cornelissen (6 fév. 2007) pour reconnaître une décision étrangère en France ?",
+    opts:["La décision doit être définitive dans l'État d'origine / non contraire à l'ordre public international français / rendue par un juge dont la compétence est reconnue selon les règles françaises", "Décision exécutoire dans l'État d'origine / accompagnée d'une traduction officielle / non contraire aux conventions internationales auxquelles la France est partie", "Décision motivée et respectant les droits de la défense / rendue dans un État ayant conclu une convention bilatérale avec la France / traduite officiellement en français par un traducteur assermenté", "Compétence indirecte fondée sur le rattachement du litige au juge saisi / conformité à l'ordre public international de fond et de procédure / absence de fraude à la loi — plus de vérification de la loi appliquée"],
+    correct:3,
+    ok:"Arrêt Cornelissen (6 fév. 2007) — revirement majeur. 3 conditions : (1) compétence indirecte fondée sur le rattachement du litige au juge saisi, (2) conformité à l'ordre public international de fond et de procédure, (3) absence de fraude à la loi. Plus de vérification que le juge étranger a appliqué la loi qu'aurait appliquée le juge français.",
+    ko:"Cornelissen : rattachement du litige au juge + conformité à l'ordre public + absence de fraude. Plus de vérification de la loi appliquée. Revirement majeur par rapport à la doctrine Mater." },
+
+  { chap:"Introduction", theme:"Exequatur", diff:"f", multi:false,
+    q:"Qu'est-ce que l'exequatur ?",
+    opts:["La procédure permettant à un juge français d'appliquer le droit étranger dans un litige présentant un élément d'extranéité", "La procédure permettant de donner force exécutoire en France à une décision rendue par une juridiction étrangère", "Le mécanisme par lequel le juge écarte l'application d'une loi étrangère contraire à l'ordre public international français", "La procédure de reconnaissance en France des mariages célébrés à l'étranger selon les formes du droit local"],
+    correct:1,
+    ok:"L'exequatur = procédure permettant de donner force exécutoire à une décision étrangère en France. En droit commun : contrôle de Cornelissen. Dans les règlements européens : règles spécifiques souvent plus libérales.",
+    ko:"Exequatur = donner force exécutoire à une décision étrangère en France. En DC : contrôle Cornelissen. En règlements européens : règles plus libérales." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"3 périodes", diff:"m", multi:false, alert:true,
+    q:"⚠ Quels textes s'appliquent selon la date du mariage pour déterminer la loi applicable au régime matrimonial ?",
+    opts:["Toujours le règlement européen de 2016 depuis son entrée en vigueur le 29 janvier 2019, y compris pour les mariages célébrés avant cette date", "Avant 1804 : DIP coutumier / après 1804 : Code civil / depuis 1992 : règlement européen applicable à tous les RM quelle que soit la date du mariage", "Avant le 1er sept. 1992 : DIP français (jurisprudence, règle de Dumoulin) / entre le 1er sept. 1992 et le 29 janv. 2019 : Convention de La Haye 1978 / depuis le 29 janv. 2019 : règlements UE 2016/1103 (mariage) et 2016/1104 (PACS)", "Toujours la Convention de La Haye du 14 mars 1978 car elle a un caractère universel s'appliquant à tous les États signataires sans distinction de date"],
+    correct:2,
+    ok:"3 périodes à bien mémoriser : avant le 1er sept. 1992 → DIP français (JP fondée sur la règle de Dumoulin) / entre le 1er sept. 1992 et le 29 janv. 2019 → Convention de La Haye du 14 mars 1978 / depuis le 29 janv. 2019 → Règlements UE 2016/1103 (mariage) et 2016/1104 (PACS).",
+    ko:"3 périodes : avant 1er sept. 1992 = DIP français / 1er sept. 1992 au 29 janv. 2019 = Convention de La Haye / depuis 29 janv. 2019 = Règlements 2016. Dates à mémoriser absolument." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"Règle de Dumoulin", diff:"m", multi:false,
+    q:"Quelle est la règle de Dumoulin (1525) et quel principe pose-t-elle en DIP ?",
+    opts:["Le régime matrimonial est toujours soumis à la loi nationale commune des époux, et en cas de nationalités différentes, à la loi nationale du mari au moment de la célébration du mariage", "Le régime matrimonial est régi par la coutume du premier lieu d'installation des époux après le mariage (convention tacite) — pose le principe de l'autonomie de la volonté en DIP", "Le régime matrimonial est soumis à la loi du juge saisi (lex fori), qui est présumé être le mieux placé pour apprécier les intérêts patrimoniaux des époux et des tiers", "Le régime matrimonial est soumis à la loi du lieu de célébration du mariage, car c'est dans cet État que les époux ont exprimé solennellement leur consentement à l'union"],
+    correct:1,
+    ok:"Charles Dumoulin (1525, affaire Gamay) : le régime matrimonial est régi par la coutume du premier lieu où les époux se sont installés après le mariage. Justification : convention tacite → les époux sont censés avoir tacitement choisi le régime matrimonial du premier domicile conjugal. Pose le principe de l'autonomie de la volonté en DIP.",
+    ko:"Règle de Dumoulin : loi du premier domicile matrimonial (convention tacite des époux). Fondement de l'autonomie de la volonté en DIP des RM." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"1er domicile matrimonial", diff:"m", multi:false, alert:true,
+    q:"⚠ La présomption fondée sur le 1er domicile matrimonial (JP antérieure à 1992) est-elle irréfragable ?",
+    opts:["Non, c'est une présomption simple pouvant être renversée par d'autres indices traduisant la volonté des époux — le domicile est le plus fort mais pas exclusif", "Oui, elle est absolue et ne peut jamais être renversée — c'est ce qu'a décidé la Cour de cassation dans l'arrêt Zelcer de 1935 en consacrant définitivement le 1er domicile comme facteur de rattachement exclusif", "Oui, depuis l'arrêt Zelcer de 1935 qui a rendu la présomption irréfragable — seul un contrat de mariage exprès peut écarter la présomption et désigner une autre loi applicable", "Non, elle est systématiquement écartée en présence d'un contrat de mariage désignant une loi étrangère, même si ce contrat n'a pas été rédigé dans les formes requises"],
+    correct:0,
+    ok:"Présomption simple (arrêt Zelcer, 4 juin 1935). Elle peut être renversée par d'autres indices traduisant la volonté des époux. Le domicile est le plus fort mais pas exclusif. Exemple : en droit musulman, la Cass. attache plus d'importance au lieu et à la forme du mariage.",
+    ko:"Présomption simple (Zelcer, 1935) : le 1er domicile matrimonial est le critère principal mais pas exclusif. D'autres indices peuvent renverser la présomption." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"Renvoi et RM", diff:"d", multi:false,
+    q:"Le renvoi est-il admis lorsque la règle de conflit en matière de régime matrimonial est fondée sur l'autonomie de la volonté ?",
+    opts:["Oui, le renvoi est toujours admis en DIP quelle que soit la matière concernée et la nature de la règle de conflit ayant désigné la loi étrangère applicable", "Non, le renvoi est exclu quand la règle de conflit est fondée sur l'autonomie de la volonté — c'est la loi matérielle qui s'applique, pas ses règles de DIP (arrêt Gouthertz)", "Oui, mais uniquement pour les immeubles situés dans des États tiers à l'Union européenne, pour lesquels la scission entre loi des meubles et loi des immeubles reste applicable", "Non, sauf si la loi désignée par l'autonomie de la volonté est celle d'un État non membre de l'Union européenne n'ayant conclu aucune convention avec la France"],
+    correct:1,
+    ok:"Le renvoi est exclu quand la règle de conflit est fondée sur l'autonomie de la volonté (arrêt Gouthertz). Si les époux ont choisi ou si on présume leur choix via le premier domicile matrimonial, c'est la loi matérielle qui s'applique, pas ses règles de DIP.",
+    ko:"Renvoi exclu en cas d'autonomie de la volonté (ex : 1er domicile matrimonial comme présomption de choix). Application de la loi matérielle uniquement (arrêt Gouthertz)." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"Convention de La Haye 1978", diff:"m", multi:false, alert:true,
+    q:"⚠ La Convention de La Haye 1978 rompt-elle avec la liberté totale de choix de la loi applicable au régime matrimonial ?",
+    opts:["Non, la liberté de choix reste totale comme avant 1992 — les époux peuvent désigner n'importe quelle loi au monde sans restriction, y compris celle d'un État avec lequel ils n'ont aucun lien", "Oui, mais uniquement pour les époux non européens — pour les ressortissants de l'Union européenne, la liberté de choix est maintenue selon les anciens principes jurisprudentiels", "Non, elle étend même la liberté de choix aux tiers contractants qui peuvent désormais choisir la loi applicable au régime matrimonial dans leurs relations avec les époux", "Oui, la Convention rompt avec l'ancienne liberté totale de choix — le choix est encadré (art. 3) et ne peut porter que sur certaines lois déterminées en fonction du lien des époux avec l'État"],
+    correct:3,
+    ok:"La Convention de La Haye 1978 rompt avec l'ancienne liberté totale de choix. Le choix est encadré (art. 3) : la loi désignée s'applique à l'ensemble des biens, mais les époux peuvent désigner pour les immeubles la loi de leur situation (scission possible). Avant 1992 : liberté totale (n'importe quelle loi).",
+    ko:"Convention de La Haye 1978 : rupture avec la liberté totale. Le choix est encadré (art. 3). Avant 1992 : liberté totale de choisir n'importe quelle loi." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"Changement automatique de loi", diff:"d", multi:false, alert:true,
+    q:"⚠ La Convention de La Haye 1978 prévoit-elle un mécanisme de changement automatique de loi applicable au régime matrimonial ? Quand se déclenche-t-il ?",
+    opts:["Non, la loi applicable au régime matrimonial est toujours fixe une fois déterminée — seul un accord exprès des époux peut modifier la loi applicable à leur régime matrimonial", "Non, seul un accord exprès des époux formalisé dans un acte notarié peut entraîner un changement de loi applicable à leur régime matrimonial", "Oui, si les époux n'ont ni choisi de loi ni fait de contrat, la loi change automatiquement dans 3 cas et peut s'opérer à l'insu des époux — le règlement 2016 ne contient aucun mécanisme de changement automatique", "Oui, mais uniquement pour les immeubles situés dans un État différent de celui de la résidence habituelle des époux, la loi de situation prévalant alors automatiquement"],
+    correct:2,
+    ok:"Oui ! La Convention de La Haye prévoit un changement automatique de loi (art. 7 al. 2) dans 3 cas. Ce mécanisme peut s'opérer à l'insu des époux ! Solution pour l'éviter : désigner expressément la loi applicable (art. 22 du règlement 2016 pour bloquer cet effet). Le règlement 2016 ne contient aucun mécanisme de changement automatique.",
+    ko:"Convention de La Haye : changement automatique possible à l'insu des époux (3 cas : nationalité commune, résidence +10 ans, installation dans l'État de nationalité commune). Le règlement 2016 n'a pas ce mécanisme automatique." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"Règlement 2016 changement de loi", diff:"m", multi:false, alert:true,
+    q:"⚠ Concernant l'effet du changement de loi applicable au régime matrimonial, quelle est la différence entre la Convention de La Haye et le règlement 2016 ?",
+    opts:["Aucune différence — les deux textes prévoient un effet rétroactif au jour du mariage, ce qui garantit la cohérence et l'unité du régime matrimonial depuis sa constitution", "Convention de La Haye : effet pour l'avenir uniquement / règlement 2016 : effet rétroactif au jour du mariage sauf convention contraire des époux", "Les deux textes prévoient un effet uniquement pour l'avenir à compter du changement de résidence habituelle ou de nationalité ayant déclenché la modification de loi applicable", "Convention de La Haye : effet rétroactif sauf convention contraire des époux / règlement 2016 : effet pour l'avenir seulement sauf convention contraire — le sens est inversé"],
+    correct:3,
+    ok:"C'est inversé ! Convention de La Haye (art. 6) : changement de loi → effet rétroactif sauf convention contraire des époux. Règlement 2016 (art. 22 §2) : changement de loi → effet pour l'avenir seulement sauf convention contraire des époux. Sens inverse.",
+    ko:"Inversé ! Convention de La Haye : rétroactif sauf accord contraire. Règlement 2016 : avenir seulement sauf accord contraire. C'est un piège classique." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"Règlement 2016 autonomie encadrée", diff:"m", multi:false,
+    q:"Selon le règlement 2016/1103 (art. 22), parmi quelles lois les époux peuvent-ils choisir la loi applicable à leur régime matrimonial ?",
+    opts:["Loi de résidence habituelle de l'un des époux au moment du choix ou loi d'un État dont l'un des époux possède la nationalité au moment du choix", "N'importe quelle loi au monde, dès lors que le choix est formulé expressément dans une convention matrimoniale rédigée en la forme authentique devant notaire", "Uniquement la loi de la nationalité commune des époux, ou à défaut la loi de la première résidence habituellement commune après le mariage", "Uniquement la loi du lieu de célébration du mariage ou la loi de la nationalité commune des époux au moment de la célébration"],
+    correct:0,
+    ok:"Règlement 2016 : autonomie encadrée (art. 22). Choix limité à : loi de résidence habituelle de l'un des époux au moment du choix ou loi d'un État dont l'un des époux possède la nationalité au moment du choix. Pour les PACS : loi de l'État d'enregistrement.",
+    ko:"Règlement 2016 : choix encadré entre résidence habituelle de l'un des époux ou nationalité de l'un des époux (au moment du choix). Pas de liberté totale." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"Règlement 2016 défaut de choix", diff:"m", multi:false,
+    q:"À défaut de choix de loi applicable au régime matrimonial (règlement 2016, art. 26), quel est le critère de rattachement en cascade ?",
+    opts:["Loi de la nationalité commune au moment du mariage → loi du domicile matrimonial → loi du for en dernier recours", "Loi du lieu de célébration du mariage → loi de la nationalité commune des époux → loi du for en l'absence de nationalité commune", "Loi de la première résidence habituelle commune → loi de la nationalité commune → loi ayant les liens les plus étroits", "Loi du for directement applicable sans cascade, le juge saisi appliquant toujours son propre droit à défaut de choix exprès des époux"],
+    correct:2,
+    ok:"Art. 26, règlement 2016 : à défaut de choix pour les RM → 1ère résidence habituelle commune → nationalité commune → loi ayant les liens les plus étroits. Pour les PACS → loi de l'État d'enregistrement.",
+    ko:"Cascade art. 26 : 1ère résidence habituelle commune → nationalité commune → liens les plus étroits. Pour PACS : loi de l'État d'enregistrement." },
+
+  { chap:"Chap. 1 — Régimes matrimoniaux", theme:"Questions exclues", diff:"d", multi:false,
+    q:"Parmi ces matières, lesquelles sont exclues du champ d'application de la loi applicable au régime matrimonial (Convention de La Haye et règlement 2016) ?",
+    opts:["La composition du patrimoine (propres/communs) et les pouvoirs de gestion des époux sur les biens communs pendant le mariage", "La capacité juridique des époux / la validité du mariage / les obligations alimentaires / la succession du conjoint décédé / les droits réels", "La gestion des biens communs par chaque époux et les actes de disposition nécessitant le consentement conjoint des deux époux", "La répartition des droits pendant le mariage et les causes de dissolution du régime matrimonial"],
+    correct:1,
+    ok:"Exclusions (Convention de La Haye et règlement 2016) : capacité juridique des époux / existence, validité, reconnaissance du mariage / obligations alimentaires / succession du conjoint décédé / SS / droits à la pension de retraite / nature des droits réels / inscriptions dans les registres.",
+    ko:"Exclusions : capacité des époux, validité du mariage, obligations alimentaires, succession du conjoint, SS, retraite, droits réels, registres. Ces questions relèvent d'autres règles de conflit." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Règlement successions", diff:"f", multi:false,
+    q:"Depuis quand le règlement UE n°650/2012 sur les successions est-il applicable, et quel est son principe directeur ?",
+    opts:["Depuis le 4 juillet 2012 (date de publication), avec maintien du principe de scission entre meubles et immeubles qui existait antérieurement en droit commun", "Depuis le 1er janvier 2020, en même temps que d'autres textes européens de droit international privé, avec un principe de liberté totale de choix de la loi applicable", "Depuis le 17 août 2015 (personnes décédées après cette date) — principe d'unité : meubles et immeubles sous la même loi et le même juge, caractère universel (art. 20)", "Depuis le 29 janvier 2019, en même temps que les règlements sur les régimes matrimoniaux, avec un principe de scission maintenu pour respecter les traditions des États membres"],
+    correct:2,
+    ok:"Règlement successions (n°650/2012) : applicable depuis le 17 août 2015 aux personnes décédées après cette date. Principe d'unité : meubles + immeubles sous la même loi et le même juge (≠ ancien principe de scission). Caractère universel (art. 20).",
+    ko:"Règlement successions : 17 août 2015. Principe d'unité (meubles + immeubles ensemble). Caractère universel. Ne s'applique pas aux matières fiscales, douanières ou administratives." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Professio juris", diff:"m", multi:false,
+    q:"Qu'est-ce que la professio juris (art. 22 du Règlement successions) et à quelles lois est-elle limitée ?",
+    opts:["Le choix par le défunt de la loi applicable à sa succession, limité à la loi de l'État dont il possède la nationalité au moment du choix ou au décès", "Le choix libre par le défunt de n'importe quelle loi applicable à l'ensemble de sa succession, sans restriction tenant à la nationalité ou à la résidence habituelle", "Le choix exercé par les héritiers après l'ouverture de la succession pour désigner la loi applicable aux opérations de partage et de liquidation", "Le choix automatique de la loi de résidence habituelle du défunt au moment du décès, désigné objectivement sans qu'aucune manifestation de volonté ne soit nécessaire"],
+    correct:0,
+    ok:"Professio juris = choix par le défunt de la loi applicable à l'ensemble de sa succession. Limité à la loi de l'État dont il possède la nationalité au moment du choix ou au décès. Avec plusieurs nationalités : choix parmi toutes. Choix formulé expressément dans une disposition à cause de mort.",
+    ko:"Professio juris : choix du défunt de la loi applicable à sa succession. Limité à la loi de sa nationalité (au moment du choix ou du décès). Pas de liberté totale comme en matière contractuelle." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Renvoi et professio juris", diff:"d", multi:false, alert:true,
+    q:"⚠ Le renvoi est-il admis lorsque le défunt a exercé une professio juris ?",
+    opts:["Non, jamais de renvoi en cas de professio juris — le défunt ayant choisi une loi, c'est le droit matériel de cette loi qui s'applique", "Oui, le renvoi est toujours admis en matière de succession internationale, quelle que soit la technique utilisée pour désigner la loi applicable", "Oui, mais uniquement si la loi choisie par le défunt renvoie expressément à la loi de sa résidence habituelle au moment du décès", "Non, sauf accord exprès de tous les héritiers acceptant l'application de la loi désignée par le renvoi à la place de la loi choisie par le défunt"],
+    correct:0,
+    ok:"Jamais de renvoi en cas de professio juris. Le défunt ayant choisi une loi, on suppose que c'est le droit matériel de cette loi qu'il a voulu appliquer. Exception aux règles habituelles du renvoi. De même, pas de renvoi possible en cas de clause des liens plus étroits, validité formelle (art. 27), art. 28b, art. 30.",
+    ko:"Renvoi exclu en cas de professio juris. Application du droit matériel uniquement. Le renvoi est admis uniquement quand la règle de conflit désigne la loi d'un État tiers (et hors cas d'exclusion)." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Rattachement objectif succession", diff:"f", multi:false,
+    q:"À défaut de professio juris, quelle loi s'applique à la succession selon l'art. 21 §1 du Règlement successions ?",
+    opts:["La loi de l'État dont les juridictions sont compétentes pour connaître de la succession en application du règlement", "La loi nationale du défunt au moment de son décès, déterminée selon les règles du droit international privé de chaque État membre", "La loi du lieu de situation des principaux biens composant le patrimoine successoral du défunt au moment de son décès", "La loi de l'État dans lequel le défunt avait sa résidence habituelle au moment de son décès"],
+    correct:3,
+    ok:"Art. 21 §1 : la loi applicable à l'ensemble d'une succession est celle de l'État dans lequel le défunt avait sa résidence habituelle au moment de son décès. Clause d'exception (art. 21 §2) : si liens manifestement plus étroits avec un autre État → loi de cet autre État. Ne peut pas être invoquée pour écarter la loi choisie.",
+    ko:"Art. 21 : résidence habituelle du défunt au moment du décès = critère principal. Clause d'exception (liens plus étroits) si nécessaire. Jamais pour écarter la loi choisie par le défunt." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Validité formelle testament", diff:"m", multi:false,
+    q:"Quel est le principe 'favor testamenti' applicable à la validité formelle des testaments (Convention de La Haye du 5 oct. 1961) ?",
+    opts:["Le testament est valide uniquement s'il est conforme à la loi nationale du testateur au moment de sa rédaction ou au moment de son décès", "Le testament est toujours valide s'il est signé devant deux témoins majeurs capables, quelle que soit la loi applicable à sa forme", "Le testament est valide s'il est conforme à l'une des nombreuses lois alternatives : lieu de rédaction / nationalité / domicile / résidence habituelle / pour les immeubles : loi de leur situation", "Le testament est valide uniquement s'il est conforme à la loi du juge saisi, conformément au principe selon lequel le for applique ses propres règles formelles"],
+    correct:2,
+    ok:"Favor testamenti : le testament est valide s'il est conforme à l'une des nombreuses lois alternatives (lieu de rédaction / nationalité au moment de la rédaction ou du décès / domicile au moment de la rédaction ou du décès / résidence habituelle / pour les immeubles : loi de leur situation). Il est donc très rare qu'un testament soit invalide formellement.",
+    ko:"Favor testamenti : valide si conforme à l'une des lois alternatives. Très rare qu'un testament soit invalide formellement. Convention de La Haye 1961 l'emporte sur le Règlement successions pour la forme." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Loi applicable au fond testament", diff:"m", multi:false,
+    q:"Selon l'art. 24 du Règlement successions, à quel moment est déterminée la loi applicable au fond du testament ?",
+    opts:["Au moment de la rédaction du testament — ce qui permet d'éviter un changement de loi par changement de résidence postérieur au testament", "Au moment de l'ouverture de la succession, qui coïncide avec le décès et constitue le point de départ de toutes les opérations successorales", "Au moment du décès du testateur, car c'est à cette date que la succession s'ouvre et que les droits des héritiers et légataires se cristallisent définitivement", "Au moment où les héritiers et légataires acceptent formellement la succession ou les legs qui leur ont été attribués par le testateur"],
+    correct:0,
+    ok:"Art. 24 : la loi applicable au fond du testament = loi successorale objectivement applicable au moment de la rédaction du testament (pas au moment du décès). Permet d'éviter un changement de loi par changement de résidence postérieur au testament.",
+    ko:"Art. 24 : loi applicable au fond = moment de la rédaction du testament (pas du décès). Stabilité : un changement de résidence après la rédaction ne change pas la loi applicable au fond." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"OP et réserve héréditaire", diff:"d", multi:false, alert:true,
+    q:"⚠ Une loi étrangère ignorant la réserve héréditaire est-elle en soi contraire à l'ordre public international français ?",
+    opts:["Oui, la réserve héréditaire fait partie de l'ordre public international français et toute loi l'ignorant est automatiquement écartée par le juge français", "Non, la réserve héréditaire n'a pas de caractère d'ordre public même en droit interne français et ne peut donc pas être invoquée pour écarter une loi étrangère", "Oui, depuis un arrêt de la Cour de cassation du 4 juillet 2018 qui a consacré la réserve héréditaire comme principe d'ordre public international français", "Non, une loi étrangère ignorant la réserve n'est pas en soi contraire à l'ordre public, mais peut être écartée si son application concrète conduit à une situation incompatible avec les principes français essentiels (arrêt Jarre et Colombier, 2017)"],
+    correct:3,
+    ok:"Arrêt Jarre et Colombier (27 sept. 2017) : une loi étrangère ignorant la réserve héréditaire n'est pas en soi contraire à l'ordre public international français. Mais elle peut être écartée si son application concrète conduit à une situation incompatible avec les principes français essentiels. C'est l'application qui compte, pas la norme elle-même.",
+    ko:"La loi étrangère n'est pas en soi contraire à l'ordre public. C'est le résultat de son application qui peut être choquant et justifier l'exception d'ordre public. Distinction fondamentale entre la norme et son résultat." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Droit de prélèvement", diff:"d", multi:false,
+    q:"Qu'est-ce que le droit de prélèvement compensatoire de l'art. 913 al. 3 C.cv (loi 24 août 2021) ?",
+    opts:["Un droit pour l'État français de prélever des droits de succession supplémentaires sur les biens situés en France appartenant à des ressortissants étrangers", "Un droit reconnu aux héritiers français de prélever sur les biens situés à l'étranger pour compenser les inégalités de traitement entre héritiers résidant dans des États différents", "Un droit pour les héritiers exhérédés par une loi étrangère ne connaissant pas la réserve héréditaire de se compenser sur les biens situés en France — c'est une loi de police", "Un droit fiscal accordé à l'administration pour percevoir des droits de succession sur les actifs étrangers des défunts ayant leur résidence habituelle en France"],
+    correct:2,
+    ok:"Art. 913 al. 3 C.cv (2021) : droit de prélèvement compensatoire sur les biens en France pour les héritiers exhérédés par une loi étrangère ne connaissant pas la réserve héréditaire. Conditions : défunt ou au moins un enfant = ressortissant d'un État membre ou y réside habituellement + loi étrangère ne prévoit aucun mécanisme réservataire. C'est une loi de police.",
+    ko:"Art. 913 al. 3 : droit de prélèvement compensatoire = loi de police. Conditions : ressortissant État membre (défunt ou enfant) + loi étrangère sans mécanisme réservataire. Né après l'inconstitutionnalité de 2011." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Fraude à la loi", diff:"m", multi:false,
+    q:"Comment peut-on frauder à la loi en matière successorale pour échapper à la réserve héréditaire ?",
+    opts:["En adoptant une nationalité différente avant le décès pour faire désigner par la professio juris la loi d'un État ne connaissant pas la réserve héréditaire", "En rédigeant un testament dans un pays ne connaissant pas la réserve héréditaire, ce qui permet d'appliquer une loi successorale plus favorable aux légataires", "Par déplacement artificiel du facteur de rattachement (changement frauduleux de domicile avant le décès) ou par ameublissement des immeubles (transformer un immeuble en parts mobilières)", "En désignant des héritiers étrangers résidant dans des États ne connaissant pas la réserve héréditaire, ce qui prive les réservataires français de tout droit à l'action en réduction"],
+    correct:2,
+    ok:"2 techniques de fraude : (1) déplacement artificiel du facteur de rattachement (changement frauduleux de domicile avant le décès pour faire appliquer une loi sans réserve héréditaire) / (2) ameublissement des immeubles (transformer un immeuble en parts mobilières = actions de société, pour échapper à la loi de situation de l'immeuble). Fraus omnia corrumpit.",
+    ko:"Fraude successorale : changement frauduleux de domicile avant le décès ou ameublissement des immeubles (transformer immeuble en parts mobilières). Fraus omnia corrumpit." },
+
+  { chap:"Chap. 2 — Successions internationales", theme:"Certificat successoral européen", diff:"m", multi:false,
+    q:"Quelles sont les caractéristiques du certificat successoral européen (CSE) ?",
+    opts:["Document obligatoire pour toute succession internationale délivré par le juge des tutelles, durée de validité illimitée, remplaçant tous les actes nationaux", "Document délivré sur demande, non obligatoire, ne se substituant pas aux documents nationaux — délivré par le notaire en France, durée de vie 6 mois, présomption simple (recours possible)", "Document délivré automatiquement par l'autorité centrale de chaque État membre dès l'ouverture d'une succession présentant un élément d'extranéité européen", "Document européen remplaçant tous les actes nationaux, force probante absolue, délivré par le notaire en 3 jours ouvrés et valable indéfiniment dans tous les États membres"],
+    correct:1,
+    ok:"CSE : délivré sur demande / non obligatoire / ne se substitue pas aux documents nationaux / en France : délivré par le notaire / copies conformes uniquement / durée de vie 6 mois / présomption simple (recours possible). Utilisé par les héritiers, légataires, exécuteurs pour exercer leurs droits dans un autre État membre.",
+    ko:"CSE : sur demande, non obligatoire, ne remplace pas les documents nationaux, délivré par le notaire en France, 6 mois de durée, présomption simple. Produit ses effets dans tous les États membres sans procédure." },
+
+  { chap:"Chap. 3 — Divorce international", theme:"Bruxelles 2 TER", diff:"m", multi:false,
+    q:"Quels sont les critères de compétence pour le divorce selon l'art. 3 de Bruxelles 2 TER (depuis le 1er août 2022) ?",
+    opts:["Uniquement la nationalité commune des époux au moment de l'introduction de la demande de divorce", "Résidence habituelle des époux / dernière résidence habituelle si l'un y réside encore / résidence du défendeur / résidence depuis 1 an / résidence depuis 6 mois si ressortissant / nationalité commune", "Uniquement la résidence habituelle du demandeur au moment de l'introduction de la demande, conformément au principe actor sequitur forum rei", "Lieu de célébration du mariage ou résidence habituelle des époux au moment de la demande, en l'absence de tout autre critère permettant d'établir la compétence"],
+    correct:1,
+    ok:"Art. 3 Bruxelles 2 TER (depuis 1er août 2022) : juridictions de l'État membre où se trouve : résidence habituelle des époux / dernière résidence habituelle si l'un y réside encore / résidence habituele du défendeur / demande conjointe : résidence de l'un ou l'autre / résidence depuis au moins 1 an / résidence depuis 6 mois si ressortissant de l'État membre. Ou nationalité commune.",
+    ko:"Bruxelles 2 TER : plusieurs critères alternatifs. Si aucun ne donne compétence au juge français : on peut utiliser les arts. 1070 CPC, 14 et 15 C.cv, sauf contre un ressortissant européen résidant dans l'UE." },
+
+  { chap:"Chap. 3 — Divorce international", theme:"Art. 309 C.cv", diff:"m", multi:false,
+    q:"Selon l'art. 309 C.cv, dans quels cas le divorce est-il régi par la loi française ?",
+    opts:["Si l'un et l'autre époux sont français / si l'un et l'autre ont leur domicile en France / si aucune loi étrangère ne se reconnaît compétente alors que les tribunaux français sont compétents", "Quand le mariage a été célébré en France, le lieu de célébration étant le critère de rattachement retenu par l'art. 309 du Code civil", "Quand le divorce est prononcé par un juge français, quelle que soit la nationalité des époux et leur lieu de résidence habituelle", "Quand l'un seulement des époux est de nationalité française, la nationalité d'un seul époux suffisant à déclencher l'application de la loi française"],
+    correct:0,
+    ok:"Art. 309 C.cv : le divorce est régi par la loi française si : (1) l'un et l'autre époux sont français / (2) l'un et l'autre ont leur domicile en France / (3) aucune loi étrangère ne se reconnaît compétente alors que les tribunaux français sont compétents. Applicable en l'absence de règlement Rome III.",
+    ko:"Art. 309 C.cv : 3 cas → tous deux français / tous deux domiciliés en France / aucune loi étrangère compétente alors que juge français est compétent." },
+
+  { chap:"Chap. 3 — Divorce international", theme:"Règlement Rome III", diff:"m", multi:false,
+    q:"Quel est l'objectif du règlement Rome III et à quelles matières s'applique-t-il ?",
+    opts:["Harmoniser les règles de compétence juridictionnelle pour le divorce entre tous les États membres de l'Union européenne", "Créer un tribunal européen du divorce compétent pour toutes les affaires familiales présentant un élément d'extranéité entre États membres", "Unifier les règles de fond du divorce dans tous les États membres en imposant des conditions communes de recevabilité de la demande", "Empêcher le forum shopping en harmonisant les règles de conflit de loi sur le divorce entre 18 États membres participants — s'applique au divorce et à la séparation de corps uniquement"],
+    correct:3,
+    ok:"Rome III : empêcher le forum shopping en harmonisant les règles de conflit de loi (pas de compétence) sur le divorce entre 18 États membres participants (coopération renforcée). S'applique aux conflits de lois sur le divorce et la séparation de corps uniquement. Exclut : capacité, validité du mariage, annulation, effets patrimoniaux, obligations alimentaires…",
+    ko:"Rome III : harmoniser les règles de conflit de loi (pas de compétence) pour lutter contre le forum shopping. 18 États membres participants. Divorce + séparation de corps uniquement." },
+
+  { chap:"Chap. 3 — Divorce international", theme:"Choix de loi Rome III", diff:"m", multi:false,
+    q:"Parmi quelles lois les époux peuvent-ils choisir la loi applicable à leur divorce selon l'art. 5 du règlement Rome III ?",
+    opts:["N'importe quelle loi au monde, la liberté de choix en matière de divorce étant totale pour permettre aux époux de désigner la loi la plus adaptée à leur situation", "Uniquement la loi de la résidence habituelle commune au moment du choix, ou à défaut la loi du juge saisi conformément au principe de la lex fori", "Uniquement la loi de la nationalité commune des époux, ou à défaut la loi de la résidence habituelle commune au moment de l'introduction de la demande de divorce", "Loi de résidence habituelle au moment du choix / loi de la dernière résidence habituelle si l'un y vit encore / loi de la nationalité de l'un des époux / loi du for"],
+    correct:3,
+    ok:"Art. 5, Rome III : choix parmi : loi de résidence habituelle au moment de la conclusion de la convention / loi de la dernière résidence habituelle si l'un y vit encore / loi de la nationalité de l'un des époux / loi du for.",
+    ko:"Rome III art. 5 : 4 options : résidence habituelle actuelle / dernière résidence habituelle (si l'un y réside encore) / nationalité de l'un des époux / loi du for." },
+
+  { chap:"Chap. 3 — Divorce international", theme:"OP et divorce", diff:"m", multi:false, alert:true,
+    q:"⚠ Si la loi choisie ne prévoit pas le divorce ou crée une inégalité d'accès selon le sexe, que prévoit le règlement Rome III ?",
+    opts:["La loi du for s'applique à la place — une loi qui ne permet pas le divorce est contraire à l'ordre public international du for (art. 12)", "La loi choisie est quand même appliquée par respect de l'autonomie de la volonté des époux, qui avaient librement consenti à cette désignation lors de la conclusion de leur convention", "Les époux doivent choisir une nouvelle loi dans un délai de 3 mois à compter de la notification par le juge que la loi choisie est contraire à l'ordre public international", "Le juge applique la loi de la nationalité commune des époux, ou à défaut la loi de la nationalité du demandeur"],
+    correct:0,
+    ok:"Art. 10 Rome III : si la loi choisie ne prévoit pas le divorce ou crée une inégalité d'accès selon le sexe → loi du for s'applique. Art. 12 : une loi qui ne permet pas le divorce est contraire à l'ordre public international du for. L'accès au divorce est un principe fondamental.",
+    ko:"Loi sans divorce ou sexiste → loi du for. Art. 12 : impossibilité de divorcer = contraire à l'ordre public international. L'accès au divorce est un droit fondamental protégé par l'ordre public international français." },
+
+  { chap:"Chap. 3 — Divorce international", theme:"À défaut de choix Rome III", diff:"m", multi:false,
+    q:"En l'absence de choix par les époux (art. 8, règlement Rome III), quelle est la cascade de rattachement ?",
+    opts:["Loi de résidence habituelle commune au moment de la saisine → dernière résidence habituelle (si moins d'1 an et l'un y réside encore) → nationalité commune → loi du for", "Loi de la nationalité commune au moment de la saisine → loi du for en l'absence de nationalité commune", "Loi du lieu de célébration du mariage → loi de la nationalité commune → loi du for", "Loi du for directement applicable sans cascade — le juge saisi applique toujours son propre droit en l'absence de choix exprès des époux"],
+    correct:0,
+    ok:"Art. 8, Rome III : à défaut de choix → résidence habituelle commune au moment de la saisine → dernière résidence habituelle (si depuis moins d'1 an et l'un y réside encore) → nationalité commune au moment de la saisine → loi du for.",
+    ko:"Cascade art. 8 Rome III : résidence habituelle commune / dernière résidence habituelle (< 1 an, l'un y réside) / nationalité commune / loi du for." },
+
+  { chap:"Chap. 3 — Divorce international", theme:"Répudiations", diff:"d", multi:false, alert:true,
+    q:"⚠ Quelle est la position de principe de la Cour de cassation sur les répudiations unilatérales étrangères ?",
+    opts:["Elles sont reconnues en France si elles ont été prononcées régulièrement dans le pays d'origine des époux et si les deux parties ont eu la possibilité de faire valoir leurs droits", "Elles sont toujours reconnues si les deux époux sont de nationalité étrangère et si la répudiation a été prononcée dans l'État dont ils sont tous deux ressortissants", "Elles sont par principe contraires à l'ordre public international français car discriminatoires (arrêt 17 fév. 2004) — exception : la Cass. a accepté une répudiation demandée par l'épouse elle-même (17 mars 2021)", "Elles sont reconnues si le défendeur ne s'y oppose pas dans un délai de 6 mois à compter de la notification de la décision étrangère"],
+    correct:2,
+    ok:"Les répudiations unilatérales sont par principe contraires à l'ordre public international français car discriminatoires (arrêt 17 fév. 2004 : inégalité entre homme et femme). Exception notable : la Cass. a accepté de donner effet à une répudiation demandée par l'épouse elle-même (Cass, 17 mars 2021).",
+    ko:"Répudiations unilatérales = contraires à l'ordre public international français (discriminatoires). Exception : répudiation demandée par l'épouse elle-même (Cass, 17 mars 2021)." },
+
+  { chap:"Chap. 3 — Divorce international", theme:"Divorce sans juge", diff:"m", multi:false,
+    q:"Le divorce par consentement mutuel sans juge (acte sous seing privé contresigné par avocat, déposé chez le notaire) est-il reconnu dans les autres États membres de l'UE ?",
+    opts:["Non, car le notaire n'exerce pas de fonctions juridictionnelles et l'acte ne constitue pas une décision judiciaire susceptible d'être reconnue en vertu des règlements européens", "Oui, depuis Bruxelles 2 TER (art. 64) : reconnaissance dans les autres États membres des divorces sans juge — avant : ne relevait pas de Bruxelles II Bis", "Non, une homologation judiciaire préalable est toujours nécessaire pour permettre la reconnaissance européenne d'un divorce prononcé sans intervention d'un juge", "Oui, mais uniquement si les deux époux sont ressortissants d'un État membre et si l'acte a été rédigé dans la langue officielle de l'État dans lequel la reconnaissance est demandée"],
+    correct:1,
+    ok:"Art. 64 Bruxelles 2 TER : désormais, reconnaissance dans les autres États membres des divorces sans juge. Avant Bruxelles 2 TER : le divorce par consentement mutuel sans juge ne relevait pas de Bruxelles II Bis car le notaire n'exerce pas de fonctions juridictionnelles.",
+    ko:"Bruxelles 2 TER (art. 64) : le divorce sans juge est désormais reconnu dans les autres États membres. Innovation importante par rapport à Bruxelles II Bis." }
+];
+
+const CHAPTER_ORDER = [
+  "Introduction",
+  "Chap. 1 — Régimes matrimoniaux",
+  "Chap. 2 — Successions internationales",
+  "Chap. 3 — Divorce international"
+];
+const N = 30;
+let sessionQ=[], state=[], currentFilter='all';
+
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
+function pickSession(){
+  const byChap={};CHAPTER_ORDER.forEach(ch=>{byChap[ch]=[];});
+  POOL.forEach(q=>{if(byChap[q.chap])byChap[q.chap].push(q);});
+  let picked=[];
+  CHAPTER_ORDER.forEach(ch=>{
+    const pool=shuffle(byChap[ch]||[]);
+    const quota=Math.round((pool.length/POOL.length)*N);
+    picked=picked.concat(pool.slice(0,quota));
+  });
+  const remaining=shuffle(POOL.filter(q=>!picked.includes(q)));
+  while(picked.length<N&&remaining.length>0)picked.push(remaining.shift());
+  picked.sort((a,b)=>CHAPTER_ORDER.indexOf(a.chap)-CHAPTER_ORDER.indexOf(b.chap));
+  return picked;
+}
+document.addEventListener('DOMContentLoaded',newSession);
+function newSession(){
+  sessionQ=pickSession();state=sessionQ.map(()=>({answered:false,selected:[],isCorrect:false}));
+  currentFilter='all';document.getElementById('recap').style.display='none';
+  document.getElementById('sessbar').innerHTML=`<span>Session en cours · <strong>${sessionQ.length} questions</strong> tirées sur ${POOL.length} disponibles</span><button class="btn-top" onclick="newSession()">⟳ Nouvelle session</button>`;
+  buildNav();renderAll();updateScore();window.scrollTo({top:0,behavior:'smooth'});
+}
+function restartSession(){
+  state=sessionQ.map(()=>({answered:false,selected:[],isCorrect:false}));
+  document.getElementById('recap').style.display='none';currentFilter='all';buildNav();renderAll();updateScore();window.scrollTo({top:0,behavior:'smooth'});
+}
+function buildNav(){
+  const nav=document.getElementById('chapnav');nav.innerHTML='';
+  ['all',...CHAPTER_ORDER.filter(ch=>sessionQ.some(q=>q.chap===ch))].forEach(ch=>{
+    const btn=document.createElement('button');btn.className='chap-btn'+(ch===currentFilter?' active':'');
+    btn.textContent=ch==='all'?'📋 Toutes':ch;btn.onclick=()=>{currentFilter=ch;buildNav();renderAll();};nav.appendChild(btn);
+  });
+}
+function renderAll(){
+  const container=document.getElementById('qlist');container.innerHTML='';document.getElementById('sc-total').textContent=sessionQ.length;
+  const filtered=sessionQ.map((q,i)=>({...q,idx:i})).filter(q=>currentFilter==='all'||q.chap===currentFilter);
+  const byChap={};CHAPTER_ORDER.forEach(ch=>{byChap[ch]=[];});filtered.forEach(q=>{byChap[q.chap].push(q);});
+  let num=0;
+  CHAPTER_ORDER.forEach(ch=>{
+    const qs=byChap[ch];if(!qs||!qs.length)return;
+    if(currentFilter==='all'){const hdr=document.createElement('div');hdr.className='chap-hdr';hdr.innerHTML=`<h2>${ch}</h2><span class="chap-cnt">${qs.length} question${qs.length>1?'s':''}</span>`;container.appendChild(hdr);}
+    qs.forEach(q=>{num++;container.appendChild(buildCard(q,num));});
+  });updateProgress();
+}
+function buildCard(q,num){
+  const s=state[q.idx];const card=document.createElement('div');card.className='q-card';card.id='c'+q.idx;
+  const dc={f:'df',m:'dm',d:'dd'}[q.diff]||'';const dl={f:'● Facile',m:'● Moyen',d:'● Difficile'}[q.diff]||'';
+  card.innerHTML=`<div class="q-meta"><span class="t-chap">${q.chap}</span><span class="t-theme">${q.theme}</span><span class="t-diff ${dc}">${dl}</span>${q.alert?'<span class="t-alert">⚠ À retenir</span>':''}<span class="q-num">Q${num}</span></div><div class="q-text">${q.q}</div><div class="q-instr">${q.multi?'📝 Plusieurs bonnes réponses — cochez tout ce qui est juste, puis validez.':'📝 Une seule bonne réponse — choisissez, puis validez.'}</div><div class="opts" id="opts${q.idx}">${q.opts.map((o,oi)=>`<button class="opt-btn" id="o${q.idx}_${oi}" onclick="toggle(${q.idx},${oi},${q.multi})" ${s.answered?'disabled':''}><span class="ind">${String.fromCharCode(65+oi)}</span><span>${o}</span></button>`).join('')}</div><div class="val-wrap"><button class="btn-val" id="v${q.idx}" onclick="validate(${q.idx})" ${s.answered||s.selected.length===0?'disabled':''}>Valider ma réponse</button></div><div class="fb" id="fb${q.idx}"></div>`;
+  if(s.answered)applyCard(q.idx,q,s);return card;
+}
+function toggle(qi,oi,multi){
+  const s=state[qi];if(s.answered)return;
+  s.selected=multi?(s.selected.includes(oi)?s.selected.filter(x=>x!==oi):[...s.selected,oi]):[oi];
+  sessionQ[qi].opts.forEach((_,i)=>{const b=document.getElementById(`o${qi}_${i}`);if(!b)return;const sel=s.selected.includes(i);b.className='opt-btn'+(sel?' opt-sel':'');const ind=b.querySelector('.ind');ind.style.cssText=sel?'background:#1a1612;border-color:#1a1612;color:#f5f0e8':'';});
+  const v=document.getElementById('v'+qi);if(v)v.disabled=s.selected.length===0;
+}
+function validate(qi){
+  const s=state[qi];if(s.answered||s.selected.length===0)return;s.answered=true;
+  const q=sessionQ[qi];const corrects=Array.isArray(q.correct)?q.correct:[q.correct];
+  const selSet=new Set(s.selected),corSet=new Set(corrects);
+  s.isCorrect=[...selSet].every(i=>corSet.has(i))&&[...corSet].every(i=>selSet.has(i));
+  q.opts.forEach((_,oi)=>{const b=document.getElementById(`o${qi}_${oi}`);if(b)b.disabled=true;});
+  const v=document.getElementById('v'+qi);if(v)v.disabled=true;
+  applyCard(qi,q,s);updateScore();updateProgress();checkComplete();
+}
+function isPartial(q,s){if(!q.multi)return false;const c=Array.isArray(q.correct)?q.correct:[q.correct];return s.selected.filter(i=>c.includes(i)).length>0&&s.selected.filter(i=>c.includes(i)).length<c.length;}
+function applyCard(qi,q,s){
+  const corrects=Array.isArray(q.correct)?q.correct:[q.correct];
+  q.opts.forEach((_,oi)=>{
+    const b=document.getElementById(`o${qi}_${oi}`);if(!b)return;const ind=b.querySelector('.ind');b.removeAttribute('style');if(ind)ind.removeAttribute('style');
+    if(corrects.includes(oi)&&s.selected.includes(oi)){b.style.setProperty('border-color','#1a5c2e');b.style.setProperty('background-color','#eef7f1');b.style.setProperty('color','#1a5c2e');if(ind){ind.style.setProperty('background','#1a5c2e');ind.style.setProperty('border-color','#1a5c2e');ind.style.setProperty('color','#fff');}}
+    else if(!corrects.includes(oi)&&s.selected.includes(oi)){b.style.setProperty('border-color','#9e1b1b');b.style.setProperty('background-color','#fdf0ef');b.style.setProperty('color','#9e1b1b');if(ind){ind.style.setProperty('background','#9e1b1b');ind.style.setProperty('border-color','#9e1b1b');ind.style.setProperty('color','#fff');}}
+    else if(corrects.includes(oi)&&!s.selected.includes(oi)){b.style.setProperty('border-color','#b8860b');b.style.setProperty('background-color','#fffbf0');b.style.setProperty('color','#7a4800');if(ind){ind.style.setProperty('background','#b8860b');ind.style.setProperty('border-color','#b8860b');ind.style.setProperty('color','#fff');}}
+  });
+  const fb=document.getElementById(`fb${qi}`);
+  if(fb){const partial=isPartial(q,s);let cls,txt;if(s.isCorrect){cls='fb-ok';txt=`<strong>✓ Bonne réponse !</strong> ${q.ok}`;}else if(partial){cls='fb-partial';txt=`<strong>⚠ Réponse incomplète.</strong> ${q.ko}`;}else{cls='fb-ko';txt=`<strong>✗ Mauvaise réponse.</strong> ${q.ko}`;}fb.className='fb visible '+cls;fb.innerHTML=txt;}
+}
+function updateScore(){const done=state.filter(s=>s.answered).length,ok=state.filter(s=>s.answered&&s.isCorrect).length;document.getElementById('sc-done').textContent=done;document.getElementById('sc-ok').textContent=ok;document.getElementById('sc-ko').textContent=done-ok;}
+function updateProgress(){document.getElementById('pbar').style.width=(state.filter(s=>s.answered).length/sessionQ.length*100)+'%';}
+function checkComplete(){
+  if(state.filter(s=>s.answered).length<sessionQ.length)return;
+  const ok=state.filter(s=>s.isCorrect).length,pct=Math.round(ok/sessionQ.length*100);
+  let chapHTML='';CHAPTER_ORDER.forEach(ch=>{const cqs=sessionQ.map((q,i)=>({...q,idx:i})).filter(q=>q.chap===ch);if(!cqs.length)return;const cok=cqs.filter(q=>state[q.idx].isCorrect).length;chapHTML+=`<div class="cs-item"><div class="cs-name">${ch}</div><div class="cs-num">${cok} / ${cqs.length}</div></div>`;});
+  document.getElementById('recap-chaps').innerHTML=chapHTML;document.getElementById('recap-score').textContent=`${ok} / ${sessionQ.length} (${pct}%)`;
+  const msgs=['Reprends la fiche depuis le début. Les 3 périodes des RM, les règlements européens et les distinctions OP/loi de police sont essentiels.','Résultat moyen. Revois les 3 périodes des RM, la professio juris, les cascades de rattachement et les distinctions Rome III / Bruxelles 2 TER.','Bon travail ! Consolide les points délicats : changement automatique de loi, sens de l\'effet rétroactif (Convention vs règlement 2016), OP et réserve héréditaire.','Excellent ! Tu maîtrises très bien ce cours de DIP. Revois les quelques points manqués avant l\'exam.'];
+  document.getElementById('recap-msg').textContent=msgs[pct>=85?3:pct>=70?2:pct>=50?1:0];document.getElementById('recap').style.display='block';setTimeout(()=>document.getElementById('recap').scrollIntoView({behavior:'smooth',block:'start'}),200);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Histoire de la Justice — Fiche de révision M1</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --rome: #1A5276; --rome-l: #D6EAF8; --rome-m: #2E86C1;
+    --moyen: #0B5345; --moyen-l: #D5F5E3; --moyen-m: #1E8449;
+    --ancien: #784212; --ancien-l: #FDEBD0; --ancien-m: #CA6F1E;
+    --rev: #7B241C; --rev-l: #FADBD8; --rev-m: #CB4335;
+    --dark: #1C2833; --mid: #566573; --light: #F4F6F7;
+    --border: #E5E8EA; --warn-bg: #FFFDE7; --warn: #F57F17;
+    --white: #fff;
+    --font: 'DM Sans', system-ui, sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font);
+    background: #F0F2F5;
+    color: #2C3E50;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--dark);
+    color: #fff;
+    padding: 28px 32px 22px;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  }
+  .site-header h1 { font-size: 22px; font-weight: 600; letter-spacing: -.3px; }
+  .site-header p { font-size: 13px; color: #AAB7C4; margin-top: 2px; }
+  .epoch-strip {
+    display: flex;
+    margin-top: 14px;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 22px;
+  }
+  .epoch-strip span {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 600; color: #fff;
+    letter-spacing: .04em;
+  }
+
+  /* ── NAV TABS — barre sticky en haut ── */
+  .nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 16px;
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: sticky;
+    top: var(--header-h, 0px);
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,.07);
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav-btn {
+    padding: 11px 14px;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mid);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .15s, border-color .15s, background .15s;
+    flex-shrink: 0;
+  }
+  .nav-btn:hover { color: var(--dark); background: var(--light); }
+  .nav-btn.active { color: var(--dark); border-bottom-color: var(--dark); font-weight: 600; }
+
+  /* ── MAIN ── */
+  .main { max-width: 900px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  .pane { display: none; }
+  .pane.active { display: block; }
+
+  /* ── SIECLE BOX ── */
+  .siecle-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 24px;
+  }
+  .siecle-box h2 {
+    font-size: 14px; font-weight: 600; color: var(--dark);
+    margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .siecle-rule {
+    font-size: 14px; line-height: 1.75; color: #2C3E50;
+    background: #F8F9FA; border-radius: 8px; padding: 10px 14px;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--dark);
+  }
+  .siecle-rule strong { font-weight: 600; color: var(--dark); }
+  .conv-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .conv-row input, .conv-row select {
+    padding: 7px 10px; border: 1px solid var(--border); border-radius: 7px;
+    font-family: var(--font); font-size: 14px; color: var(--dark);
+    background: var(--white); outline: none;
+  }
+  .conv-row input { width: 110px; }
+  .conv-row input:focus, .conv-row select:focus { border-color: var(--dark); }
+  .conv-result {
+    font-size: 14px; font-weight: 600;
+    color: var(--rome); min-width: 180px;
+  }
+  .ex-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .ex-pill {
+    font-size: 12px; padding: 3px 10px; border-radius: 20px;
+    background: var(--light); border: 1px solid var(--border);
+    color: var(--mid); cursor: pointer; font-family: var(--mono);
+    transition: background .12s, color .12s;
+  }
+  .ex-pill:hover { background: var(--dark); color: #fff; border-color: var(--dark); }
+
+  .table-siecle { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px; }
+  .table-siecle th { background: var(--dark); color: #fff; padding: 7px 12px; text-align: left; font-weight: 500; }
+  .table-siecle td { padding: 6px 12px; border-bottom: 1px solid var(--border); }
+  .table-siecle tr:nth-child(even) td { background: #F8F9FA; }
+  .tag-rome { background: var(--rome-l); color: var(--rome); padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 12px; }
+  .tag-moyen { background: var(--moyen-l); color: var(--moyen); padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 12px; }
+  .tag-ancien { background: var(--ancien-l); color: var(--ancien); padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 12px; }
+  .tag-rev { background: var(--rev-l); color: var(--rev); padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 12px; }
+
+  /* ── TIMELINE ── */
+  .timeline { position: relative; padding-left: 36px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 14px; top: 0; 
+    width: 2px; background: var(--border); border-radius: 2px;
+  }
+  .te {
+    position: relative; margin-bottom: 18px;
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px 16px;
+  }
+  .te::before {
+    content: ''; position: absolute; left: -29px; top: 16px;
+    width: 12px; height: 12px; border-radius: 50%;
+    border: 2px solid var(--border); background: var(--white);
+  }
+  .te.rome::before { background: var(--rome); border-color: var(--rome); }
+  .te.moyen::before { background: var(--moyen); border-color: var(--moyen); }
+  .te.ancien::before { background: var(--ancien); border-color: var(--ancien); }
+  .te.rev::before { background: var(--rev); border-color: var(--rev); }
+  .te.key { border-left: 3px solid; }
+  .te.key.rome { border-left-color: var(--rome); }
+  .te.key.moyen { border-left-color: var(--moyen); }
+  .te.key.ancien { border-left-color: var(--ancien); }
+  .te.key.rev { border-left-color: var(--rev); }
+  .te-meta { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
+  .te-date { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--mid); }
+  .te-siecle { font-size: 11px; color: #AAB7C4; font-style: italic; }
+  .te-title { font-size: 14px; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
+  .te-sub { font-size: 13px; color: var(--mid); line-height: 1.55; }
+  .te-warn { font-size: 12px; color: var(--warn); background: var(--warn-bg); border-radius: 5px; padding: 4px 8px; margin-top: 6px; display: inline-block; }
+
+  .epoch-divider {
+    display: flex; align-items: center; margin: 24px 0 18px;
+    font-size: 12px; font-weight: 600; color: #fff;
+    letter-spacing: .06em;
+  }
+  .epoch-divider span {
+    padding: 5px 14px; border-radius: 6px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;
+  }
+  .card-title {
+    font-size: 14px; font-weight: 600; color: var(--dark);
+    margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+  }
+  .pill {
+    font-size: 11px; padding: 2px 9px; border-radius: 12px; font-weight: 600;
+  }
+  .pill-rome { background: var(--rome-l); color: var(--rome); }
+  .pill-moyen { background: var(--moyen-l); color: var(--moyen); }
+  .pill-ancien { background: var(--ancien-l); color: var(--ancien); }
+  .pill-rev { background: var(--rev-l); color: var(--rev); }
+
+  .flow {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+    margin-top: 8px;
+  }
+  .flow-step {
+    font-size: 12px; padding: 4px 10px; border-radius: 6px;
+    background: var(--light); border: 1px solid var(--border);
+    color: var(--dark); font-weight: 500;
+  }
+  .flow-arr { font-size: 14px; color: #BDC3C7; }
+
+  .kv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .kv-item { background: var(--light); border-radius: 8px; padding: 10px 12px; }
+  .kv-label { font-size: 11px; color: var(--mid); font-weight: 500; margin-bottom: 3px; text-transform: uppercase; letter-spacing: .05em; }
+  .kv-val { font-size: 13px; color: var(--dark); line-height: 1.5; }
+
+  .warn-box {
+    background: var(--warn-bg); border: 1px solid #FFE082;
+    border-radius: 8px; padding: 10px 13px; font-size: 13px;
+    color: #7F6000; margin-top: 10px; line-height: 1.55;
+  }
+  .warn-box strong { font-weight: 600; }
+
+  blockquote {
+    border-left: 3px solid var(--border); padding: 6px 14px;
+    font-size: 13px; color: var(--mid); font-style: italic;
+    margin: 8px 0; line-height: 1.6;
+  }
+
+  ul.custom { list-style: none; padding: 0; margin: 8px 0; }
+  ul.custom li { font-size: 13px; color: var(--mid); padding: 3px 0 3px 18px; position: relative; line-height: 1.55; }
+  ul.custom li::before { content: '→'; position: absolute; left: 0; color: #BDC3C7; }
+
+  .sep { border: none; border-top: 1px solid var(--border); margin: 12px 0; }
+
+  .section-label {
+    font-size: 11px; font-weight: 600; color: var(--mid);
+    text-transform: uppercase; letter-spacing: .08em;
+    margin: 28px 0 12px;
+  }
+
+  /* ── SUJETS ── */
+  .sujet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .sujet-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 14px; font-size: 13px;
+    color: var(--dark); line-height: 1.45;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .sujet-card:hover { border-color: var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,.07); }
+  .sujet-num { font-weight: 600; color: var(--mid); font-size: 11px; margin-bottom: 3px; }
+  .sujet-epoch { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 4px; margin-bottom: 4px; font-weight: 600; }
+
+  /* ── EPOCH HEADERS IN CONTENT ── */
+  .epoch-head {
+    border-radius: 8px; padding: 10px 16px; margin: 22px 0 14px;
+    font-size: 14px; font-weight: 600; color: #fff; letter-spacing: .02em;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    .nav, .site-header { position: static; }
+    .pane { display: block !important; }
+    body { background: #fff; font-size: 12px; }
+    .card, .te { break-inside: avoid; }
+    .epoch-strip { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+
+  @media (max-width: 600px) {
+    .kv-grid { grid-template-columns: 1fr; }
+    .sujet-grid { grid-template-columns: 1fr; }
+    .main { padding: 16px 14px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>⚖️ Histoire de la Justice</h1>
+  <p>Fiche de révision complète · M1 Droit Civil S7 · M. Moncassin · 20 sujets</p>
+  <div class="epoch-strip">
+    <span style="background:#1A5276;width:22%;">Rome</span>
+    <span style="background:#0B5345;width:20%;">Moyen Âge</span>
+    <span style="background:#784212;width:30%;">Ancien Régime</span>
+    <span style="background:#7B241C;width:28%;">Révolution</span>
+  </div>
+</header>
+
+<nav class="nav">
+  <button class="nav-btn active" onclick="switchTab('siecles',this)">🔢 Comprendre les siècles</button>
+  <button class="nav-btn" onclick="switchTab('chronologie',this)">📅 Chronologie</button>
+  <button class="nav-btn" onclick="switchTab('rome',this)">🏛 Rome</button>
+  <button class="nav-btn" onclick="switchTab('monarchie',this)">⚜️ Monarchie</button>
+  <button class="nav-btn" onclick="switchTab('revolution',this)">🔴 Révolution</button>
+  <button class="nav-btn" onclick="switchTab('sujets',this)">📝 20 sujets</button>
+</nav>
+
+<main class="main">
+
+<!-- ══ SIÈCLES ══ -->
+<div id="siecles" class="pane active">
+  <div class="siecle-box">
+    <h2>🔢 Comprendre les siècles — la règle en 10 secondes</h2>
+    <div class="siecle-rule">
+      <strong>Après J.-C. :</strong> prends les centaines de la date, ajoute 1.<br>
+      Exemple : <strong>1789</strong> → centaines = « 17 » → 17 + 1 = <strong>18e siècle</strong> &nbsp;|&nbsp; <strong>476</strong> → « 4 » + 1 = <strong>5e siècle</strong><br><br>
+      <strong>Avant J.-C. (dates négatives) :</strong> même logique.<br>
+      Exemple : <strong>−149</strong> → centaines = « 1 » → 1 + 1 = <strong>−IIe siècle</strong> &nbsp;|&nbsp; <strong>−509</strong> → « 5 » + 1 = <strong>−VIe siècle</strong>
+    </div>
+    <div class="conv-row">
+      <input type="number" id="date-input" placeholder="Ex : 1667" oninput="convertSiecle()">
+      <select id="era-sel" onchange="convertSiecle()">
+        <option value="ap">Après J.-C.</option>
+        <option value="av">Avant J.-C.</option>
+      </select>
+      <span class="conv-result" id="conv-result">← tape une date</span>
+    </div>
+    <div class="ex-pills">
+      <span class="ex-pill" onclick="setEx(1789,'ap')">1789</span>
+      <span class="ex-pill" onclick="setEx(1670,'ap')">1670</span>
+      <span class="ex-pill" onclick="setEx(1667,'ap')">1667</span>
+      <span class="ex-pill" onclick="setEx(476,'ap')">476</span>
+      <span class="ex-pill" onclick="setEx(530,'ap')">530</span>
+      <span class="ex-pill" onclick="setEx(149,'av')">−149</span>
+      <span class="ex-pill" onclick="setEx(509,'av')">−509</span>
+      <span class="ex-pill" onclick="setEx(27,'av')">−27</span>
+    </div>
+  </div>
+
+  <div class="section-label">Tableau de référence rapide — toutes les dates du cours</div>
+  <table class="table-siecle">
+    <thead>
+      <tr><th>Date</th><th>Centaines</th><th>→ Siècle</th><th>Époque</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>−509 av. J.-C.</td><td>5</td><td>−VIe siècle (−600 à −500)</td><td><span class="tag-rome">Rome</span></td></tr>
+      <tr><td>−454/−450 av. J.-C.</td><td>4</td><td>−Ve siècle (−500 à −400)</td><td><span class="tag-rome">Rome</span></td></tr>
+      <tr><td>−149/−126 av. J.-C.</td><td>1</td><td>−IIe siècle (−200 à −100)</td><td><span class="tag-rome">Rome</span></td></tr>
+      <tr><td>−27 av. J.-C.</td><td>0 → cas limite</td><td>−Ier siècle (−100 à 0)</td><td><span class="tag-rome">Rome</span></td></tr>
+      <tr><td>476 ap. J.-C.</td><td>4</td><td>5e siècle (400–500)</td><td><span class="tag-moyen">Moyen Âge</span></td></tr>
+      <tr><td>530 ap. J.-C.</td><td>5</td><td>6e siècle (500–600)</td><td><span class="tag-moyen">Moyen Âge</span></td></tr>
+      <tr><td>11e siècle</td><td>—</td><td>11e siècle = 1000–1100</td><td><span class="tag-moyen">Moyen Âge</span></td></tr>
+      <tr><td>12e siècle</td><td>—</td><td>12e siècle = 1100–1200</td><td><span class="tag-moyen">Moyen Âge</span></td></tr>
+      <tr><td>1190 / 1254 / 1274</td><td>12</td><td>13e siècle (1200–1300)</td><td><span class="tag-ancien">Ancien Régime</span></td></tr>
+      <tr><td>1444 / 1462 / 1477</td><td>14</td><td>15e siècle (1400–1500)</td><td><span class="tag-ancien">Ancien Régime</span></td></tr>
+      <tr><td>1522</td><td>15</td><td>16e siècle (1500–1600)</td><td><span class="tag-ancien">Ancien Régime</span></td></tr>
+      <tr><td>1604 / 1648</td><td>16</td><td>17e siècle (1600–1700)</td><td><span class="tag-ancien">Ancien Régime</span></td></tr>
+      <tr><td>1667 / 1670</td><td>16</td><td>17e siècle (1600–1700)</td><td><span class="tag-ancien">Ancien Régime</span></td></tr>
+      <tr><td>1761 / 1771 / 1788 / 1789</td><td>17</td><td>18e siècle (1700–1800)</td><td><span class="tag-ancien">Ancien Régime</span> / <span class="tag-rev">Révolution</span></td></tr>
+      <tr><td>1793 / 1794</td><td>17</td><td>18e siècle (1700–1800)</td><td><span class="tag-rev">Révolution</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══ CHRONOLOGIE ══ -->
+<div id="chronologie" class="pane">
+  <p style="font-size:13px;color:var(--mid);margin-bottom:18px;">Les événements importants ont un trait coloré à gauche. La couleur du point indique l'époque.</p>
+  <div class="timeline">
+
+    <div class="epoch-divider"><span style="background:var(--rome);">🏛 ROME — République puis Empire (−509 → 476 ap. J.-C.)</span></div>
+
+    <div class="te key rome">
+      <div class="te-meta"><span class="te-date">−509 av. J.-C.</span><span class="te-siecle">→ −VIe siècle</span></div>
+      <div class="te-title">République romaine</div>
+      <div class="te-sub">Tarquin le Superbe écarté. 3 institutions : Comices, Magistratures, Sénat.</div>
+    </div>
+    <div class="te rome">
+      <div class="te-meta"><span class="te-date">−454/−450 av. J.-C.</span><span class="te-siecle">→ −Ve siècle</span></div>
+      <div class="te-title">Loi des XII Tables</div>
+      <div class="te-sub">1re grande codification : droit public + privé + procédures. Affichée sur le forum. En vigueur jusqu'à Justinien (530 ap. J.-C. = 6e siècle).</div>
+    </div>
+    <div class="te rome">
+      <div class="te-meta"><span class="te-date">−149/−126 av. J.-C.</span><span class="te-siecle">→ −IIe siècle</span></div>
+      <div class="te-title">Procédure formulaire & 1res quaestiones perpetuae</div>
+      <div class="te-sub">Loi Aebutia abolit les actions de la loi. 1re chambre criminelle permanente (−149). Fin République : 11 quaestiones perpetuae.</div>
+    </div>
+    <div class="te key rome">
+      <div class="te-meta"><span class="te-date">−27 av. J.-C.</span><span class="te-siecle">→ −Ier siècle</span></div>
+      <div class="te-title">Empire romain — Auguste</div>
+      <div class="te-sub">2 lois : procédure civile + pénale. Justice pleinement étatique. Procédure extraordinaire : libellé écrit, juge représente l'État.</div>
+    </div>
+    <div class="te rome">
+      <div class="te-meta"><span class="te-date">2e siècle ap. J.-C.</span><span class="te-siecle">→ (100–200)</span></div>
+      <div class="te-title">Conseil impérial</div>
+      <div class="te-sub">Grands jurisconsultes : Ulpien, Gaius, Paul, Modestinus. Unité de jugement imposée. Hiérarchie des juges. Appel suspensif.</div>
+    </div>
+    <div class="te rome">
+      <div class="te-meta"><span class="te-date">530 ap. J.-C.</span><span class="te-siecle">→ 6e siècle</span></div>
+      <div class="te-title">Compilations de Justinien</div>
+      <div class="te-sub">Digeste, Code, Institutes. Redécouvertes au 12e siècle (= 1100s) → fondent la justice médiévale.</div>
+    </div>
+
+    <div class="epoch-divider"><span style="background:var(--moyen);">⛪ MOYEN ÂGE (476 → 13e siècle = 400s → 1200s)</span></div>
+
+    <div class="te key moyen">
+      <div class="te-meta"><span class="te-date">476 ap. J.-C.</span><span class="te-siecle">→ 5e siècle</span></div>
+      <div class="te-title">Chute de Rome → Royaumes barbares</div>
+      <div class="te-sub">Francs Saliens, Burgondes, Wisigoths. Destruction des structures judiciaires romaines. Entre le 5e et le 12e s. : destruction puis concurrence des justices.</div>
+    </div>
+    <div class="te moyen">
+      <div class="te-meta"><span class="te-date">11e siècle</span><span class="te-siecle">→ (1000–1100)</span></div>
+      <div class="te-title">Justice d'Église & renouveau du droit romain</div>
+      <div class="te-sub">Réforme grégorienne (Pape Grégoire VII) → procédure romano-canonique, écrite et rationnelle, calquée sur le Bas-Empire romain.</div>
+    </div>
+    <div class="te moyen">
+      <div class="te-meta"><span class="te-date">12e siècle</span><span class="te-siecle">→ (1100–1200)</span></div>
+      <div class="te-title">4 justices en concurrence</div>
+      <div class="te-sub">Royale / Seigneuriale / Ecclésiastique / Municipale. La justice royale va supplanter toutes les autres.</div>
+    </div>
+
+    <div class="epoch-divider"><span style="background:var(--ancien);">⚜️ ANCIEN RÉGIME (13e → fin 18e siècle = 1200s → 1780s)</span></div>
+
+    <div class="te key ancien">
+      <div class="te-meta"><span class="te-date">13e s. — Philippe Auguste (1180–1223)</span><span class="te-siecle">→ 13e siècle (1200s)</span></div>
+      <div class="te-title">Essor de la justice royale</div>
+      <div class="te-sub">«Toute justice émane du Roi». Bailliages créés en 1190. Sénéchaussées au Sud. Parlement issu de la Cour royale. Procédure inquisitoire adoptée.</div>
+    </div>
+    <div class="te ancien">
+      <div class="te-meta"><span class="te-date">1254 & 1258</span><span class="te-siecle">→ 13e siècle</span></div>
+      <div class="te-title">St Louis interdit le duel judiciaire</div>
+      <div class="te-sub">Abandon des preuves irrationnelles. Minimum 2 témoins. L'écrit prévaut au 14e s. (1300s). Aveu = reine des preuves → torture dès le 14e s.</div>
+    </div>
+    <div class="te ancien">
+      <div class="te-meta"><span class="te-date">1274</span><span class="te-siecle">→ 13e siècle</span></div>
+      <div class="te-title">Ordonnance royale — régulation des avocats</div>
+      <div class="te-sub">6 obligations : licence de droit, inscription au tableau, serment, aide aux pauvres, honoraires limités, interdiction quota litis.</div>
+    </div>
+    <div class="te ancien">
+      <div class="te-meta"><span class="te-date">1444 / 1462 / 1477</span><span class="te-siecle">→ 15e siècle</span></div>
+      <div class="te-title">Parlements provinciaux</div>
+      <div class="te-sub">Toulouse (1444), Bordeaux (1462), Dijon (1477). Fin AR : 13 Parlements = équivalents des Cours d'appel actuelles.</div>
+    </div>
+    <div class="te ancien">
+      <div class="te-meta"><span class="te-date">1522 (François Ier) / Paulette 1604</span><span class="te-siecle">→ 16e–17e siècle</span></div>
+      <div class="te-title">Vénalité des offices</div>
+      <div class="te-sub">Bureau fixant la valeur des offices (1522). Paulette 1604 : taxe = 1/60 par an → offices héréditaires. Juges inamovibles en pratique.</div>
+      <div class="te-warn">⚠ Indépendance totale des juges → conflit permanent avec le Roi</div>
+    </div>
+    <div class="te key ancien">
+      <div class="te-meta"><span class="te-date">Juin 1648</span><span class="te-siecle">→ 17e siècle</span></div>
+      <div class="te-title">La Fronde</div>
+      <div class="te-sub">Conseillers contre le Parlement de Paris. Charte : interdit la justice retenue + aucun impôt sans vérification. Réprimée en 1651 par Anne d'Autriche et Mazarin.</div>
+    </div>
+    <div class="te key ancien">
+      <div class="te-meta"><span class="te-date">1667</span><span class="te-siecle">→ 17e siècle</span></div>
+      <div class="te-title">Ordonnance civile — «1er Code civil»</div>
+      <div class="te-sub">35 titres, 551 articles. Unifier + simplifier + soumettre les juges. Louis XIV soutenu par Colbert. Le CPC de 1806 sera calqué dessus.</div>
+    </div>
+    <div class="te key ancien">
+      <div class="te-meta"><span class="te-date">1670</span><span class="te-siecle">→ 17e siècle</span></div>
+      <div class="te-title">Ordonnance criminelle de Louis XIV</div>
+      <div class="te-sub">5 étapes. Style inquisitoire. Pas d'avocat pour les grands criminels (Pussort gagne contre Lamoignon). Appel obligatoire pour peines graves.</div>
+    </div>
+    <div class="te ancien">
+      <div class="te-meta"><span class="te-date">1761–1765</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">Affaire Calas → critique de Voltaire</div>
+      <div class="te-sub">Jean Calas exécuté le 10 mars 1762, innocenté en 1765. Scandale majeur de la justice d'Ancien Régime.</div>
+    </div>
+    <div class="te ancien">
+      <div class="te-meta"><span class="te-date">Fév. 1771</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">Réforme Maupeou — annulée par Louis XVI</div>
+      <div class="te-sub">Suppression vénalité, nomination royale, gratuité de la justice. Annulée dès l'avènement de Louis XVI.</div>
+    </div>
+    <div class="te ancien">
+      <div class="te-meta"><span class="te-date">1780 & 1788</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">Louis XVI — abolitions partielles</div>
+      <div class="te-sub">Question préparatoire abolie (1780), question préalable (1788), sellette supprimée. Trop peu, trop tard.</div>
+    </div>
+    <div class="te ancien">
+      <div class="te-meta"><span class="te-date">8 mai 1788</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">Réforme Lamoignon — échec</div>
+      <div class="te-sub">47 grands baillages + Cour plénière. Journée des tuiles le 7 juin (Grenoble, Pau, Rennes). Louis XVI convoque les États généraux.</div>
+    </div>
+
+    <div class="epoch-divider"><span style="background:var(--rev);">🔴 RÉVOLUTION (1789 → 1794 — fin 18e siècle)</span></div>
+
+    <div class="te key rev">
+      <div class="te-meta"><span class="te-date">5 mai 1789</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">États généraux → Assemblée nationale</div>
+      <div class="te-sub">17 juin : AN. 20 juin : Jeu de Paume. 4 août : abolition des privilèges (nuit). DDHC 26 août : art. 9 (présomption d'innocence), art. 16 (séparation des pouvoirs).</div>
+    </div>
+    <div class="te key rev">
+      <div class="te-meta"><span class="te-date">16 & 24 août 1790</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">Loi sur l'organisation judiciaire</div>
+      <div class="te-sub">4 nouvelles juridictions : tribunal de famille (supprimé 1796), justice de paix (supprimée 1958), tribunal de district (→ TGI 1958), tribunal de cassation.</div>
+    </div>
+    <div class="te rev">
+      <div class="te-meta"><span class="te-date">25 sept. / 6 oct. 1791</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">Code pénal révolutionnaire</div>
+      <div class="te-sub">Laïcisation + fixité des peines + guillotine. Droit de grâce supprimé. Tribunal de cassation libéré de la tutelle législative en 1837.</div>
+    </div>
+    <div class="te key rev">
+      <div class="te-meta"><span class="te-date">10 mars 1793</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">Tribunal révolutionnaire — Danton</div>
+      <div class="te-sub">5 juges + 12 jurés jacobins. 3 lois d'accélération : oct. 1793 → avril 1794 → 22 prairial (10 juin 1794 : suppression de tous les droits de la défense, seule peine : mort).</div>
+    </div>
+    <div class="te key rev">
+      <div class="te-meta"><span class="te-date">27 juillet 1794</span><span class="te-siecle">→ 18e siècle</span></div>
+      <div class="te-title">Thermidor — chute de Robespierre</div>
+      <div class="te-sub">Fin de la Terreur. ~500 000 emprisonnés · ~17 000 condamnations à mort · 200 000 victimes des colonnes infernales.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ ROME ══ -->
+<div id="rome" class="pane">
+  <div class="epoch-head" style="background:var(--rome);">🏛 Rome — −509 à 476 ap. J.-C.</div>
+
+  <div class="card">
+    <div class="card-title"><span class="pill pill-rome">République</span> 2 procédures civiles successives</div>
+    <p style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:6px;">Actions de la loi (−Ve → −IIe siècle)</p>
+    <div class="flow">
+      <span class="flow-step">Phase in iure (préteur)</span><span class="flow-arr">→</span>
+      <span class="flow-step">Provocatio (somme fixée)</span><span class="flow-arr">→</span>
+      <span class="flow-step">Litis attestatio</span><span class="flow-arr">→</span>
+      <span class="flow-step">Phase apud iudicem (juge privé)</span><span class="flow-arr">→</span>
+      <span class="flow-step">Décision le jour même</span>
+    </div>
+    <hr class="sep">
+    <p style="font-size:13px;font-weight:600;color:var(--dark);margin-bottom:6px;">Procédure formulaire (à partir du −IIe siècle — Loi Aebutia −149/−126)</p>
+    <div class="flow">
+      <span class="flow-step">Comparution (ou mandataire)</span><span class="flow-arr">→</span>
+      <span class="flow-step">Formule rédigée par le préteur</span><span class="flow-arr">→</span>
+      <span class="flow-step">Juge lié par la formule</span><span class="flow-arr">→</span>
+      <span class="flow-step">Exécution par le préteur</span>
+    </div>
+    <div class="warn-box">Droit prétorien = édit publié en début de mandat, repris et enrichi par chaque nouveau préteur. En constante évolution.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="pill pill-rome">République</span> Justice criminelle</div>
+    <div class="kv-grid">
+      <div class="kv-item"><div class="kv-label">Avant −IIe s. (avant −200)</div><div class="kv-val">Procès devant les Comices centuriates. Le consul accuse, le peuple vote. Justice directement politique.</div></div>
+      <div class="kv-item"><div class="kv-label">Quaestiones perpetuae (−149 →)</div><div class="kv-val">Chambres permanentes. Préteur + jury 300 citoyens nobles. Procédure accusatoire. Serment de calomnie. 151 voix pour condamner.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="pill pill-ancien">Empire</span> Procédure extraordinaire — Auguste (−27)</div>
+    <div class="flow">
+      <span class="flow-step">Libellé (requête écrite)</span><span class="flow-arr">→</span>
+      <span class="flow-step">Citation du défendeur</span><span class="flow-arr">→</span>
+      <span class="flow-step">PV écrit des débats</span><span class="flow-arr">→</span>
+      <span class="flow-step">Sentence écrite</span><span class="flow-arr">→</span>
+      <span class="flow-step">Frais au perdant</span>
+    </div>
+    <div class="warn-box">Le juge représente l'autorité impériale. Plus de juges privés. Justice pleinement étatique. Non publique (secrétarium). Procédure bureaucratique écrite.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="pill pill-ancien">Empire</span> 3 innovations pénales d'Auguste</div>
+    <div class="kv-grid">
+      <div class="kv-item"><div class="kv-label">1. Rescrits</div><div class="kv-val">Actes législatifs. Délits privés → domaine public. Aggravation des peines (ex : vol → exil/mort).</div></div>
+      <div class="kv-item"><div class="kv-label">2. Justice personnelle</div><div class="kv-val">Accusatoire → inquisitoire. Le juge peut s'auto-saisir. Torture systématique dès le 3e s.</div></div>
+    </div>
+    <div class="kv-item" style="margin-top:8px;background:var(--light);border-radius:8px;padding:10px 12px;">
+      <div class="kv-label">3. Lèse-majesté (maiestas)</div>
+      <div class="kv-val">Crime contre l'autorité impériale. Peine de mort + confiscation + perte droits civiques des descendants. Jugé par le Sénat contrôlé par l'empereur.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Citations à retenir absolument</div>
+    <blockquote>Ulpien : «le droit est l'art du bon et du juste» — les juristes = «prêtres de la justice»</blockquote>
+    <blockquote>Pomponius : «le droit ne se tire pas de la règle, mais la règle se tire du droit»</blockquote>
+    <blockquote>St Augustin (5e s. = 400s) : «sans la Justice, que sont les royaumes ? Sinon vaste brigandage»</blockquote>
+  </div>
+</div>
+
+<!-- ══ MONARCHIE ══ -->
+<div id="monarchie" class="pane">
+  <div class="epoch-head" style="background:var(--ancien);">⚜️ Justice monarchique — 13e → 18e siècle (1200s → 1780s)</div>
+
+  <div class="card">
+    <div class="card-title">Hiérarchie des juridictions royales</div>
+    <div class="flow" style="flex-direction:column;align-items:flex-start;gap:6px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="flow-step" style="background:var(--ancien-l);border-color:var(--ancien);color:var(--ancien);font-weight:600;">Parlement (Cour souveraine)</span>
+        <span style="font-size:12px;color:var(--mid);">— Arrêts en dernier ressort. 4 chambres : Grande Chambre, Enquêtes, Requêtes, Tournelle (16e s. = criminelle).</span>
+      </div>
+      <span style="padding-left:12px;color:#BDC3C7;font-size:18px;">↑ appel</span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="flow-step">Bailliages (Nord) / Sénéchaussées (Sud)</span>
+        <span style="font-size:12px;color:var(--mid);">— ~400 tribunaux à la Révolution</span>
+      </div>
+      <span style="padding-left:12px;color:#BDC3C7;font-size:18px;">↑ appel</span>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <span class="flow-step">Justices de paix</span>
+        <span class="flow-step">Juridictions consulaires</span>
+        <span class="flow-step">Maréchaussée</span>
+        <span class="flow-step">Cours des aides</span>
+        <span class="flow-step">Châtelet (Paris)</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--mid);margin-top:10px;">Parlements provinciaux : Toulouse (1444 = 15e s.) / Bordeaux (1462) / Dijon (1477). Fin AR : 13 Parlements.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Justice retenue vs Justice déléguée</div>
+    <div class="kv-grid">
+      <div class="kv-item"><div class="kv-label">Justice déléguée</div><div class="kv-val">Rendue par les officiers royaux. Cours ordinaires. Mission complète.</div></div>
+      <div class="kv-item"><div class="kv-label">Justice retenue</div><div class="kv-val">Le Roi reprend à tout moment. Évocations, commissions, lits de justice, lettres de cachet.</div></div>
+    </div>
+    <p style="font-size:12px;color:var(--mid);margin-top:10px;">Lettres de grâce — 4 types : <strong>rémission</strong> (homicide légitime défense) · <strong>abolition</strong> (très rares, peine de mort) · <strong>pardon</strong> (crimes moins graves) · <strong>commutation de peine</strong></p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Vénalité des offices & indépendance des magistrats</div>
+    <ul class="custom">
+      <li>Inamovibilité : de fait dès le 15e s. (1400s), de droit par ordonnance.</li>
+      <li>2 revenus : gage (Roi) + épices (plaideur). Fonction très recherchée.</li>
+      <li>Vénalité : François Ier (1522) — bureau fixant la valeur des offices.</li>
+      <li>Paulette (1604 = 17e s.) : taxe = 1/60 par an → transmissible héréditairement.</li>
+    </ul>
+    <div class="warn-box"><strong>⚠ La vénalité des offices = source de l'indépendance totale → conflit permanent avec le Roi.</strong> Le Roi ne peut plus révoquer les juges.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Procédure civile AR — 4 étapes + l'adage</div>
+    <div class="flow">
+      <span class="flow-step">Ajournement (huissier + 2 témoins)</span><span class="flow-arr">→</span>
+      <span class="flow-step">Appointement (écrits contradictoires)</span><span class="flow-arr">→</span>
+      <span class="flow-step">Sentence (+ épices)</span><span class="flow-arr">→</span>
+      <span class="flow-step">Voies de recours (jusqu'à 5 appels)</span>
+    </div>
+    <blockquote style="margin-top:10px;">«3 sacs pour le plaideur : sac de papier + sac d'argent + sac de patience» — procès pouvant durer 60 ans voire un siècle.</blockquote>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Les 5 grandes ordonnances de Louis XIV (17e s. = 1600s)</div>
+    <div class="kv-grid">
+      <div class="kv-item"><div class="kv-label">1667 — Civile</div><div class="kv-val">«1er Code civil». 35 titres, 551 articles. Unification procédure civile. CPC 1806 calqué dessus.</div></div>
+      <div class="kv-item"><div class="kv-label">1669 — Eaux et forêts</div><div class="kv-val">Juridictions spécialisées.</div></div>
+      <div class="kv-item"><div class="kv-label">1670 — Criminelle</div><div class="kv-val">5 étapes. Style inquisitoire. Pussort gagne sur Lamoignon : pas d'avocat pour les grands criminels.</div></div>
+      <div class="kv-item"><div class="kv-label">1673 & 1681</div><div class="kv-val">Commerciale + Commerce maritime.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Ordonnance criminelle 1670 — 5 étapes</div>
+    <div class="flow">
+      <span class="flow-step">1. Déclenchement (plainte ou d'office)</span><span class="flow-arr">→</span>
+      <span class="flow-step">2. Instruction (JI + témoins secrets)</span><span class="flow-arr">→</span>
+      <span class="flow-step">3. Interrogatoires (factums)</span><span class="flow-arr">→</span>
+      <span class="flow-step">4. Jugement (7 juges, sellette)</span><span class="flow-arr">→</span>
+      <span class="flow-step">5. Appel obligatoire</span>
+    </div>
+    <div class="warn-box">Torture — 2 types : <strong>question préparatoire</strong> (obtenir l'aveu) + <strong>question préalable</strong> (complices, au moment de l'exécution). Abolies par Louis XVI en 1780 et 1788.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Conflit Roi / Parlements — Théorie de la représentation</div>
+    <blockquote>Les juges incarnent «l'image présente d'une royauté absente». Le Roi est «mort» → le Parlement le représente → ne peut plus intervenir dans le cours normal de la justice.</blockquote>
+    <ul class="custom">
+      <li>Enregistrement forcé : «sous l'express commandement du Roi» = mauvaise volonté manifeste.</li>
+      <li>Fronde (juin 1648 = 17e s.) : charte contre la justice retenue. Réprimée en 1651 par Mazarin.</li>
+      <li>Les Parlements paralysent l'action gouvernementale → <strong>cause majeure de la Révolution.</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══ RÉVOLUTION ══ -->
+<div id="revolution" class="pane">
+  <div class="epoch-head" style="background:var(--rev);">🔴 Révolution de la Justice — 1789 → 1794 (fin 18e siècle)</div>
+
+  <div class="card">
+    <div class="card-title">Rupture fondamentale — DDHC 26 août 1789</div>
+    <div class="kv-grid">
+      <div class="kv-item"><div class="kv-label">Art. 9</div><div class="kv-val">Présomption d'innocence.</div></div>
+      <div class="kv-item"><div class="kv-label">Art. 16</div><div class="kv-val">Toute société sans séparation des pouvoirs n'a pas de Constitution.</div></div>
+    </div>
+    <div class="warn-box">La justice ne sera plus rendue au nom du Roi mais au nom du peuple. <strong>Fin de la justice retenue.</strong></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Loi 16 & 24 août 1790 — 4 nouvelles juridictions</div>
+    <div class="kv-grid">
+      <div class="kv-item"><div class="kv-label">Tribunal de famille</div><div class="kv-val">4 arbitres (parents/amis). Arbitrage obligatoire en famille. Supprimé en 1796.</div></div>
+      <div class="kv-item"><div class="kv-label">Justice de paix ⭐</div><div class="kv-val">1 par canton (6000 cantons). Élu 2 ans, seul certificat de civisme requis. Conciliation obligatoire avant tout litige. Supprimée en 1958.</div></div>
+      <div class="kv-item"><div class="kv-label">Tribunal de district</div><div class="kv-val">553 en 1790 → tribunaux d'arrondissement (Consulat) → TGI en 1958. 1er ressort >500 livres.</div></div>
+      <div class="kv-item"><div class="kv-label">Tribunal de cassation</div><div class="kv-val">1 seul, Paris. 40 juges. Uniformiser le droit. Libéré tutelle législative en 1837 → Assemblée plénière.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Code pénal sept. 1791 — 3 éléments</div>
+    <div class="kv-grid">
+      <div class="kv-item"><div class="kv-label">1. Laïcisation radicale</div><div class="kv-val">Abandon blasphème, sorcellerie, impiété, magie (art. 10 DDHC).</div></div>
+      <div class="kv-item"><div class="kv-label">2. Fixité des peines</div><div class="kv-val">1 crime = 1 peine imposée au juge. Égalité devant la loi. Rôle du juge réduit.</div></div>
+    </div>
+    <p style="font-size:13px;font-weight:600;color:var(--dark);margin:10px 0 6px;">3. Nouvelles peines (abandon des mutilations de l'AR) :</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;">
+      <span style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--rev-l);color:var(--rev);font-weight:600;">Peine de mort (guillotine)</span>
+      <span style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--ancien-l);color:var(--ancien);">Peine des fers (ports/mines)</span>
+      <span style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--ancien-l);color:var(--ancien);">Emprisonnement ≤ 24 ans</span>
+      <span style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--ancien-l);color:var(--ancien);">La gêne</span>
+      <span style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--ancien-l);color:var(--ancien);">Maison de force</span>
+      <span style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--ancien-l);color:var(--ancien);">Déportation (Cayenne)</span>
+      <span style="font-size:12px;padding:3px 10px;border-radius:12px;background:var(--ancien-l);color:var(--ancien);">Pilori</span>
+    </div>
+    <div class="warn-box">Droit de grâce supprimé par la Révolution. Peines allégées pour femmes et mineurs.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="pill pill-rev">Terreur</span> Tribunal révolutionnaire — 10 mars 1793</div>
+    <blockquote>Danton : «Soyons terribles pour dispenser le peuple de l'être. Organisons un tribunal, non pas bien, cela est impossible, mais le moins mal qu'il se pourra.»</blockquote>
+    <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;align-items:flex-start;gap:10px;">
+        <span style="font-size:11px;color:var(--mid);min-width:100px;padding-top:4px;">Oct. 1793</span>
+        <span class="flow-step">Jugement immédiat si jurés «suffisamment instruits»</span>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;">
+        <span style="font-size:11px;color:var(--mid);min-width:100px;padding-top:4px;">Avril 1794</span>
+        <span class="flow-step">Accusé rebelle jugé sur le champ (procès Danton)</span>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;">
+        <span style="font-size:11px;color:var(--mid);min-width:100px;padding-top:4px;">22 prairial = 10 juin 1794</span>
+        <span class="flow-step" style="background:var(--rev-l);border-color:var(--rev);color:var(--rev);">Suppression de TOUS les droits de la défense. Seule peine : mort.</span>
+      </div>
+    </div>
+    <hr class="sep">
+    <p style="font-size:13px;color:var(--mid);">Bilan : <strong>~500 000 emprisonnés</strong> · <strong>~17 000 condamnations à mort</strong> · <strong>200 000 victimes</strong> des colonnes infernales. Chute de Robespierre : 27 juillet 1794 (Thermidor).</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Loi des suspects (17 sept. 1793)</div>
+    <ul class="custom">
+      <li>Partisans de la tyrannie (royalistes) ou du fédéralisme (Girondins)</li>
+      <li>Sans justification de moyens d'existence ou sans certificat de civisme</li>
+      <li>Fonctionnaires suspendus · nobles et émigrés n'ayant pas manifesté leur attachement</li>
+    </ul>
+    <div class="warn-box">21 000 individus ciblés pour «mise hors de la loi» → 13 000 exécutés.</div>
+  </div>
+</div>
+
+<!-- ══ SUJETS ══ -->
+<div id="sujets" class="pane">
+  <div class="warn-box" style="margin-bottom:18px;">
+    <strong>Format examen :</strong> Introduction complète (accroche + définitions + contexte + enjeux + problématique + annonce de plan) + plan apparent + développement. Le prof choisit 2 sujets, tu en traites 1.
+  </div>
+
+  <div class="epoch-head" style="background:var(--rome);">🏛 ROME — sujets 1 à 5</div>
+  <div class="sujet-grid">
+    <div class="sujet-card"><div class="sujet-num">Sujet 1</div>Procédure des actions de la loi — République romaine</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 2</div>Procédure formulaire — République romaine</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 3</div>Justice criminelle — République romaine</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 4</div>Justice civile — Empire romain</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 5</div>Justice criminelle — Empire romain</div>
+  </div>
+
+  <div class="epoch-head" style="background:var(--moyen);margin-top:16px;">⛪ MOYEN ÂGE — sujets 6 à 10</div>
+  <div class="sujet-grid">
+    <div class="sujet-card"><div class="sujet-num">Sujet 6</div>Le renouveau du droit romain au Moyen Âge</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 7</div>Le ministère royal de justice</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 8</div>L'équipement juridictionnel du royaume au MA</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 9</div>Les transformations de la procédure au MA</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 10</div>L'abaissement des juridictions concurrentes</div>
+  </div>
+
+  <div class="epoch-head" style="background:var(--ancien);margin-top:16px;">⚜️ ANCIEN RÉGIME — sujets 11 à 18</div>
+  <div class="sujet-grid">
+    <div class="sujet-card"><div class="sujet-num">Sujet 11</div>La Justice retenue sous l'Ancien Régime</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 12</div>La Justice déléguée sous l'Ancien Régime</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 13</div>L'indépendance des magistrats sous l'AR</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 14</div>Les rapports entre le pouvoir royal et ses juges sous l'AR</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 15</div>Les juges législateurs sous l'AR</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 16</div>L'Ordonnance civile de 1667</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 17</div>L'Ordonnance criminelle de 1670</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 18</div>L'échec des réformes à la fin du 18e siècle</div>
+  </div>
+
+  <div class="epoch-head" style="background:var(--rev);margin-top:16px;">🔴 RÉVOLUTION — sujets 19 à 20</div>
+  <div class="sujet-grid">
+    <div class="sujet-card"><div class="sujet-num">Sujet 19</div>La Justice civile issue de la loi des 16 et 24 août 1790</div>
+    <div class="sujet-card"><div class="sujet-num">Sujet 20</div>La Terreur judiciaire de 1793 à 1794</div>
+  </div>
+</div>
+
+</main>
+
+<script>
+function updateHeaderHeight() {
+  const h = document.querySelector('.site-header');
+  if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+}
+window.addEventListener('load', updateHeaderHeight);
+window.addEventListener('resize', updateHeaderHeight);
+
+function switchTab(id, btn) {
+  document.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toRoman(n) {
+  const v=[1000,900,500,400,100,90,50,40,10,9,5,4,1];
+  const s=['M','CM','D','CD','C','XC','L','XL','X','IX','V','IV','I'];
+  let r=''; for(let i=0;i<v.length;i++) while(n>=v[i]){r+=s[i];n-=v[i];}
+  return r;
+}
+
+function convertSiecle() {
+  const raw = parseInt(document.getElementById('date-input').value);
+  const era = document.getElementById('era-sel').value;
+  const out = document.getElementById('conv-result');
+  if (isNaN(raw) || raw <= 0) { out.textContent = '← tape une date'; out.style.color='var(--mid)'; return; }
+  const s = Math.floor((raw - 1) / 100) + 1;
+  if (era === 'ap') {
+    out.textContent = '→ ' + s + 'e siècle ap. J.-C. (' + toRoman(s) + 'e s.)';
+    out.style.color = 'var(--rome)';
+  } else {
+    out.textContent = '→ −' + s + 'e siècle av. J.-C. (−' + toRoman(s) + 'e s.)';
+    out.style.color = 'var(--rev)';
+  }
+}
+
+function setEx(val, era) {
+  document.getElementById('date-input').value = val;
+  document.getElementById('era-sel').value = era;
+  convertSiecle();
+}
+</script>
+
+</body>
+</html>

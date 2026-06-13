@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="QCM Contrats Immo">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>QCM - Droit des Contrats Immobiliers S8</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #1a1612 0%, #2a2218 100%);
+  color: #f5f0e8;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(26,22,18,0.97);
+  border-bottom: 2px solid #b8860b;
+  padding: 12px 16px;
+  backdrop-filter: blur(6px);
+}
+header h1 {
+  font-size: 17px;
+  color: #d4a843;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+header .sub {
+  text-align: center;
+  font-size: 11px;
+  color: #b8a890;
+  margin-top: 2px;
+}
+.scorebar {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: rgba(184,134,11,0.12);
+  border-radius: 8px;
+  font-size: 13px;
+}
+.scorebar .val { color: #d4a843; font-weight: 700; }
+
+.container { padding: 14px; max-width: 720px; margin: 0 auto; }
+
+.filters {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
+}
+.filters select, .filters button {
+  background: #2a2218;
+  color: #f5f0e8;
+  border: 1px solid #b8860b;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  flex: 1;
+  min-width: 120px;
+}
+.filters button {
+  background: #b8860b;
+  color: #1a1612;
+  font-weight: 700;
+  flex: 0 0 auto;
+  min-width: auto;
+}
+
+.card {
+  background: #241e16;
+  border: 1px solid #3a3025;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.card .meta {
+  display:flex; justify-content: space-between; align-items:center;
+  margin-bottom: 8px; flex-wrap: wrap; gap: 6px;
+}
+.tag {
+  font-size: 10px; padding: 3px 8px; border-radius: 6px;
+  background: rgba(184,134,11,0.18); color: #d4a843;
+  text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;
+}
+.tag.diff-facile { background: rgba(80,160,90,0.18); color: #7fcf8f; }
+.tag.diff-moyen { background: rgba(212,168,67,0.18); color: #d4a843; }
+.tag.diff-difficile { background: rgba(200,80,70,0.18); color: #e08a7d; }
+.tag.piege {
+  background: rgba(220,80,60,0.25); color: #ff9d8a;
+}
+.qnum { color: #b8a890; font-size: 12px; font-weight: 700; }
+
+.qtext {
+  font-size: 15px; line-height: 1.5; margin-bottom: 12px; color: #f5f0e8;
+}
+.qtype-note {
+  font-size: 11px; color: #b8a890; margin-bottom: 10px; font-style: italic;
+}
+
+.option {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: 1px solid #3a3025;
+  background: #2a2218;
+  cursor: pointer;
+  font-size: 14px; line-height: 1.4;
+  transition: background 0.15s, border-color 0.15s;
+}
+.option:active { background: #332a1d; }
+.option .letter {
+  flex: 0 0 24px; height: 24px; border-radius: 50%;
+  background: #3a3025; color: #d4a843;
+  display:flex; align-items:center; justify-content:center;
+  font-weight: 700; font-size: 12px;
+}
+.option .otext { flex: 1; padding-top: 1px; }
+.option.selected {
+  border-color: #d4a843;
+}
+.option.selected .letter { background: #d4a843; color: #1a1612; }
+
+.validate-btn, .next-btn {
+  display:block; width: 100%; padding: 12px;
+  border-radius: 10px; border: none;
+  font-size: 15px; font-weight: 700;
+  margin-top: 10px;
+  background: #b8860b; color: #1a1612;
+}
+.validate-btn:disabled { opacity: 0.4; }
+
+.explication {
+  margin-top: 12px; padding: 12px;
+  border-radius: 10px;
+  background: rgba(184,134,11,0.08);
+  border-left: 3px solid #b8860b;
+  font-size: 13px; line-height: 1.5; color: #e8ddd0;
+}
+.explication .lead { font-weight: 700; margin-bottom: 4px; color: #d4a843; }
+
+.recap {
+  background: #241e16; border: 1px solid #3a3025; border-radius: 14px;
+  padding: 16px; margin-bottom: 14px;
+}
+.recap h2 { color: #d4a843; font-size: 16px; margin-bottom: 10px; }
+.recap-row {
+  display:flex; justify-content: space-between; align-items:center;
+  padding: 8px 0; border-bottom: 1px solid #2f271c;
+  font-size: 13px;
+}
+.recap-row:last-child { border-bottom: none; }
+.recap-score { font-weight: 700; }
+.recap-score.good { color: #7fcf8f; }
+.recap-score.bad { color: #e08a7d; }
+.recap-score.mid { color: #d4a843; }
+
+.restart-btn {
+  display:block; width: 100%; padding: 14px;
+  border-radius: 10px; border: none;
+  font-size: 15px; font-weight: 700;
+  margin-top: 6px;
+  background: #d4a843; color: #1a1612;
+}
+
+.progress-wrap {
+  height: 4px; background: #2a2218; border-radius: 4px; margin: 10px 0 4px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%; background: #b8860b; transition: width 0.3s;
+}
+.intro {
+  text-align: center; padding: 20px 0;
+}
+.intro p { font-size: 13px; color: #b8a890; line-height: 1.6; margin: 8px 0; }
+.intro .start-btn {
+  display:inline-block; margin-top: 16px; padding: 14px 28px;
+  border-radius: 10px; border: none; font-size: 16px; font-weight: 700;
+  background: #b8860b; color: #1a1612;
+}
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Droit des Contrats Immobiliers</h1>
+  <div class="sub">M. Damas — M1 Droit Civil S8</div>
+  <div class="scorebar" id="scoreBar">
+    <span>Question <span class="val" id="curNum">-</span> / <span id="totalNum">30</span></span>
+    <span>Score : <span class="val" id="curScore">0</span> / <span id="answeredCount">0</span></span>
+  </div>
+  <div class="progress-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+</header>
+
+<div class="container">
+
+  <div id="introScreen" class="intro">
+    <p>30 questions tirées d'un pool de 96, couvrant la vente immobilière (VIC, formation, avant-contrats, garanties, publicité foncière), les baux commerciaux et professionnels, et le bail d'habitation (loi de 1989).</p>
+    <p>Mélange de QCU (une seule bonne réponse) et QCM (plusieurs réponses possibles). Les questions marquées d'un badge ⚠ contiennent un piège classique à connaître pour l'examen.</p>
+    <p>Tu peux filtrer par chapitre avant de commencer, ou lancer le QCM complet.</p>
+    <div class="filters" style="justify-content:center; margin-top:14px;">
+      <select id="chapFilter">
+        <option value="all">Tous les chapitres</option>
+        <option value="Vente immobilière">Vente immobilière</option>
+        <option value="Baux commerciaux & professionnels">Baux commerciaux & professionnels</option>
+        <option value="Bail d'habitation">Bail d'habitation</option>
+      </select>
+    </div>
+    <button class="start-btn" id="startBtn" onclick="startQuiz()">Commencer le QCM</button>
+  </div>
+
+  <div id="quizScreen" class="hidden"></div>
+
+  <div id="recapScreen" class="hidden"></div>
+
+</div>
+
+<script>
+const QUESTIONS = [{"idx": 0, "num": 1, "groupe": "Vente immobilière", "chapitre": "Préemption", "type": "QCU", "difficulte": "moyen", "question": "Quel est le délai de prescription applicable en cas de non-respect du droit de préemption du locataire commercial, selon Cass. 3e civ. 18 déc. 2025 ?", "options": {"A": "1 an", "B": "5 ans", "C": "10 ans", "D": "2 ans"}, "reponse": "D", "explication": "Le non-respect du droit de préemption du locataire commercial entraîne la nullité de la vente au tiers, sans substitution du locataire dans les droits du tiers. Le délai de prescription de cette action est de 2 ans selon l'arrêt Cass. 3e civ., 18 déc. 2025.", "piege": false}, {"idx": 1, "num": 2, "groupe": "Vente immobilière", "chapitre": "Capacité", "type": "QCU", "difficulte": "moyen", "question": "Concernant l'indivision, quelle règle de majorité l'art. 815-3 C.cv applique-t-il pour la vente d'un bien indivis, et quelle est la sanction en cas de non-respect ?", "options": {"A": "L'unanimité est requise, la règle des 2/3 étant écartée, et la sanction est l'inopposabilité", "B": "La majorité simple suffit, sanctionnée par la résolution", "C": "L'unanimité est requise mais la sanction est la nullité absolue de la vente", "D": "La règle des 2/3 s'applique, sanctionnée par la nullité relative"}, "reponse": "A", "explication": "L'art. 815-3 C.cv pose le principe de l'unanimité pour la vente d'un bien indivis, écartant la règle des 2/3 applicable à d'autres actes d'administration. La sanction du non-respect de l'unanimité est l'inopposabilité de l'acte aux indivisaires n'ayant pas consenti.", "piege": true}, {"idx": 2, "num": 3, "groupe": "Baux commerciaux & professionnels", "chapitre": "Bail commercial - Champ", "type": "QCU", "difficulte": "facile", "question": "Pour bénéficier du statut des baux commerciaux (art. L.145-1 C.com), quelles conditions cumulatives doivent en principe être réunies ?", "options": {"A": "Un local mis à disposition gratuitement pendant au moins 9 ans", "B": "Un local donné en location à un commerçant immatriculé qui y exploite son fonds de commerce", "C": "Un local exclusivement destiné à la domiciliation de l'entreprise", "D": "Un local situé dans une zone de chalandise définie par le préfet"}, "reponse": "B", "explication": "Le statut des baux commerciaux, statut d'ordre public, s'applique en résumé à un local donné en location à un commerçant immatriculé qui y exploite son fonds de commerce. La domiciliation pure d'entreprise (art. L.123-10 C.com) est expressément exclue du champ d'application.", "piege": false}, {"idx": 3, "num": 4, "groupe": "Baux commerciaux & professionnels", "chapitre": "Déplafonnement", "type": "QCM", "difficulte": "difficile", "question": "Parmi les hypothèses suivantes, lesquelles permettent un déplafonnement du loyer lors du renouvellement (art. L.145-34 C.com) ?", "options": {"A": "Un bail initial d'une durée supérieure à 9 ans", "B": "Des locaux monovalents, construits pour une seule utilisation", "C": "Une simple révision triennale standard sans changement de circonstances", "D": "Un bail initial de 9 ans en tacite prolongation dépassant 12 ans"}, "reponse": "ABD", "explication": "Le déplafonnement du loyer lors du renouvellement peut intervenir notamment dans les cas suivants : bail initial de plus de 9 ans, modification notable d'un des quatre premiers éléments de la valeur locative, bail initial de 9 ans en tacite prolongation dépassant 12 ans, locaux monovalents, locaux à usage exclusif de bureaux, baux comportant une clause de loyer variable, ou renonciation par le preneur. Une simple révision triennale standard, sans changement de circonstances, reste en revanche soumise au plafonnement.", "piege": false}, {"idx": 4, "num": 5, "groupe": "Vente immobilière", "chapitre": "Capacité", "type": "QCU", "difficulte": "difficile", "question": "Pourquoi est-il déconseillé d'insérer dans un avant-contrat portant sur le bien d'un mineur une condition suspensive d'autorisation du juge des tutelles ?", "options": {"A": "Parce que cela transformerait automatiquement l'avant-contrat en PSV", "B": "Une vente aux enchères publiques est obligatoire dans tous les cas pour les biens de mineurs", "C": "Parce que le juge des tutelles refuse systématiquement les ventes immobilières concernant des mineurs", "D": "Parce que l'autorisation du juge est un élément de validité de la vente, qui ne peut être l'objet d'une condition suspensive sans risquer l'annulation"}, "reponse": "D", "explication": "L'autorisation du juge des tutelles est un élément de formation de la vente et non un simple événement extérieur pouvant constituer une condition suspensive classique. L'insérer comme condition risque l'annulation tant de la condition que de l'acte lui-même. Le seul avant-contrat envisageable dans cette hypothèse est la PUA, car le propriétaire ne s'engage pas immédiatement.", "piege": true}, {"idx": 5, "num": 6, "groupe": "Vente immobilière", "chapitre": "Publicité foncière", "type": "QCU", "difficulte": "difficile", "question": "Que signifie le principe de \"l'effet relatif\" propre à la publicité foncière (≠ effet relatif des contrats) ?", "options": {"A": "Seuls les actes notariés sont concernés par l'effet relatif, à l'exclusion des décisions judiciaires", "B": "Aucun acte ne peut être publié si le titre du disposant n'a pas été préalablement publié", "C": "Un acte ne peut produire d'effet qu'entre les parties signataires de cet acte", "D": "La publication d'un acte n'a d'effet que pendant une durée de 5 ans renouvelable"}, "reponse": "B", "explication": "L'effet relatif, notion propre à la publicité foncière, signifie qu'aucun acte ne peut être publié si le titre du disposant n'a pas été préalablement publié. Par exemple, si A vend à B sans publication de l'acte (faute du notaire), et que B veut ensuite vendre à C, l'acte B-C ne pourra pas être publié tant que la vente A-B ne l'est pas, car pour le SPF, A demeure le propriétaire. Une exception existe en cas d'achat-revente dans le mois (publication simultanée).", "piege": true}, {"idx": 6, "num": 7, "groupe": "Vente immobilière", "chapitre": "Avant-contrats", "type": "QCU", "difficulte": "facile", "question": "Selon l'art. 1589 C.cv, quelle est la valeur juridique d'une promesse synallagmatique de vente (PSV) ?", "options": {"A": "Elle ne vaut vente qu'en présence d'une indemnité d'immobilisation", "B": "Elle vaut vente, car elle contient tous les éléments de la vente", "C": "Elle ne vaut vente qu'après signature de l'acte authentique chez le notaire", "D": "Elle ne vaut qu'un simple engagement moral sans force obligatoire"}, "reponse": "B", "explication": "L'art. 1589 C.cv dispose que la PSV vaut vente car elle contient déjà tous les éléments constitutifs de la vente. La vente devient définitive lorsque les conditions suspensives éventuelles se réalisent, et le refus de réitérer devant notaire constitue une faute ouvrant droit à vente forcée, résolution ou dommages-intérêts.", "piege": false}, {"idx": 7, "num": 8, "groupe": "Bail d'habitation", "chapitre": "Évolution loyer", "type": "QCU", "difficulte": "difficile", "question": "Un bailleur oublie d'appliquer la clause d'indexation en septembre 2025 (dernière indexation correcte : septembre 2024) et souhaite la récupérer en mars 2026. Quelle est la conséquence pour la période septembre 2025 - mars 2026 ?", "options": {"A": "Le bailleur dispose de 5 ans pour réclamer l'indexation rétroactivement sans aucune perte", "B": "Le bailleur peut appliquer rétroactivement l'indexation depuis septembre 2025", "C": "Le locataire doit rembourser la totalité de l'écart sur les 12 derniers mois", "D": "La période septembre 2025 - mars 2026 est définitivement perdue ; l'indexation ne peut s'appliquer qu'à partir de mars 2026 pour l'avenir"}, "reponse": "D", "explication": "L'indexation du loyer n'est pas automatique depuis 2014 : le bailleur doit en réclamer l'application. Si l'indexation n'est pas appliquée à une date donnée, elle est perdue pour le passé : le bailleur ne peut l'appliquer qu'à partir du moment où il agit, et pour l'avenir. Le manque à gagner entre la date où il aurait dû agir et la date où il agit effectivement est définitivement perdu. Le bailleur peut néanmoins agir en justice dans la limite de 3 ans pour les indexations futures dues.", "piege": true}, {"idx": 8, "num": 9, "groupe": "Baux commerciaux & professionnels", "chapitre": "Déspécialisation", "type": "QCU", "difficulte": "moyen", "question": "Quelle est la différence essentielle entre la déspécialisation partielle et la déspécialisation plénière ?", "options": {"A": "Seule la déspécialisation plénière peut avoir une incidence sur le loyer", "B": "La partielle nécessite l'accord du juge, la plénière une simple notification au bailleur", "C": "La partielle permet d'adjoindre des activités connexes ou complémentaires, la plénière permet un changement total d'activité sous conditions drastiques", "D": "La plénière est de droit, alors que la partielle nécessite une autorisation préalable du tribunal"}, "reponse": "C", "explication": "La déspécialisation partielle permet d'adjoindre des activités connexes ou complémentaires à l'activité initiale, par simple notification (le bailleur a 2 mois pour s'opposer, à défaut le tribunal judiciaire tranche). La déspécialisation plénière permet un changement total d'activité, mais sous des conditions cumulatives et d'ordre public très strictes (conjoncture économique défavorable, nécessités de l'organisation rationnelle de la distribution, conformité de la nouvelle activité avec la destination de l'immeuble), ce qui la rend rarement mise en œuvre.", "piege": false}, {"idx": 9, "num": 10, "groupe": "Baux commerciaux & professionnels", "chapitre": "Plafonnement", "type": "QCU", "difficulte": "difficile", "question": "Le bail d'une boutique conclu en 2017 arrive à échéance en 2026. Le loyer 2017 était de 1 000 euros, la valeur locative 2026 est de 1 700 euros, et l'ILC a progressé de 20 pourcent sur la période. Quel sera le loyer du nouveau bail en application du plafonnement ?", "options": {"A": "1 200 euros, plafonné par la variation de l'indice de référence", "B": "1 700 euros, montant de la valeur locative", "C": "1 500 euros, moyenne entre l'ancien loyer et la valeur locative", "D": "1 000 euros, le loyer reste inchangé"}, "reponse": "A", "explication": "Selon l'art. L.145-34 C.com, la hausse du loyer lors du renouvellement est plafonnée par la variation de l'indice de référence (ici l'ILC, en hausse de 20 pourcent). Le loyer du nouveau bail est donc de 1 200 euros (1 000 + 20 pourcent), et non de 1 700 euros comme le souhaiterait le bailleur en se référant directement à la valeur locative.", "piege": false}, {"idx": 10, "num": 11, "groupe": "Vente immobilière", "chapitre": "Agent immobilier", "type": "QCU", "difficulte": "moyen", "question": "Une clause du mandat impose au vendeur d'accepter toute offre faite au prix indiqué dans le mandat. Quelle est la portée juridique de cette clause ?", "options": {"A": "Elle est nulle de plein droit et entraîne la nullité de tout le mandat", "B": "Elle transforme le mandat d'entremise en mandat de vendre opposable aux tiers", "C": "Elle est sans portée car le mandant garde la liberté d'accepter ou non une offre, l'agent devant démontrer une faute pour être indemnisé", "D": "Elle est pleinement contraignante : le vendeur doit signer dès qu'une offre au prix arrive"}, "reponse": "C", "explication": "Le mandat est en principe un mandat d'entremise et non un mandat de vendre. Une clause imposant l'acceptation de toute offre au prix est donc sans portée réelle : le mandant conserve sa liberté contractuelle, et l'agent devrait démontrer une faute du vendeur pour obtenir une indemnisation.", "piege": true}, {"idx": 11, "num": 12, "groupe": "Vente immobilière", "chapitre": "Avant-contrats", "type": "QCU", "difficulte": "facile", "question": "Selon l'art. 1124 C.cv, qu'est-ce qu'une promesse unilatérale de vente (PUV) ?", "options": {"A": "Un contrat par lequel les deux parties s'engagent réciproquement à vendre et acheter", "B": "Une simple lettre d'intention sans valeur contractuelle", "C": "Un contrat accordant au bénéficiaire le droit d'opter pour la conclusion d'un contrat dont les éléments essentiels sont déterminés", "D": "Un contrat conditionné à l'obtention préalable d'un agrément administratif"}, "reponse": "C", "explication": "L'art. 1124 C.cv définit la promesse unilatérale comme un contrat par lequel le promettant accorde au bénéficiaire le droit d'opter pour la conclusion d'un contrat dont les éléments essentiels sont déjà déterminés, et pour la formation duquel il ne manque que le consentement du bénéficiaire.", "piege": false}, {"idx": 12, "num": 13, "groupe": "Vente immobilière", "chapitre": "Avant-contrats", "type": "QCU", "difficulte": "moyen", "question": "Dans l'arrêt Cass. 3e civ., 27 oct. 2016, pourquoi la vente n'a-t-elle pas été formée au profit des bénéficiaires malgré la transmission d'un courrier bancaire accordant le prêt ?", "options": {"A": "Parce que la promesse prévoyait des modalités précises de levée d'option qui n'ont pas été respectées par la simple remise du courrier", "B": "Parce que le délai de réflexion SRU n'avait pas encore couru", "C": "Parce que le notaire séquestre avait commis une faute en recevant le courrier", "D": "Parce que le prêt obtenu était d'un montant insuffisant par rapport au prix"}, "reponse": "A", "explication": "La Cour de cassation a jugé que la simple remise d'un courrier bancaire accordant le prêt ne suffit pas à caractériser une levée valable de l'option dès lors que la promesse prévoyait des modalités précises de réalisation. La PUV est un contrat formaliste quant à sa réalisation, et la sincérité de la volonté d'acquérir ne supplée pas le respect des formes contractuelles.", "piege": true}, {"idx": 13, "num": 14, "groupe": "Vente immobilière", "chapitre": "Objet - Lésion", "type": "QCU", "difficulte": "difficile", "question": "Pour qu'une lésion soit établie dans une vente immobilière (art. 1674 C.cv), à quel seuil le prix de vente doit-il être comparé à la valeur réelle de l'immeuble ?", "options": {"A": "Le prix doit équivaloir à moins de la moitié de la valeur réelle", "B": "Le prix doit équivaloir à moins des 2/3 de la valeur réelle", "C": "Le prix doit équivaloir à moins du quart de la valeur réelle", "D": "Le prix doit équivaloir à moins des 5/12e de la valeur réelle"}, "reponse": "D", "explication": "Selon l'art. 1674 C.cv, la lésion est établie lorsque le prix de vente équivaut à moins des 5/12e de la valeur réelle de l'immeuble. Dans l'exemple du cours, un immeuble vendu 110 000 euros pour une valeur réelle de 330 000 euros présente une lésion de 220 000 euros, supérieure aux 7/12e de 330 000, soit 192 500 euros, confirmant l'existence de la lésion.", "piege": false}, {"idx": 14, "num": 15, "groupe": "Baux commerciaux & professionnels", "chapitre": "Déspécialisation", "type": "QCU", "difficulte": "facile", "question": "Selon la jurisprudence relative à la notion d'activité incluse, l'autorisation d'exploiter une \"pharmacie\" inclut-elle la parapharmacie ?", "options": {"A": "Oui, la parapharmacie est considérée comme sous-entendue par l'activité de pharmacie", "B": "Oui, mais uniquement si une clause expresse du bail le mentionne", "C": "Non, une déspécialisation partielle est obligatoire pour vendre des produits de parapharmacie", "D": "Non, seule une déspécialisation plénière permet la vente de parapharmacie"}, "reponse": "A", "explication": "La jurisprudence retient la notion d'activité incluse, c'est-à-dire sous-entendue par l'activité prévue au bail. Ainsi, l'activité de \"pharmacie\" implique la parapharmacie. À l'inverse, l'activité de \"restaurant\" n'implique pas nécessairement la vente à emporter, qui pourrait nécessiter une déspécialisation.", "piege": false}, {"idx": 15, "num": 16, "groupe": "Vente immobilière", "chapitre": "Avant-contrats", "type": "QCU", "difficulte": "difficile", "question": "En Alsace-Moselle, quel délai particulier s'applique à un compromis de vente sous signature privée pour constater la vente par acte authentique, et quelle est la sanction de son non-respect ?", "options": {"A": "Délai de 1 an, sanctionné par la nullité relative à la demande de l'acquéreur", "B": "Délai de 6 mois, sanctionné par la caducité de plein droit, sans renonciation possible", "C": "Délai de 3 mois, sanctionné par une simple suspension de l'acte", "D": "Délai de 6 mois, mais une renonciation expresse des deux parties est toujours possible"}, "reponse": "B", "explication": "Depuis la loi du 4 mars 2002, le délai de 6 mois requis en Alsace-Moselle pour constater par acte authentique un compromis sous signature privée est sanctionné par une caducité de plein droit, sans possibilité de renonciation. Seule la clause pénale survit à cette caducité.", "piege": true}, {"idx": 16, "num": 17, "groupe": "Bail d'habitation", "chapitre": "Bail meublé", "type": "QCM", "difficulte": "moyen", "question": "Parmi les différences suivantes entre bail meublé et bail nu, lesquelles sont correctes ?", "options": {"A": "Le dépôt de garantie est de 2 mois pour le meublé contre 1 mois pour le nu", "B": "Le congé du locataire est possible à tout moment avec un préavis de 1 mois pour le meublé, contre 3 mois pour le nu", "C": "Le congé du bailleur est annuel pour le meublé avec un préavis de 3 mois, contre 3/6 ans avec un préavis de 6 mois pour le nu", "D": "Les charges récupérables ne peuvent jamais faire l'objet d'un forfait pour le meublé"}, "reponse": "ABC", "explication": "Le bail meublé se distingue par un dépôt de garantie de 2 mois (contre 1 mois pour le nu), un congé du locataire possible à tout moment avec un préavis de 1 mois (contre 3 mois pour le nu), et un congé du bailleur annuel avec un préavis de 3 mois et les mêmes motifs que pour le nu (contre une échéance de 3 ou 6 ans avec préavis de 6 mois pour le nu). Concernant les charges, le meublé permet justement un forfait, alors que le nu impose un décompte en réel.", "piege": false}, {"idx": 17, "num": 18, "groupe": "Bail d'habitation", "chapitre": "Sous-location habitation", "type": "QCU", "difficulte": "moyen", "question": "Selon l'art. 8 de la loi du 6 juillet 1989, la cession et la sous-location d'un bail d'habitation sont-elles libres ?", "options": {"A": "Libres uniquement pour les logements meublés", "B": "La cession est libre, mais la sous-location est totalement interdite, même avec accord", "C": "Non, interdites sans autorisation, et le sous-loyer ne peut jamais excéder le loyer principal versé", "D": "Oui, totalement libres sans aucune autorisation requise"}, "reponse": "C", "explication": "L'art. 8 de la loi de 1989 interdit la cession et la sous-location sans autorisation du bailleur. Si une sous-location est autorisée, elle n'est pas soumise à la loi de 1989. Mais si le sous-locataire installe sa résidence principale dans le logement, le bail relève alors du droit commun. Dans tous les cas, le sous-loyer ne peut excéder le loyer principal.", "piege": false}, {"idx": 18, "num": 19, "groupe": "Vente immobilière", "chapitre": "Construction", "type": "QCM", "difficulte": "moyen", "question": "Parmi les délais suivants courant à compter de la réception de l'ouvrage, lesquels correspondent aux garanties du droit de la construction ?", "options": {"A": "1 an pour la garantie de parfait achèvement", "B": "2 ans pour la garantie biennale des équipements", "C": "5 ans pour une garantie intermédiaire générale", "D": "10 ans pour la garantie décennale concernant la structure"}, "reponse": "ABD", "explication": "Le droit de la construction prévoit trois délais courant à compter de la réception de l'ouvrage : 1 an pour la garantie de parfait achèvement (remise en état), 2 ans pour la garantie biennale (éléments d'équipement comme fenêtres et portes), et 10 ans pour la garantie décennale couvrant les problèmes structurels rendant l'ouvrage impropre à son usage. Il n'existe pas de garantie générale intermédiaire de 5 ans.", "piege": false}, {"idx": 19, "num": 20, "groupe": "Vente immobilière", "chapitre": "Avant-contrats", "type": "QCU", "difficulte": "facile", "question": "Quel est l'avantage principal de la promesse unilatérale d'achat (PUA) par rapport à la PUV ?", "options": {"A": "Elle confère un droit de préférence renforcé à l'acheteur sur tous les autres candidats", "B": "Elle n'engage pas encore le propriétaire à vendre, ce qui est utile lorsqu'une autorisation préalable est nécessaire", "C": "Elle permet d'éviter toute formalité d'enregistrement, même au-delà de 18 mois", "D": "Elle dispense systématiquement de tout délai de rétractation SRU"}, "reponse": "B", "explication": "La PUA, mécanisme inverse de la PUV et non soumise à l'enregistrement de l'art. 1589-2, présente l'avantage de ne pas encore engager le propriétaire à vendre. Elle est donc utile lorsqu'une autorisation doit être obtenue au préalable, par exemple celle du juge des tutelles pour un vendeur mineur.", "piege": false}, {"idx": 20, "num": 21, "groupe": "Bail d'habitation", "chapitre": "Garanties locatives", "type": "QCU", "difficulte": "facile", "question": "Qu'est-ce que le dispositif VISALE ?", "options": {"A": "Un cautionnement gratuit fourni par Action Logement, garantissant jusqu'à 36 mensualités de loyers, ciblé notamment sur les moins de 30 ans", "B": "Un dépôt de garantie spécifique réservé aux logements meublés", "C": "Une réduction d'impôt accordée au bailleur en cas d'impayés", "D": "Une assurance obligatoire contre les risques locatifs pour tous les bailleurs"}, "reponse": "A", "explication": "Le dispositif VISALE est un cautionnement gratuit fourni par Action Logement, garantissant jusqu'à 36 mensualités de loyers impayés. Il est ciblé sur les personnes de moins de 30 ans et certaines personnes de plus de 30 ans en mutation professionnelle, et permet au locataire d'accéder à un logement sans personne physique pouvant se porter garante.", "piege": false}, {"idx": 21, "num": 22, "groupe": "Bail d'habitation", "chapitre": "Frais d'agence", "type": "QCU", "difficulte": "difficile", "question": "Un agent immobilier est payé 2 000 euros pour la location d'un appartement de 100 m² situé à Nancy (zone \"reste du territoire\" : 8,07 euros/m²). Quel est le plafond légal de la part payée par le locataire ?", "options": {"A": "1 000 euros, soit 50 pourcent du total", "B": "2 000 euros, le locataire pouvant payer l'intégralité", "C": "807 euros, correspondant à 8,07 euros multipliés par la surface", "D": "1 193 euros, correspondant au solde après déduction du plafond du bailleur"}, "reponse": "C", "explication": "L'art. 5 de la loi de 1989 prévoit un double plafonnement : le locataire ne peut pas payer plus que ce qui est demandé au bailleur, et un plafond en valeur absolue par m² selon la zone. À Nancy (zone \"reste du territoire\", 8,07 euros/m²), pour 100 m², le plafond locataire est de 807 euros (8,07 x 100). Le bailleur paiera donc le solde, soit 1 193 euros, mais le plafond imposé au locataire reste 807 euros, sous réserve qu'il ne dépasse pas non plus ce que paie le bailleur.", "piege": true}, {"idx": 22, "num": 23, "groupe": "Vente immobilière", "chapitre": "Capacité", "type": "QCU", "difficulte": "moyen", "question": "Pour vendre l'immeuble d'un mineur non émancipé, quelle est la procédure applicable depuis 2009 ?", "options": {"A": "Une vente amiable est possible mais nécessite l'autorisation du juge des tutelles", "B": "Le tuteur peut vendre librement sans aucune autorisation", "C": "Une vente aux enchères publiques est obligatoire dans tous les cas", "D": "Seule une donation est envisageable avant la majorité du mineur"}, "reponse": "A", "explication": "Depuis 2009 (art. 387-1 C.cv), la vente amiable est devenue possible pour les biens d'un mineur non émancipé, alors qu'auparavant seule la vente aux enchères était permise. Cette vente amiable nécessite toujours l'autorisation du juge des tutelles.", "piege": false}, {"idx": 23, "num": 24, "groupe": "Bail d'habitation", "chapitre": "Champ application", "type": "QCU", "difficulte": "facile", "question": "Qui peut bénéficier de la protection de la loi du 6 juillet 1989 en tant que locataire ?", "options": {"A": "Toute personne ayant signé un bail meublé, qu'elle soit physique ou morale", "B": "Uniquement une personne physique, même si des personnes morales y exercent une activité", "C": "Toute personne morale ou physique, sans distinction", "D": "Uniquement les personnes morales à but non lucratif"}, "reponse": "B", "explication": "Seul un locataire personne physique bénéficie de la protection de la loi de 1989. Si le locataire est une personne morale, la loi de 1989 est inapplicable, même si des personnes physiques habitent effectivement dans le logement loué par cette personne morale.", "piege": false}, {"idx": 24, "num": 25, "groupe": "Vente immobilière", "chapitre": "Vices cachés", "type": "QCU", "difficulte": "facile", "question": "Selon l'art. L.271-4 CCH, quelle est la conséquence de l'absence de production d'un diagnostic obligatoire sur la clause exonératoire de garantie des vices cachés ?", "options": {"A": "La clause exonératoire reste pleinement efficace pour tous les vices", "B": "La vente devient automatiquement nulle pour défaut d'information", "C": "L'acquéreur perd définitivement tout recours contre le vendeur", "D": "La clause exonératoire devient inefficace dans le champ du diagnostic manquant"}, "reponse": "D", "explication": "Selon l'art. L.271-4 CCH, si un diagnostic obligatoire n'est pas fourni, la clause exonératoire de garantie des vices cachés ne pourra pas être invoquée par le vendeur dans le champ du diagnostic manquant. La clause reste cependant efficace pour les autres types de vices couverts par des diagnostics fournis.", "piege": false}, {"idx": 25, "num": 26, "groupe": "Vente immobilière", "chapitre": "Hypothèque PPD", "type": "QCU", "difficulte": "difficile", "question": "Depuis l'ordonnance du 15 sept. 2021, comment fonctionne le rang de l'hypothèque légale de prêteur de deniers (ancien privilège de prêteur de deniers) inscrite après cette réforme ?", "options": {"A": "Elle prend rang rétroactivement au jour de la signature de l'acte de vente, comme sous l'ancien régime", "B": "Elle prend rang à la date de son inscription au SPF, sans rétroactivité", "C": "Elle prend systématiquement le même rang que l'hypothèque conventionnelle la plus ancienne", "D": "Elle ne peut plus garantir que les travaux, et non le prix de vente"}, "reponse": "B", "explication": "L'ordonnance du 15 septembre 2021 a remplacé les privilèges immobiliers spéciaux, dont le privilège de prêteur de deniers, par des hypothèques légales. L'objectif était de renforcer la sécurité juridique en supprimant la rétroactivité de l'inscription : désormais, l'hypothèque légale de prêteur de deniers prend rang à la date de son inscription au SPF. Les privilèges déjà inscrits avant la réforme continuent de bénéficier de la rétroactivité de la loi ancienne.", "piege": true}, {"idx": 26, "num": 27, "groupe": "Bail d'habitation", "chapitre": "Encadrement des loyers", "type": "QCU", "difficulte": "moyen", "question": "Dans les zones soumises à l'encadrement des loyers (Paris, certaines villes de Seine-Saint-Denis, Lille, Lyon, etc.), comment est fixé le loyer de référence ?", "options": {"A": "Par accord collectif entre les associations de locataires et de bailleurs", "B": "Par référence exclusive au prix payé par le précédent locataire, sans autre critère", "C": "Par le maire de chaque commune individuellement", "D": "Par le préfet, selon des critères tels que le quartier, le nombre de pièces, la date de construction et le caractère meublé ou non"}, "reponse": "D", "explication": "Dans les zones soumises à l'encadrement des loyers, le loyer de référence est fixé par le préfet, en fonction de critères tels que le quartier, le nombre de pièces, la date de construction, et le caractère meublé ou non du logement. Une majoration de ce loyer de référence est possible (20 pourcent maximum, sous peine d'amende), et un complément de loyer peut être appliqué si le logement présente des caractéristiques distinctives, comme une vue dégagée ou une terrasse. Depuis 2022, l'encadrement des loyers est interdit pour les logements classés DPE F ou G.", "piege": false}, {"idx": 27, "num": 28, "groupe": "Baux commerciaux & professionnels", "chapitre": "Bail professionnel", "type": "QCU", "difficulte": "moyen", "question": "Quelle est la durée minimale d'un bail professionnel selon les art. 57 A et 57 B de la loi du 23 déc. 1986 ?", "options": {"A": "Aucune durée minimale n'est imposée", "B": "9 ans", "C": "6 ans", "D": "3 ans"}, "reponse": "C", "explication": "Le bail professionnel constitue une catégorie intermédiaire entre le bail commercial et le bail civil de droit commun. Parmi les règles impératives figurent une durée minimale de 6 ans, un congé du locataire possible à tout moment avec un préavis de 6 mois, et un congé du bailleur uniquement pour le terme, avec un préavis de 6 mois, sans motif ni indemnité d'éviction.", "piege": false}, {"idx": 28, "num": 29, "groupe": "Vente immobilière", "chapitre": "Avant-contrats", "type": "QCU", "difficulte": "difficile", "question": "Quelle innovation majeure de la réforme de 2016 a été consacrée pour la révocation d'une PUV par le promettant ?", "options": {"A": "Toute révocation entraîne automatiquement la nullité de la promesse et la perte de l'indemnité d'immobilisation", "B": "Le promettant ne peut révoquer qu'avec l'accord exprès du notaire rédacteur", "C": "La révocation par le promettant n'empêche plus la formation du contrat définitif si le bénéficiaire lève l'option", "D": "La révocation reste possible avant la levée d'option et empêche définitivement la vente forcée, conformément à la JP de 1993 et 2011"}, "reponse": "C", "explication": "La réforme de 2016 brise l'ancienne jurisprudence (1993 et 2011) qui permettait au promettant de se rétracter avant la levée d'option sans empêcher la vente forcée par ailleurs ; depuis 2016, si le bénéficiaire lève l'option, le contrat définitif se forme malgré la révocation. La Cour de cassation a aligné en 2021 sa jurisprudence sur ce nouveau régime même pour les promesses antérieures à 2016.", "piege": true}, {"idx": 29, "num": 30, "groupe": "Baux commerciaux & professionnels", "chapitre": "Immatriculation", "type": "QCU", "difficulte": "moyen", "question": "L'immatriculation au RCS (ou RNE depuis 2025) est-elle une condition d'application du statut protecteur des baux commerciaux ou seulement du droit au renouvellement ?", "options": {"A": "Elle est indispensable pour le droit au renouvellement, mais pas pour l'application du statut protecteur en général", "B": "Elle n'est requise dans aucun cas, le statut s'appliquant indépendamment de toute immatriculation", "C": "Elle n'est exigée que pour les sociétés commerciales, jamais pour les commerçants personnes physiques", "D": "Elle est indispensable pour l'application du statut protecteur lui-même"}, "reponse": "A", "explication": "L'immatriculation prouve la qualité de commerçant et constitue une condition du droit au renouvellement, devant exister au moment de la demande de renouvellement. Elle n'est cependant pas indispensable pour l'application du statut protecteur dans son ensemble. Il convient néanmoins de mettre à jour l'immatriculation, par exemple en cas de changement d'adresse ou d'évolution de l'activité.", "piege": true}];
+
+let activeQuestions = [];
+let currentIndex = 0;
+let score = 0;
+let answered = 0;
+let userAnswers = {}; // idx -> {selected: [...], correct: bool}
+
+function startQuiz() {
+  const filter = document.getElementById('chapFilter').value;
+  if (filter === 'all') {
+    activeQuestions = QUESTIONS.slice();
+  } else {
+    activeQuestions = QUESTIONS.filter(q => q.groupe === filter);
+  }
+  currentIndex = 0;
+  score = 0;
+  answered = 0;
+  userAnswers = {};
+  document.getElementById('introScreen').classList.add('hidden');
+  document.getElementById('recapScreen').classList.add('hidden');
+  document.getElementById('quizScreen').classList.remove('hidden');
+  document.getElementById('totalNum').textContent = activeQuestions.length;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = activeQuestions[currentIndex];
+  const qi = currentIndex;
+  const container = document.getElementById('quizScreen');
+
+  document.getElementById('curNum').textContent = currentIndex + 1;
+  document.getElementById('curScore').textContent = score;
+  document.getElementById('answeredCount').textContent = answered;
+  const pct = Math.round(((currentIndex) / activeQuestions.length) * 100);
+  document.getElementById('progressBar').style.width = pct + '%';
+
+  const letters = ['A','B','C','D'];
+  const isQCM = q.type === 'QCM';
+  const alreadyAnswered = userAnswers.hasOwnProperty(qi);
+
+  let html = '<div class="card">';
+  html += '<div class="meta">';
+  html += '<span class="qnum">Q' + (currentIndex+1) + ' · ' + escapeHtml(q.chapitre) + '</span>';
+  html += '<span><span class="tag diff-' + q.difficulte + '">' + q.difficulte + '</span>';
+  if (q.piege) html += ' <span class="tag piege">⚠ piège</span>';
+  html += '</span>';
+  html += '</div>';
+  html += '<div class="qtext">' + escapeHtml(q.question) + '</div>';
+  html += '<div class="qtype-note">' + (isQCM ? 'Plusieurs réponses possibles (QCM)' : 'Une seule réponse possible (QCU)') + '</div>';
+
+  letters.forEach(letter => {
+    const text = q.options[letter];
+    let cls = 'option';
+    let sel = false;
+    if (alreadyAnswered && userAnswers[qi].selected.includes(letter)) {
+      sel = true;
+    }
+    html += '<div class="option" id="opt-' + qi + '-' + letter + '" onclick="selectOption(' + qi + ',\'' + letter + '\')">';
+    html += '<div class="letter">' + letter + '</div>';
+    html += '<div class="otext">' + escapeHtml(text) + '</div>';
+    html += '</div>';
+  });
+
+  html += '<button class="validate-btn" id="validateBtn-' + qi + '" onclick="validateAnswer(' + qi + ')"' + (alreadyAnswered ? ' disabled' : '') + '>Valider</button>';
+
+  if (alreadyAnswered) {
+    html += renderExplication(qi);
+    if (currentIndex < activeQuestions.length - 1) {
+      html += '<button class="next-btn" onclick="nextQuestion()">Question suivante</button>';
+    } else {
+      html += '<button class="next-btn" onclick="showRecap()">Voir le récapitulatif</button>';
+    }
+  }
+
+  html += '</div>';
+  container.innerHTML = html;
+
+  if (alreadyAnswered) {
+    applyCard(qi, q, userAnswers[qi].selected);
+  }
+}
+
+function selectOption(qi, letter) {
+  if (userAnswers.hasOwnProperty(qi)) return; // already validated
+  const q = activeQuestions[qi];
+  const isQCM = q.type === 'QCM';
+  const el = document.getElementById('opt-' + qi + '-' + letter);
+
+  if (isQCM) {
+    el.classList.toggle('selected');
+  } else {
+    ['A','B','C','D'].forEach(l => {
+      const e = document.getElementById('opt-' + qi + '-' + l);
+      if (e) e.classList.remove('selected');
+    });
+    el.classList.add('selected');
+  }
+}
+
+function validateAnswer(qi) {
+  const q = activeQuestions[qi];
+  const letters = ['A','B','C','D'];
+  const selected = letters.filter(l => {
+    const e = document.getElementById('opt-' + qi + '-' + l);
+    return e && e.classList.contains('selected');
+  });
+
+  if (selected.length === 0) return; // require at least one selection
+
+  const correctSet = q.reponse.split('');
+  const isCorrect = (selected.length === correctSet.length) && selected.every(s => correctSet.includes(s));
+
+  userAnswers[qi] = { selected: selected, correct: isCorrect };
+  answered++;
+  if (isCorrect) score++;
+
+  document.getElementById('curScore').textContent = score;
+  document.getElementById('answeredCount').textContent = answered;
+
+  applyCard(qi, q, selected);
+
+  const btn = document.getElementById('validateBtn-' + qi);
+  btn.disabled = true;
+
+  const card = document.querySelector('.card');
+  const explDiv = document.createElement('div');
+  explDiv.innerHTML = renderExplication(qi);
+  card.appendChild(explDiv.firstChild);
+
+  const nextBtn = document.createElement('button');
+  if (qi < activeQuestions.length - 1) {
+    nextBtn.className = 'next-btn';
+    nextBtn.textContent = 'Question suivante';
+    nextBtn.onclick = nextQuestion;
+  } else {
+    nextBtn.className = 'next-btn';
+    nextBtn.textContent = 'Voir le récapitulatif';
+    nextBtn.onclick = showRecap;
+  }
+  card.appendChild(nextBtn);
+}
+
+function applyCard(qi, q, selected) {
+  const letters = ['A','B','C','D'];
+  const correctSet = q.reponse.split('');
+  letters.forEach(l => {
+    const el = document.getElementById('opt-' + qi + '-' + l);
+    if (!el) return;
+    if (correctSet.includes(l)) {
+      el.style.setProperty('background', 'rgba(80,160,90,0.22)');
+      el.style.setProperty('border-color', '#7fcf8f');
+    } else if (selected.includes(l)) {
+      el.style.setProperty('background', 'rgba(200,80,70,0.22)');
+      el.style.setProperty('border-color', '#e08a7d');
+    } else {
+      el.style.setProperty('opacity', '0.55');
+    }
+  });
+}
+
+function renderExplication(qi) {
+  const q = activeQuestions[qi];
+  const ua = userAnswers[qi];
+  let lead = ua.correct ? '✓ Bonne réponse' : '✗ Réponse incorrecte';
+  return '<div class="explication"><div class="lead">' + lead + '</div>' + escapeHtml(q.explication) + '</div>';
+}
+
+function nextQuestion() {
+  currentIndex++;
+  renderQuestion();
+}
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function showRecap() {
+  document.getElementById('quizScreen').classList.add('hidden');
+  document.getElementById('progressBar').style.width = '100%';
+  document.getElementById('curNum').textContent = activeQuestions.length;
+
+  // per-chapitre breakdown
+  const byChap = {};
+  activeQuestions.forEach((q, i) => {
+    if (!byChap[q.chapitre]) byChap[q.chapitre] = { total: 0, correct: 0 };
+    byChap[q.chapitre].total++;
+    if (userAnswers[i] && userAnswers[i].correct) byChap[q.chapitre].correct++;
+  });
+
+  let html = '<div class="recap">';
+  html += '<h2>Résultat final</h2>';
+  html += '<div class="recap-row"><span>Score global</span><span class="recap-score ' + scoreClass(score, activeQuestions.length) + '">' + score + ' / ' + activeQuestions.length + '</span></div>';
+  html += '</div>';
+
+  html += '<div class="recap"><h2>Détail par chapitre</h2>';
+  Object.keys(byChap).forEach(chap => {
+    const d = byChap[chap];
+    html += '<div class="recap-row"><span>' + escapeHtml(chap) + '</span><span class="recap-score ' + scoreClass(d.correct, d.total) + '">' + d.correct + ' / ' + d.total + '</span></div>';
+  });
+  html += '</div>';
+
+  html += '<button class="restart-btn" onclick="restartQuiz()">Recommencer</button>';
+
+  const recapDiv = document.getElementById('recapScreen');
+  recapDiv.innerHTML = html;
+  recapDiv.classList.remove('hidden');
+}
+
+function scoreClass(correct, total) {
+  if (total === 0) return 'mid';
+  const ratio = correct / total;
+  if (ratio >= 0.7) return 'good';
+  if (ratio >= 0.4) return 'mid';
+  return 'bad';
+}
+
+function restartQuiz() {
+  document.getElementById('recapScreen').classList.add('hidden');
+  document.getElementById('introScreen').classList.remove('hidden');
+  document.getElementById('progressBar').style.width = '0%';
+  document.getElementById('curNum').textContent = '-';
+  document.getElementById('curScore').textContent = '0';
+  document.getElementById('answeredCount').textContent = '0';
+}
+</script>
+
+</body>
+</html>

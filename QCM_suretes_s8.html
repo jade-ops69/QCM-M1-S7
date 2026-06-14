@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="QCM Suretes">
+<link rel="apple-touch-icon" href="data:image/png;base64,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9FAoFFq2bGW3D5lMpplnz+htd4GoIgDoh7xe7113/9rtdvf0hOTk5BO/OGrUqG6frCjK/gPFvQx3oPhATw+NHt39NgE9IADon5xO5759+3t61GTq5r7i1NTuJ3b2er0nrgX2db3cZtzTNgE9IADQtQED0v7nmb+e3vvoXiaGa2ttP/GL4XD3N5rFx8f3PhFFLzNG9LRNQA8IAHRNluXzzpu9YvnbTz315NgxY/r+jSkpKWPH9vj81tbWE794tOVoT/vQ+0X9vTza0zYBPSAAiA1zLjh/2bI33121/LrrrullEa5jHA7H44//sacbvpxOZ3VNzYlfP3KksacNXn7Zkp4eMhqNSxZf2tOjjUf6OpUQoD2mg0YsKSws+PU9d911569KSkq3b9+xbfv26uqa1tbWtrb2YDCYmJiYn5939oyzrrzyirS0Hm9w+fLLLd0e09+wYeO558zs9luuvPLbGzZsXL1m7XFfl2X5jl/9Ij8/v6exNmzY2Lc/GRAFBACxx2g0jh49avToUddee/VpfPuHH33U7dfXrv34rjt/JcvyiQ8ZDIYnn3x8+fKV7yxbXlpa6nK5k5OTJkw447prr5k2bWpPA9XU1JQePHgaewhogwBALCWlpe+9180tXZIk1dTULF++YvHi7hefMRgMS5Ys6n1pmuM8/sSTp7OLgFY4BwCBBAKB++9/IBwO9/SEPzzyx27PD5+GTV9uXrXqvYhsClAJAYAoQqHQ7T/7xbZt23t5TktL69XXXH/0aMs3HGv7jh0333zrN9wIoDYCAF3r6Oh86qlneppsp+8qKiuvve6G1avXnPSZZWWHrrjyqtM+eRsOh1955bUbbrjR5XKd3hYAzTAbKGJDYWHB3DkXTJ06Zfz4cb1P6H+ckpLSd5Ytf/XV1/1+/ymNOHfOBVdddeW0aVP7uByxx+NZu3bdc39/4UCv80YAp0TVl1xOAiM2lJSUlpSUSk/+1WKxjBs7prCwMDc3Jyc3J2vIELvdbrNZrVZrMBh0uVwul+vo0ZbS0oPFJSVbt24rKzt0eiOuXrN29Zq1aWmpM2eeXVRUWDBy5OAhg+02u91us1gsXq/X6XR2dTmrqqpLS0v37z+w/osvPB5vZP/UgKoIAGKM3+/ftn3Htu07tBmupaV1xYpVK1as0mY4QEucAwAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABCUSe0Bnr/dp/YQAIDTwCcAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABAUAQAAQREAABCUPDgjNdr7AACIAj4BAICgCAAACIoAAICgCAAACIoAAICgCAAACIoAAICgCAAACIoAAICgCAAACIoAAICgCAAACIoAAICgCAAACOp/ATWTzoTKFqPZAAAAAElFTkSuQmCC">
+<title>QCM - Droit des Sûretés S8</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #1a1612 0%, #2a2218 100%);
+  color: #f5f0e8;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(26,22,18,0.97);
+  border-bottom: 2px solid #b8860b;
+  padding: 12px 16px;
+  backdrop-filter: blur(6px);
+}
+header h1 {
+  font-size: 17px;
+  color: #d4a843;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+header .sub {
+  text-align: center;
+  font-size: 11px;
+  color: #b8a890;
+  margin-top: 2px;
+}
+.scorebar {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: rgba(184,134,11,0.12);
+  border-radius: 8px;
+  font-size: 13px;
+}
+.scorebar .val { color: #d4a843; font-weight: 700; }
+
+.container { padding: 14px; max-width: 720px; margin: 0 auto; }
+
+.filters {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
+}
+.filters select, .filters button {
+  background: #2a2218;
+  color: #f5f0e8;
+  border: 1px solid #b8860b;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  flex: 1;
+  min-width: 120px;
+}
+.filters button {
+  background: #b8860b;
+  color: #1a1612;
+  font-weight: 700;
+  flex: 0 0 auto;
+  min-width: auto;
+}
+
+.card {
+  background: #241e16;
+  border: 1px solid #3a3025;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.card .meta {
+  display:flex; justify-content: space-between; align-items:center;
+  margin-bottom: 8px; flex-wrap: wrap; gap: 6px;
+}
+.tag {
+  font-size: 10px; padding: 3px 8px; border-radius: 6px;
+  background: rgba(184,134,11,0.18); color: #d4a843;
+  text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;
+}
+.tag.diff-facile { background: rgba(80,160,90,0.18); color: #7fcf8f; }
+.tag.diff-moyen { background: rgba(212,168,67,0.18); color: #d4a843; }
+.tag.diff-difficile { background: rgba(200,80,70,0.18); color: #e08a7d; }
+.tag.piège {
+  background: rgba(220,80,60,0.25); color: #ff9d8a;
+}
+.qnum { color: #b8a890; font-size: 12px; font-weight: 700; }
+
+.qtext {
+  font-size: 15px; line-height: 1.5; margin-bottom: 12px; color: #f5f0e8;
+}
+.qtype-note {
+  font-size: 11px; color: #b8a890; margin-bottom: 10px; font-style: italic;
+}
+
+.option {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: 1px solid #3a3025;
+  background: #2a2218;
+  cursor: pointer;
+  font-size: 14px; line-height: 1.4;
+  transition: background 0.15s, border-color 0.15s;
+}
+.option:active { background: #332a1d; }
+.option .letter {
+  flex: 0 0 24px; height: 24px; border-radius: 50%;
+  background: #3a3025; color: #d4a843;
+  display:flex; align-items:center; justify-content:center;
+  font-weight: 700; font-size: 12px;
+}
+.option .otext { flex: 1; padding-top: 1px; }
+.option.selected {
+  border-color: #d4a843;
+}
+.option.selected .letter { background: #d4a843; color: #1a1612; }
+
+.validate-btn, .next-btn {
+  display:block; width: 100%; padding: 12px;
+  border-radius: 10px; border: none;
+  font-size: 15px; font-weight: 700;
+  margin-top: 10px;
+  background: #b8860b; color: #1a1612;
+}
+.validate-btn:disabled { opacity: 0.4; }
+
+.explication {
+  margin-top: 12px; padding: 12px;
+  border-radius: 10px;
+  background: rgba(184,134,11,0.08);
+  border-left: 3px solid #b8860b;
+  font-size: 13px; line-height: 1.5; color: #e8ddd0;
+}
+.explication .lead { font-weight: 700; margin-bottom: 4px; color: #d4a843; }
+
+.recap {
+  background: #241e16; border: 1px solid #3a3025; border-radius: 14px;
+  padding: 16px; margin-bottom: 14px;
+}
+.recap h2 { color: #d4a843; font-size: 16px; margin-bottom: 10px; }
+.recap-row {
+  display:flex; justify-content: space-between; align-items:center;
+  padding: 8px 0; border-bottom: 1px solid #2f271c;
+  font-size: 13px;
+}
+.recap-row:last-child { border-bottom: none; }
+.recap-score { font-weight: 700; }
+.recap-score.good { color: #7fcf8f; }
+.recap-score.bad { color: #e08a7d; }
+.recap-score.mid { color: #d4a843; }
+
+.restart-btn {
+  display:block; width: 100%; padding: 14px;
+  border-radius: 10px; border: none;
+  font-size: 15px; font-weight: 700;
+  margin-top: 6px;
+  background: #d4a843; color: #1a1612;
+}
+
+.progress-wrap {
+  height: 4px; background: #2a2218; border-radius: 4px; margin: 10px 0 4px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%; background: #b8860b; transition: width 0.3s;
+}
+.intro {
+  text-align: center; padding: 20px 0;
+}
+.intro p { font-size: 13px; color: #b8a890; line-height: 1.6; margin: 8px 0; }
+.intro .start-btn {
+  display:inline-block; margin-top: 16px; padding: 14px 28px;
+  border-radius: 10px; border: none; font-size: 16px; font-weight: 700;
+  background: #b8860b; color: #1a1612;
+}
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Droit des Sûretés</h1>
+  <div class="sub">Mme Houin Bressand — M1 Droit Civil S8</div>
+  <div class="scorebar" id="scoreBar">
+    <span>Question <span class="val" id="curNum">-</span> / <span id="totalNum">30</span></span>
+    <span>Score : <span class="val" id="curScore">0</span> / <span id="answeredCount">0</span></span>
+  </div>
+  <div class="progress-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+</header>
+
+<div class="container">
+
+  <div id="introScreen" class="intro">
+    <p>30 questions tirées d'un pool de 82, couvrant le cautionnement (formation, conditions, classifications, effets, recours, extinction), les autres sûretés personnelles (garantie autonome, lettre d'intention, porte-fort, délégation) et le droit de rétention, les sûretés réelles mobilières (gage, nantissement, privilèges, propriétés-sûretés), et les sûretés réelles immobilières (hypothèque).</p>
+    <p>Mélange de QCU (une seule bonne réponse) et QCM (plusieurs réponses possibles). Les questions marquées d'un badge &#9888; contiennent un piège classique à connaître pour l'examen.</p>
+    <p>Tu peux filtrer par chapitre avant de commencer, ou lancer le QCM complet.</p>
+    <div class="filters" style="justify-content:center; margin-top:14px;">
+      <select id="chapFilter">
+        <option value="all">Tous les chapitres</option>
+        <option value="Cautionnement">Cautionnement</option>
+        <option value="Autres sûretés personnelles &amp; droit de rétention">Autres sûretés personnelles &amp; droit de rétention</option>
+        <option value="Sûretés réelles mobilières">Sûretés réelles mobilières</option>
+        <option value="Sûretés réelles immobilières (hypothèque)">Sûretés réelles immobilières (hypothèque)</option>
+      </select>
+    </div>
+    <button class="intro .start-btn start-btn" id="startBtn" onclick="startQuiz()">Commencer le QCM</button>
+  </div>
+
+  <div id="quizScreen" class="hidden"></div>
+
+  <div id="recapScreen" class="hidden"></div>
+
+</div>
+
+<script>
+const QUESTIONS = [{"chapitre": "Délégation", "groupe": "Autres sûretés personnelles & droit de rétention", "type": "QCU", "question": "Quelle est la différence entre la délégation parfaite (novatoire) et la délégation simple (imparfaite) quant à leur qualification de sûreté ?", "options": {"A": "Seule la délégation simple peut être consentie par un tiers garant, jamais par le déléguant lui-même envers le créancier", "B": "La délégation parfaite a toujours un effet de garantie, contrairement à la délégation simple", "C": "La délégation parfaite substitue un nouveau débiteur en libérant l'ancien (pas une sûreté) ; la simple ajoute un débiteur sans libérer le premier (effet de garantie)", "D": "Les deux formes de délégation sont des sûretés équivalentes au cautionnement et produisent les mêmes effets juridiques"}, "reponse": "C", "explication": "La délégation est une opération à trois personnes (déléguant, délégué, délégataire/créancier). La délégation parfaite ou novatoire opère une substitution de débiteur : le délégué remplace le délégant, qui est libéré, et le délégataire renonce à sa créance contre le délégant. Ce n'est pas une sûreté, le créancier perdant un débiteur pour en gagner un autre. La délégation simple ou imparfaite ajoute un débiteur (le délégué) sans libérer le premier (le délégant) : le créancier a désormais deux débiteurs, ce qui produit un effet de garantie renforçant ses chances d'être payé (validée par Cass., 21 juin 1994).", "difficulte": "difficile", "piège": false}, {"chapitre": "Privilèges généraux", "groupe": "Sûretés réelles mobilières", "type": "QCM", "question": "Parmi les privilèges généraux portant sur tous les biens (meubles et immeubles), lesquels des éléments suivants sont corrects ?", "options": {"A": "Le privilège des frais de justice exige deux conditions cumulatives : frais engagés pour la conservation ou réalisation des biens du débiteur, et dans l'intérêt commun des créanciers", "B": "Le privilège des salaires porte sur les 6 derniers mois de salaire et accessoires, et s'exerce sur tout le patrimoine de l'employeur", "C": "Le super privilège des salariés (en procédure collective) porte sur les 3 derniers mois de salaires avant l'ouverture de la procédure, avec priorité maximale", "D": "Le privilège de procédure ne concerne que les créances fiscales du Trésor public au titre des impôts directs et indirects"}, "reponse": "ABC", "explication": "Quatre privilèges généraux portent sur tous les biens : le privilège des frais de justice, soumis à deux conditions cumulatives (frais de conservation ou réalisation des biens du débiteur, et intérêt commun des créanciers, par exemple frais de séquestre, de saisie, ou action oblique) ; le privilège des salaires, portant sur les 6 derniers mois de salaire et accessoires (notamment indemnités de licenciement), s'exerçant sur tout le patrimoine de l'employeur en raison du caractère alimentaire du salaire ; le super privilège des salariés, en cas de procédure collective, portant sur les 3 derniers mois de salaires avant l'ouverture de la procédure, avec une priorité maximale ; et le privilège de procédure, concernant les banques prêtant à une entreprise en difficulté pour favoriser le redressement, ce qui les incite à accorder ces prêts.", "difficulte": "moyen", "piège": false}, {"chapitre": "Garantie autonome", "groupe": "Autres sûretés personnelles & droit de rétention", "type": "QCU", "question": "Selon Com., 13 déc. 1994, que se passe-t-il lorsqu'une sûreté est qualifiée d'autonome par les parties mais que le garant s'oblige en réalité à exécuter la dette du débiteur ?", "options": {"A": "La sûreté devient nulle de plein droit pour contradiction entre la qualification et le contenu", "B": "La sûreté devient une lettre d'intention par défaut", "C": "La qualification donnée par les parties prévaut systématiquement, peu important le contenu réel de l'engagement", "D": "La sûreté est requalifiée en cautionnement, car l'engagement n'est en réalité pas autonome"}, "reponse": "D", "explication": "L'arrêt Com., 13 déc. 1994 illustre que la qualification donnée par les parties ne suffit pas : si le garant, malgré une qualification d'autonomie, s'oblige en réalité à exécuter la dette du débiteur (paiement conditionné par la dette principale), la sûreté est requalifiée en cautionnement, car l'engagement n'est pas réellement autonome. Le juge recherche donc le contenu réel de l'engagement au-delà des termes employés par les parties.", "difficulte": "difficile", "piège": false}, {"chapitre": "Hypothèque - notion", "groupe": "Sûretés réelles immobilières (hypothèque)", "type": "QCU", "question": "Quelle est la différence essentielle entre l'hypothèque et le gage immobilier ?", "options": {"A": "L'hypothèque s'effectue sans dépossession du constituant (la règle), le gage immobilier suppose une dépossession (l'exception, peu utilisée)", "B": "L'hypothèque et le gage immobilier sont des synonymes en droit positif", "C": "L'hypothèque suppose une dépossession du constituant, le gage immobilier non", "D": "Le gage immobilier ne peut porter que sur des immeubles agricoles"}, "reponse": "A", "explication": "L'hypothèque est l'affectation d'un immeuble à la garantie d'une obligation, sans dépossession du constituant : c'est la règle en matière de sûretés immobilières. Le gage immobilier, à l'inverse, suppose une dépossession du constituant : c'est l'exception, peu utilisée en pratique car très contraignante (le constituant perd l'usage d'un immeuble). En pratique, créancier et constituant concluent souvent un bail fictif pour que le constituant garde l'usage du bien, ce qui rend ce mécanisme artificiel et peu attractif. L'hypothèque confère un droit de préférence sur la valeur de l'immeuble et un droit de suite : elle suit l'immeuble en cas d'aliénation.", "difficulte": "facile", "piège": false}, {"chapitre": "Poursuite de la caution", "groupe": "Cautionnement", "type": "QCU", "question": "Quel est le principe applicable à la déchéance du terme à l'égard de la caution, et existe-t-il une dérogation ?", "options": {"A": "Principe : la déchéance du terme n'est pas opposable à la caution car elle sanctionne le débiteur ; dérogation par clause expresse possible", "B": "La déchéance du terme libère automatiquement et définitivement la caution de tout engagement envers le créancier poursuivant", "C": "La déchéance du terme transforme automatiquement le cautionnement simple en cautionnement solidaire, sans clause nécessaire", "D": "La déchéance du terme est toujours opposable à la caution, sans aucune dérogation possible quelle que soit la clause"}, "reponse": "A", "explication": "Le principe est que la déchéance du terme, qui rend la dette immédiatement exigible en sanction du comportement du débiteur, n'est pas opposable à la caution : elle sanctionne le débiteur, pas la caution. Une dérogation reste cependant possible si une clause expresse du contrat de cautionnement le prévoit, rendant alors la déchéance du terme opposable à la caution également.", "difficulte": "moyen", "piège": false}, {"chapitre": "Extinction - voie accessoire", "groupe": "Cautionnement", "type": "QCU", "question": "Une remise de dette imposée au débiteur dans le cadre d'une procédure collective éteint-elle le cautionnement ?", "options": {"A": "Oui, mais seulement si la caution est une personne physique et que le créancier est un établissement de crédit professionnel", "B": "Non : les remises de dette imposées (PC, surendettement) n'éteignent pas le cautionnement, car c'est précisément ce risque que le créancier voulait couvrir", "C": "Oui, dans la même proportion que pour le débiteur, comme toute remise de dette volontaire consentie par le créancier", "D": "Non, mais le créancier perd alors tout droit de poursuite contre la caution pour le solde de la dette restante"}, "reponse": "B", "explication": "Si la dette principale s'éteint, le cautionnement s'éteint dans la même proportion, en raison du caractère accessoire du cautionnement (paiement, compensation art. 1347-6 C.cv invocable par la caution, ou remise de dette volontaire au débiteur). Cependant, les remises de dette imposées au débiteur dans le cadre de procédures collectives ou de surendettement n'éteignent pas le cautionnement : c'est précisément dans ce type de situation que le créancier avait sollicité une caution, pour pallier l'insolvabilité du débiteur.", "difficulte": "moyen", "piège": true}, {"chapitre": "Porte-fort", "groupe": "Autres sûretés personnelles & droit de rétention", "type": "QCU", "question": "Le porte-fort ratification (art. 1204 al. 1 C.cv) constitue-t-il une sûreté ?", "options": {"A": "Oui, mais uniquement lorsqu'il est conclu à titre onéreux", "B": "Non, car il est requalifié systématiquement en cautionnement", "C": "Oui, c'est la principale sûreté personnelle issue du régime général des obligations", "D": "Non, car il s'agit seulement de la promesse qu'un tiers ratifiera un acte, et non d'une garantie de paiement"}, "reponse": "D", "explication": "Le porte-fort ratification (art. 1204 al. 1 C.cv) est l'engagement par lequel une personne promet qu'un tiers ratifiera un acte. Ce n'est pas une garantie de paiement et ne constitue donc pas une sûreté. Il faut le distinguer du porte-fort exécution, qui lui constitue une véritable sûreté personnelle indemnitaire en promettant le fait d'un tiers (l'exécution d'un engagement souscrit par ce tiers).", "difficulte": "moyen", "piège": false}, {"chapitre": "Nantissement de titres", "groupe": "Sûretés réelles mobilières", "type": "QCU", "question": "Concernant le nantissement de parts sociales non librement cessibles, quel est l'obstacle principal en cas de réalisation, et quelle solution préventive existe ?", "options": {"A": "Le nantissement de parts sociales est purement et simplement interdit en droit français", "B": "Les associés peuvent refuser l'agrément de l'acquéreur, ce qui bloque la réalisation ; il convient d'obtenir un agrément anticipé de la société valant agrément en cas de mise en jeu", "C": "Aucun obstacle particulier n'existe, les parts sociales étant cessibles comme les actions", "D": "Le créancier doit obligatoirement obtenir l'unanimité des associés au moment de la constitution du nantissement, sans solution alternative possible"}, "reponse": "B", "explication": "Le nantissement de parts sociales non librement cessibles (parts de société civile, art. 1866-1868 C.cv, ou de SARL, art. L.223-15 C.com) se constitue par écrit, désignation des parts et publicité au registre des sûretés mobilières. La difficulté tient au caractère intuitu personae fort des parts sociales : en cas de réalisation, les associés peuvent refuser l'agrément de l'acquéreur, ce qui bloque la procédure. Des solutions existent en cas de refus : les associés rachètent eux-mêmes les parts, ou la société les rachète (réduction de capital). Pour éviter ce blocage préventivement, il est conseillé d'obtenir un agrément anticipé de la société, valant agrément en cas de mise en jeu du nantissement.", "difficulte": "difficile", "piège": false}, {"chapitre": "Figures complexes", "groupe": "Cautionnement", "type": "QCU", "question": "Quelle est la différence entre la certification de caution (art. 2291 C.cv) et le sous-cautionnement (art. 2291-1 C.cv) ?", "options": {"A": "La certification et le sous-cautionnement sont deux noms pour le même mécanisme garantissant le créancier", "B": "La certification garantit la caution contre l'insolvabilité du débiteur ; le sous-cautionnement garantit le créancier directement", "C": "La certification garantit le créancier que la caution paiera ; le sous-cautionnement garantit la caution que le débiteur la remboursera après son recours", "D": "Aucune des deux n'implique de recours entre les parties concernées"}, "reponse": "C", "explication": "La certification de caution (art. 2291 C.cv) est l'engagement du certificateur envers le créancier de payer à la place de la caution si elle est défaillante : c'est une « caution de la caution », garantissant le créancier. Le sous-cautionnement (art. 2291-1 C.cv) garantit la caution elle-même (et non le créancier) contre le risque de non-remboursement par le débiteur après l'exercice de son recours, fréquent dans les cautionnements bancaires. La certification est rare en pratique car elle impose un ordre de poursuite (d'abord la caution de premier rang) ; les créanciers préfèrent la cofidéjussion, où plusieurs cautions s'engagent de manière juxtaposée pour la même dette.", "difficulte": "difficile", "piège": true}, {"chapitre": "Hypothèque - radiation", "groupe": "Sûretés réelles immobilières (hypothèque)", "type": "QCU", "question": "Quelle est la différence entre la radiation amiable et la radiation judiciaire d'une inscription hypothécaire ?", "options": {"A": "La radiation amiable nécessite l'intervention systématique du tribunal judiciaire, même en cas d'accord du créancier", "B": "La radiation amiable est toujours automatique dès le paiement intégral de la créance, sans aucune formalité notariée requise", "C": "Amiable : accord du créancier + acte de mainlevée notarié ; judiciaire : demandée au juge si inscription irrégulière, nulle ou injustifiée", "D": "Seule la radiation judiciaire permet de mettre fin à une inscription avant sa date extrême d'effet, l'amiable étant impossible"}, "reponse": "C", "explication": "La radiation permet de mettre fin à une inscription hypothécaire avant sa date extrême d'effet. Deux types existent : la radiation amiable, qui nécessite l'accord du créancier et un acte de mainlevée notarié, typiquement lorsque le créancier est désintéressé à l'occasion de la vente de l'immeuble (par exemple, immeuble vendu en 2028 alors que l'hypothèque arrive à échéance en 2036 : le créancier est payé à l'occasion de la vente et accepte la radiation pour que l'acquéreur reçoive un bien sans hypothèque) ; et la radiation judiciaire, demandée au juge, par exemple en cas d'inscription irrégulière, nulle, ou devenue sans justification. La mention en marge, autre modalité, sert à actualiser l'inscription sans aggraver la situation du débiteur, par exemple en cas de paiement partiel de la créance ou de changement de créancier.", "difficulte": "moyen", "piège": false}, {"chapitre": "Gage - notion", "groupe": "Sûretés réelles mobilières", "type": "QCU", "question": "Depuis la réforme de 2006, le gage (art. 2333 C.cv) est-il un contrat réel ou consensuel ?", "options": {"A": "Réel : la dépossession est une condition de formation du contrat", "B": "Consensuel : la dépossession reste possible mais n'est plus une condition de formation", "C": "Solennel : un acte authentique est systématiquement requis", "D": "Le gage n'est ni réel ni consensuel, il s'agit d'un acte unilatéral"}, "reponse": "B", "explication": "Le gage est une convention par laquelle le constituant accorde au créancier un droit de préférence sur un bien mobilier corporel, présent ou futur. Depuis la réforme de 2006, le gage est devenu un contrat consensuel : la dépossession reste possible (gage avec dépossession) mais n'est plus une condition de validité du contrat. Le gage confère un droit de préférence, et non un droit d'exclusivité.", "difficulte": "facile", "piège": false}, {"chapitre": "Cautionnement - notion", "groupe": "Cautionnement", "type": "QCU", "question": "Selon l'art. 2288 C.cv, qui sont les parties au contrat de cautionnement ?", "options": {"A": "La caution, le créancier et le débiteur principal, qui sont tous trois parties au contrat", "B": "La caution et le débiteur principal, le créancier étant simple bénéficiaire tiers", "C": "La caution et le créancier ; le débiteur principal n'est pas partie au contrat", "D": "Le débiteur principal et le créancier uniquement, la caution n'intervenant qu'en exécution"}, "reponse": "C", "explication": "Le cautionnement est un contrat conclu entre la caution et le créancier, par lequel la caution s'oblige à payer la dette du débiteur en cas de défaillance de celui-ci. Le débiteur principal n'est pas partie au contrat de cautionnement, même s'il en est le bénéficiaire indirect. Le cautionnement est unilatéral (n'oblige que la caution), accessoire (calqué sur la dette principale) et personnel (engage le patrimoine de la caution).", "difficulte": "facile", "piège": false}, {"chapitre": "Droit de rétention - effets", "groupe": "Autres sûretés personnelles & droit de rétention", "type": "QCM", "question": "Quelles sont les caractéristiques du droit de rétention quant à son exercice et son opposabilité (Civ. 1e, 7 janv. 1992) ?", "options": {"A": "Il est quasi-discrétionnaire : exerçable peu importe les conséquences ou le préjudice pour le débiteur, sous réserve de l'abus de droit", "B": "Il est indivisible : la totalité du bien peut être retenue jusqu'au paiement intégral, même si le bien est divisible", "C": "Il n'est opposable qu'au débiteur lui-même, jamais aux autres créanciers ni au mandataire judiciaire", "D": "Il est opposable à tous : débiteur, héritiers, autres créanciers même gagistes, mandataire judiciaire en procédure collective, et propriétaire du bien si ce n'est pas le débiteur"}, "reponse": "ABD", "explication": "Le droit de rétention présente trois caractéristiques majeures : il est quasi-discrétionnaire, exerçable peu importe les conséquences pour le débiteur (Cass., 17 juin 1969 : un comptable peut retenir la comptabilité même si le client est condamné à une amende fiscale, sous la seule limite de l'abus de droit, par exemple si le créancier dispose d'autres garanties suffisantes) ; il est indivisible, permettant de retenir le bien en totalité jusqu'au paiement intégral même si le bien est divisible ; et il est opposable à tous (Civ. 1e, 7 janv. 1992, arrêt de principe) : débiteur, héritiers, autres créanciers même gagistes, mandataire judiciaire en procédure collective, et propriétaire du bien si ce n'est pas le débiteur.", "difficulte": "moyen", "piège": false}, {"chapitre": "Lettre d'intention - obligation de résultat", "groupe": "Autres sûretés personnelles & droit de rétention", "type": "QCU", "question": "Quelle formule a fait l'objet d'une évolution jurisprudentielle avant d'être définitivement qualifiée d'obligation de résultat (arrêt de fév. 2002, confirmé en 2005) ?", "options": {"A": "« Apporter son soutien moral »", "B": "« Veiller aux intérêts du débiteur »", "C": "« Faire le nécessaire »", "D": "« Garantir la bonne fin de l'opération »"}, "reponse": "C", "explication": "La formule « faire le nécessaire » a connu une évolution jurisprudentielle : qualifiée d'obligation de résultat par un arrêt du 23 oct. 1990, puis d'obligation de moyen par un arrêt du 26 janv. 1999 (solution depuis abandonnée), avant d'être définitivement fixée comme obligation de résultat par un arrêt de février 2002, confirmé en 2005. En cas d'obligation de résultat, la défaillance déduit automatiquement la faute de l'auteur de la lettre. La mise en œuvre de la responsabilité se fait par une action en responsabilité contractuelle, ouvrant droit à des dommages-intérêts à hauteur du préjudice intégral, qui peut être supérieur au montant de la créance garantie.", "difficulte": "difficile", "piège": true}, {"chapitre": "Hypothèque conventionnelle - forme", "groupe": "Sûretés réelles immobilières (hypothèque)", "type": "QCU", "question": "Selon l'art. 2409 C.cv, qui doit obligatoirement signer l'acte authentique d'affectation hypothécaire à peine de nullité ?", "options": {"A": "Aucune des parties n'a besoin de signer un acte authentique si la créance est inférieure à 1500 euros", "B": "Seul le créancier doit signer l'acte authentique, le constituant pouvant donner un accord verbal", "C": "Le créancier et le constituant doivent tous deux signer en présence d'un notaire", "D": "Seul le consentement du constituant doit être authentifié ; le créancier (par exemple une banque) n'a pas à signer l'acte, son consentement tacite étant accepté"}, "reponse": "D", "explication": "L'hypothèque conventionnelle résulte d'un accord de volonté entre créancier et constituant, formalisé par un « acte d'affectation hypothécaire ». L'art. 2409 C.cv impose un acte authentique obligatoire à peine de nullité : le contrat est solennel, ce qui se justifie par l'importance des immeubles, les montants élevés en jeu, et le rôle d'information et de conseil du notaire. Cependant, seul le consentement du constituant doit être authentifié : le créancier (par exemple une banque) n'a pas à signer l'acte authentique, son consentement tacite étant accepté. Pour les groupements (art. 2326), la prise de décision peut se faire en assemblée ou par délégation, par un acte sous seing privé suffisant pour cette étape, seul l'acte final devant être authentique.", "difficulte": "moyen", "piège": true}, {"chapitre": "Cautionnement - classification origine", "groupe": "Cautionnement", "type": "QCU", "question": "Parmi le cautionnement conventionnel, légal et judiciaire (art. 2289 C.cv), que retenir quant à la liberté de la personne sollicitée pour être caution ?", "options": {"A": "La loi et le juge imposent seulement au débiteur de trouver une caution ; le contrat repose toujours sur l'accord volontaire de l'engagé", "B": "Le cautionnement judiciaire dispense la caution de toute solvabilité et de tout patrimoine suffisant", "C": "La loi ou le juge peuvent imposer directement et sans son accord à une personne déterminée de devenir caution", "D": "Seul le cautionnement conventionnel repose sur un accord volontaire, les deux autres étant imposés d'office à un tiers"}, "reponse": "A", "explication": "La classification selon l'origine distingue le cautionnement conventionnel (le plus fréquent, librement négocié à l'initiative du créancier), légal (la loi impose au débiteur de fournir une caution) et judiciaire (le juge ordonne la fourniture d'une caution). Dans tous les cas, ni la loi ni le juge n'imposent à une personne déterminée de devenir caution : ils imposent seulement au débiteur de trouver une caution, le cautionnement restant un contrat reposant sur un accord volontaire. En cas de cautionnement légal ou judiciaire, la caution proposée doit être solvable et justifier d'un patrimoine suffisant (art. 2301 C.cv).", "difficulte": "moyen", "piège": false}, {"chapitre": "Hypothèque conventionnelle - créances", "groupe": "Sûretés réelles immobilières (hypothèque)", "type": "QCU", "question": "Qu'est-ce qu'une hypothèque rechargeable (art. 2416 C.cv) et à quelles dettes est-elle limitée ?", "options": {"A": "Une hypothèque qui se renouvelle automatiquement tous les 5 ans sans aucune intervention des parties ni du créancier", "B": "Constituée pour une créance identifiée puis réutilisée pour une nouvelle créance ; limitée aux dettes professionnelles, par crainte de l'endettement", "C": "Une hypothèque réservée exclusivement aux particuliers pour financer l'achat de biens de consommation courante", "D": "Une hypothèque qui perd toute valeur juridique dès le premier remboursement partiel de la créance initiale"}, "reponse": "B", "explication": "L'hypothèque rechargeable (art. 2416 C.cv) est constituée au départ pour une créance identifiée, puis peut être réutilisée pour garantir une nouvelle créance, sans nécessiter une nouvelle inscription complète. Elle est cependant limitée aux dettes professionnelles, le législateur ayant craint qu'ouvrir ce mécanisme aux particuliers les incite à un endettement excessif en leur permettant de réutiliser indéfiniment la garantie de leur logement. Par ailleurs, le principe de spécialité des créances impose une identification par la cause de la créance, et un montant maximum obligatoire ; une hypothèque omnibus (garantissant des créances futures déterminables) reste possible.", "difficulte": "difficile", "piège": false}, {"chapitre": "Notion sûretés", "groupe": "Cautionnement", "type": "QCU", "question": "Selon l'art. 2285 C.cv, qu'est-ce que le droit de gage commun ?", "options": {"A": "Le droit reconnu à tous les créanciers d'agir et de saisir les biens du débiteur", "B": "Un droit de préférence réservé aux créanciers titulaires d'une sûreté réelle", "C": "Un mécanisme exclusivement applicable aux procédures collectives", "D": "Un privilège accordé uniquement au Trésor public"}, "reponse": "A", "explication": "L'art. 2285 C.cv consacre le droit de gage commun : tout créancier, même chirographaire, peut agir et saisir les biens de son débiteur. Si le patrimoine du débiteur est insuffisant pour désintéresser tous les créanciers, le paiement se fait au marc l'euro, c'est-à-dire proportionnellement au montant de chaque créance.", "difficulte": "facile", "piège": false}, {"chapitre": "Nantissement de créance", "groupe": "Sûretés réelles mobilières", "type": "QCU", "question": "Quelle est la différence fondamentale entre le gage et le nantissement de créance quant aux conditions d'opposabilité aux tiers ?", "options": {"A": "Le gage exige une publicité ; le nantissement de créance est opposable dès l'acte sans publicité, mais le débiteur nanti doit être notifié séparément", "B": "Les deux exigent une publicité identique au registre des sûretés mobilières, sans aucune différence de régime", "C": "Aucune opposabilité n'est nécessaire pour le nantissement de créance, ni envers les tiers ni envers le débiteur de la créance nantie", "D": "Le nantissement de créance exige une dépossession matérielle du bien, contrairement au gage qui en est dispensé"}, "reponse": "A", "explication": "Le nantissement de créance (art. 2356 s. C.cv) suit globalement le régime du gage (art. 2355), mais présente une différence fondamentale sur l'opposabilité : alors que le gage exige une publicité pour être opposable aux tiers, le nantissement de créance est opposable aux tiers immédiatement, dès la date de l'acte, sans formalité de publicité requise. En revanche, pour que le débiteur de la créance nantie sache à qui payer, il doit être notifié du nantissement, ou intervenir à l'acte (art. 2362). L'écrit doit mentionner la créance garantie et la créance nantie. L'opération est triangulaire : constituant/débiteur principal, créancier nanti, et débiteur de la créance nantie.", "difficulte": "difficile", "piège": true}, {"chapitre": "Cautionnement - proportionnalité", "groupe": "Cautionnement", "type": "QCU", "question": "Selon Cass., 20 avr. 2017, dans quelle hypothèse un cautionnement a-t-il été jugé manifestement disproportionné, et comment se distingue un engagement « ruineux » d'une disproportion manifeste ?", "options": {"A": "Lorsque le créancier est de mauvaise foi au moment de la conclusion, indépendamment du montant réel du cautionnement souscrit", "B": "Lorsque le cautionnement représente 2 fois la valeur du patrimoine seulement ; un engagement ruineux équivaut toujours à une disproportion manifeste", "C": "Lorsque la caution n'a signé aucune mention manuscrite exigée, indépendamment de sa situation patrimoniale réelle", "D": "Cautionnement = 4x la valeur du patrimoine + 6 ans de revenus = disproportion manifeste ; un engagement ruineux n'en est pas une"}, "reponse": "D", "explication": "L'arrêt du 20 avril 2017 a retenu une disproportion manifeste pour un cautionnement représentant 4 fois la valeur du patrimoine de la caution et 6 années de revenus. La disproportion manifeste se définit comme l'impossibilité incontestable pour la caution de faire face à son engagement. Un engagement simplement « ruineux », qui ne laisserait plus rien à la caution mais lui permettrait techniquement d'assumer son engagement, ne constitue pas en soi une disproportion manifeste.", "difficulte": "difficile", "piège": true}, {"chapitre": "Hypothèque prêteur de deniers", "groupe": "Sûretés réelles immobilières (hypothèque)", "type": "QCU", "question": "Pour l'hypothèque légale spéciale du prêteur de deniers, quels sont les deux actes notariés obligatoires et leur objet respectif ?", "options": {"A": "Un seul acte authentique suffit, mentionnant à la fois l'emprunt, la quittance et la destination des deniers prêtés", "B": "Un acte d'emprunt authentique avec clause de destination des deniers, et un acte de quittance avec clause d'origine des deniers, pour certifier le trajet de l'argent jusqu'au prêteur", "C": "Un acte sous signature privée pour l'emprunt et un acte authentique de mainlevée pour la quittance du vendeur", "D": "Un acte de donation entre vifs et un acte de partage amiable de l'indivision successorale concernée"}, "reponse": "B", "explication": "L'hypothèque légale spéciale du prêteur de deniers porte sur l'immeuble acquis grâce au prêt, favorisant ainsi le crédit hypothécaire. Sa spécificité est une origine légale mais un formalisme particulier imposé : deux actes notariés sont obligatoires. L'acte d'emprunt authentique constate le versement des fonds et contient une clause de destination des deniers, mentionnant que les fonds sont destinés à l'acquisition d'un immeuble déterminé. L'acte de quittance, dans lequel le vendeur reconnaît être payé du prix de vente, contient une clause d'origine des deniers, indiquant que le prix a été payé avec les deniers empruntés auprès de ce prêteur. L'objectif est de certifier de manière absolue le trajet de l'argent, afin que l'hypothèque profite bien au prêteur qui a effectivement financé l'acquisition.", "difficulte": "difficile", "piège": false}, {"chapitre": "Cautionnement - dettes futures", "groupe": "Cautionnement", "type": "QCU", "question": "Pour limiter l'engagement d'une caution garantissant des dettes futures, deux moyens sont évoqués. Lequel des éléments suivants est exact concernant la distinction obligation de couverture / obligation de règlement ?", "options": {"A": "Seule l'obligation de règlement existe en matière de dettes futures, l'obligation de couverture ne concernant que les dettes présentes", "B": "Les deux obligations sont strictement identiques et s'éteignent toujours simultanément", "C": "L'obligation de règlement détermine quelles dettes sont couvertes, l'obligation de couverture porte sur leur paiement effectif", "D": "L'obligation de couverture détermine l'étendue de la garantie (quelles dettes sont couvertes), l'obligation de règlement porte sur le paiement effectif de ces dettes"}, "reponse": "D", "explication": "Pour limiter l'engagement d'une caution sur des dettes futures, deux moyens existent : un plafond maximum en capital, ou une durée déterminée. L'obligation de couverture détermine l'étendue de la garantie, c'est-à-dire quelles dettes nées pendant la durée du cautionnement sont couvertes. L'obligation de règlement porte sur le paiement effectif de ces dettes couvertes. Lorsque l'obligation de couverture s'éteint, la caution n'est plus tenue des dettes nées après l'extinction, mais reste tenue, au titre de l'obligation de règlement, pour les dettes nées avant. Seule la date de naissance de la dette compte, sa date d'exigibilité étant indifférente.", "difficulte": "difficile", "piège": false}, {"chapitre": "Cautionnement - mise en garde", "groupe": "Cautionnement", "type": "QCU", "question": "Depuis l'ordonnance du 15 septembre 2021 (art. 2299 C.cv), quel est le champ d'application du devoir de mise en garde, et que doit faire le créancier professionnel ?", "options": {"A": "Tout créancier, professionnel ou non, envers toute caution ; il doit refuser purement et simplement de conclure le contrat", "B": "Tout créancier professionnel envers toute caution personne physique : attirer son attention si l'engagement est inadapté, sans conseiller ni dissuader", "C": "Établissements de crédit uniquement, envers toute caution ; il doit garantir le remboursement intégral en cas de défaillance du débiteur", "D": "Établissements de crédit uniquement, envers cautions profanes uniquement ; il doit en outre les conseiller et les dissuader de s'engager"}, "reponse": "B", "explication": "Avant 2022, le devoir de mise en garde ne s'imposait qu'aux établissements de crédit, envers les cautions profanes seulement. Depuis l'ordonnance du 15 septembre 2021 (art. 2299 C.cv), ce devoir s'impose à tout créancier professionnel, envers toutes cautions personnes physiques, qu'elles soient profanes ou averties. Le contenu de l'obligation se limite à attirer l'attention de la caution sur le caractère inadapté de l'engagement du débiteur à ses capacités, sans aller jusqu'à conseiller ou dissuader. Le manquement à ce devoir ouvre une action en responsabilité contractuelle donnant lieu à des dommages-intérêts à hauteur du préjudice.", "difficulte": "difficile", "piège": false}, {"chapitre": "Propriété cédée", "groupe": "Sûretés réelles mobilières", "type": "QCU", "question": "Quelle est la différence entre le nantissement de créance et la cession de créance à titre de garantie ?", "options": {"A": "Le nantissement transfère systématiquement la propriété de la créance, contrairement à la cession à titre de garantie", "B": "Les deux mécanismes sont rigoureusement identiques quant à leurs effets sur le patrimoine", "C": "La cession de créance à titre de garantie n'existe qu'au profit des établissements de crédit", "D": "Dans le nantissement, la créance reste dans le patrimoine du constituant ; dans la cession à titre de garantie, le débiteur transfère la propriété de la créance à son créancier"}, "reponse": "D", "explication": "La différence fondamentale est que, dans le nantissement de créance, la créance nantie reste dans le patrimoine du constituant : le créancier nanti dispose seulement d'un droit de préférence sur cette créance. Dans la cession de créance à titre de garantie, le débiteur transfère la propriété de la créance à son créancier : c'est une sûreté de propriété cédée. Deux mécanismes existent pour cette cession : le bordereau Dailly (réservé aux établissements de crédit, très efficace en procédure collective), et la cession de droit commun depuis 2021 (art. 2373 s. C.cv), ouverte à tout créancier, pour toute créance, dans tout contexte.", "difficulte": "difficile", "piège": false}, {"chapitre": "Gage - pacte commissoire", "groupe": "Sûretés réelles mobilières", "type": "QCU", "question": "À quelle condition un pacte commissoire (clause d'attribution automatique du bien gagé au créancier en cas de défaillance) est-il valable (art. 2348 C.cv), et que se passe-t-il si la valeur du bien excède le montant de la créance ?", "options": {"A": "Valable si la valeur du bien est déterminée objectivement par expert ou cotation officielle ; soulte due au débiteur si valeur excède la créance", "B": "Il est valable uniquement pour les biens immobiliers, jamais pour les meubles corporels gagés conventionnellement", "C": "Il est valable sans aucune condition particulière, le créancier fixant librement et unilatéralement la valeur du bien", "D": "Il est toujours nul de plein droit, l'attribution du bien ne pouvant résulter que d'une décision judiciaire"}, "reponse": "A", "explication": "Le pacte commissoire est une clause contractuelle prévoyant que, en cas de défaillance du débiteur, le créancier deviendra automatiquement propriétaire du bien gagé sans avoir à saisir le juge. Il n'est valable que si la valeur du bien est déterminée objectivement, par un expert ou une cotation officielle (art. 2348 C.cv). Si la valeur du bien excède le montant de la créance, une soulte (somme d'argent compensant la différence de valeur) est due au débiteur. Inversement, si la valeur est inférieure à la créance, il y a paiement partiel et le solde devient une créance chirographaire. L'autre voie d'attribution du bien à titre de paiement est l'attribution judiciaire, par saisine du tribunal judiciaire ; dans tous les cas, l'attribution judiciaire est interdite si le bien constitue la résidence principale du débiteur.", "difficulte": "difficile", "piège": false}, {"chapitre": "Cautionnement - formalisme", "groupe": "Cautionnement", "type": "QCU", "question": "Depuis l'ordonnance du 15 septembre 2021 (art. 2297 C.cv), quel est le domaine d'application du formalisme de la première mention obligatoire pour le cautionnement d'une personne physique, et quelle est la sanction de son absence ?", "options": {"A": "Tous les cautionnements, y compris ceux des personnes morales ; sanction : réduction du montant garanti", "B": "Uniquement les cautionnements commerciaux ; sanction : inopposabilité au créancier", "C": "Uniquement caution personne physique + créancier professionnel ; sanction : cautionnement simple", "D": "Tous les cautionnements consentis par des personnes physiques, quel que soit le créancier ; sanction : nullité"}, "reponse": "D", "explication": "Avant 2022, le formalisme de la mention manuscrite ne s'appliquait qu'au cautionnement consenti par une personne physique au profit d'un créancier professionnel. Depuis l'ordonnance du 15 septembre 2021, l'art. 2297 C.cv étend ce formalisme à tous les cautionnements consentis par des personnes physiques, quel que soit le créancier. La première mention, écrite par la caution elle-même (mais plus nécessairement manuscrite, et librement rédigée sans formule imposée), porte sur le montant maximum garanti et constitue une condition de validité à peine de nullité. L'acte authentique dispense totalement de ce formalisme.", "difficulte": "moyen", "piège": false}, {"chapitre": "Propriété cédée - fiducie", "groupe": "Sûretés réelles mobilières", "type": "QCU", "question": "Qu'est-ce que la fiducie-sûreté (arts. 2372-1 s. C.cv) et quel est son avantage principal ?", "options": {"A": "La fiducie-sûreté est réservée aux particuliers pour de petits montants", "B": "Le débiteur conserve la pleine propriété du bien, le créancier ne disposant que d'un simple gage", "C": "Le débiteur transfère un bien dans un patrimoine fiduciaire distinct, ce qui place le bien hors de la procédure collective éventuelle du débiteur", "D": "La fiducie-sûreté ne peut jamais coexister avec une convention de mise à disposition du bien"}, "reponse": "C", "explication": "La fiducie-sûreté consiste pour le débiteur à transférer un bien dans un patrimoine fiduciaire distinct de son patrimoine personnel, ce qui place le bien hors de la procédure collective éventuelle du débiteur, avantage décisif des sûretés fondées sur la propriété. Une convention de mise à disposition reste possible, permettant au débiteur de conserver l'usage du bien. La réalisation s'effectue par attribution au bénéficiaire ou vente par le fiduciaire, avec une évaluation objective obligatoire, et une soulte due si la valeur excède le montant de la créance.", "difficulte": "moyen", "piège": false}, {"chapitre": "Réserve de propriété", "groupe": "Sûretés réelles mobilières", "type": "QCU", "question": "Concernant la clause de réserve de propriété (art. 2367 s. C.cv), que se passe-t-il à l'échéance si le bien a été incorporé dans un autre bien (art. 1370 C.cv) ?", "options": {"A": "La restitution est impossible dans tous les cas, le vendeur perdant tout droit", "B": "Une soulte est systématiquement due au vendeur, quelle que soit la valeur", "C": "La restitution reste possible si le bien peut être séparé sans dommage", "D": "Le vendeur devient automatiquement propriétaire de l'ensemble du bien incorporé"}, "reponse": "C", "explication": "La clause de réserve de propriété permet au vendeur de conserver la propriété du bien jusqu'au complet paiement du prix, sous condition suspensive de transfert, par écrit, sans publicité (sûreté occulte). À l'échéance, en cas de non-paiement, la restitution s'effectue si le bien se trouve en nature entre les mains de l'acquéreur. Si le bien a été incorporé dans un autre bien (art. 1370 C.cv), la restitution reste possible si le bien peut être séparé sans dommage. D'autres hypothèses sont prévues : bien revendu (le droit de propriété est reporté sur la créance du prix de revente, le vendeur pouvant agir directement contre le sous-acquéreur), bien détruit avec assurance (report sur l'indemnité, art. 1372), ou bien fongible (art. 2369, restitution de biens de même nature et qualité). Si la valeur du bien est inférieure à la créance, il y a paiement partiel et le solde devient chirographaire ; si elle est supérieure, une soulte est due à l'acquéreur.", "difficulte": "moyen", "piège": false}, {"chapitre": "Cautionnement - formalisme", "groupe": "Cautionnement", "type": "QCU", "question": "Que se passe-t-il si la seconde mention obligatoire (renonciation aux bénéfices de discussion et de division, en cas de clause de solidarité) est absente d'un cautionnement consenti par une personne physique ?", "options": {"A": "Le cautionnement devient un cautionnement simple, mais reste valide", "B": "Le créancier doit recommencer toute la procédure de formalisation", "C": "Le cautionnement devient une garantie autonome de plein droit", "D": "Le cautionnement est nul dans son intégralité"}, "reponse": "A", "explication": "À la différence de la première mention (montant maximum garanti), qui est une condition de validité dont l'absence entraîne la nullité du cautionnement, l'absence de la seconde mention (renonciation aux bénéfices de discussion et de division) n'entraîne pas la nullité de l'acte : le cautionnement devient simplement un cautionnement simple, qui reste valide et confère à la caution les bénéfices de discussion et de division.", "difficulte": "moyen", "piège": true}, {"chapitre": "Lettre d'intention", "groupe": "Autres sûretés personnelles & droit de rétention", "type": "QCU", "question": "Quelle est la différence fondamentale entre la lettre d'intention (art. 2322 C.cv) et le cautionnement quant à la nature de l'obligation garantie ?", "options": {"A": "Le cautionnement est une garantie indemnitaire, la lettre d'intention est une garantie de paiement de la dette principale", "B": "Lettre d'intention = obligation de faire/ne pas faire, DI en cas de défaillance (garantie indemnitaire) ; cautionnement = obligation de payer (garantie de paiement)", "C": "La lettre d'intention est toujours plus protectrice que le cautionnement pour le créancier bénéficiaire de la garantie", "D": "La lettre d'intention ne peut jamais être consentie par une société mère au profit de sa filiale en difficulté"}, "reponse": "B", "explication": "La lettre d'intention (aussi appelée lettre de patronage ou lettre de confort, souvent émise par une société mère pour sa filiale) est un engagement de faire ou de ne pas faire, ayant pour objet le soutien apporté à un débiteur dans l'exécution de son obligation. Sa nature est celle d'une garantie indemnitaire : en cas de défaillance, elle donne lieu à des dommages-intérêts. Le cautionnement, à l'inverse, est une garantie de paiement : la caution s'oblige à payer la dette du débiteur.", "difficulte": "moyen", "piège": false}];
+
+let activeQuestions = [];
+let currentIndex = 0;
+let score = 0;
+let answered = 0;
+let userAnswers = {};
+
+function startQuiz() {
+  const filter = document.getElementById('chapFilter').value;
+  if (filter === 'all') {
+    activeQuestions = QUESTIONS.slice();
+  } else {
+    activeQuestions = QUESTIONS.filter(q => q.groupe === filter);
+  }
+  currentIndex = 0;
+  score = 0;
+  answered = 0;
+  userAnswers = {};
+  document.getElementById('introScreen').classList.add('hidden');
+  document.getElementById('recapScreen').classList.add('hidden');
+  document.getElementById('quizScreen').classList.remove('hidden');
+  document.getElementById('totalNum').textContent = activeQuestions.length;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = activeQuestions[currentIndex];
+  const qi = currentIndex;
+  const container = document.getElementById('quizScreen');
+
+  document.getElementById('curNum').textContent = currentIndex + 1;
+  document.getElementById('curScore').textContent = score;
+  document.getElementById('answeredCount').textContent = answered;
+  const pct = Math.round(((currentIndex) / activeQuestions.length) * 100);
+  document.getElementById('progressBar').style.width = pct + '%';
+
+  const letters = ['A','B','C','D'];
+  const isQCM = q.type === 'QCM';
+  const alreadyAnswered = userAnswers.hasOwnProperty(qi);
+
+  let html = '<div class="card">';
+  html += '<div class="meta">';
+  html += '<span class="qnum">Q' + (currentIndex+1) + ' . ' + escapeHtml(q.chapitre) + '</span>';
+  html += '<span><span class="tag diff-' + q.difficulte + '">' + q.difficulte + '</span>';
+  if (q.piège) html += ' <span class="tag piège">&#9888; piège</span>';
+  html += '</span>';
+  html += '</div>';
+  html += '<div class="qtext">' + escapeHtml(q.question) + '</div>';
+  html += '<div class="qtype-note">' + (isQCM ? 'Plusieurs réponses possibles (QCM)' : 'Une seule réponse possible (QCU)') + '</div>';
+
+  letters.forEach(letter => {
+    const text = q.options[letter];
+    html += '<div class="option" id="opt-' + qi + '-' + letter + '" onclick="selectOption(' + qi + ',\'' + letter + '\')">';
+    html += '<div class="letter">' + letter + '</div>';
+    html += '<div class="otext">' + escapeHtml(text) + '</div>';
+    html += '</div>';
+  });
+
+  html += '<button class="validate-btn" id="validateBtn-' + qi + '" onclick="validateAnswer(' + qi + ')"' + (alreadyAnswered ? ' disabled' : '') + '>Valider</button>';
+
+  if (alreadyAnswered) {
+    html += renderExplication(qi);
+    if (currentIndex < activeQuestions.length - 1) {
+      html += '<button class="next-btn" onclick="nextQuestion()">Question suivante</button>';
+    } else {
+      html += '<button class="next-btn" onclick="showRecap()">Voir le récapitulatif</button>';
+    }
+  }
+
+  html += '</div>';
+  container.innerHTML = html;
+
+  if (alreadyAnswered) {
+    applyCard(qi, q, userAnswers[qi].selected);
+    letters.forEach(l => {
+      const el = document.getElementById('opt-' + qi + '-' + l);
+      if (el && userAnswers[qi].selected.includes(l)) {
+        el.classList.add('selected');
+      }
+    });
+  }
+}
+
+function selectOption(qi, letter) {
+  if (userAnswers.hasOwnProperty(qi)) return;
+  const q = activeQuestions[qi];
+  const isQCM = q.type === 'QCM';
+  const el = document.getElementById('opt-' + qi + '-' + letter);
+
+  if (isQCM) {
+    el.classList.toggle('selected');
+  } else {
+    ['A','B','C','D'].forEach(l => {
+      const e = document.getElementById('opt-' + qi + '-' + l);
+      if (e) e.classList.remove('selected');
+    });
+    el.classList.add('selected');
+  }
+}
+
+function validateAnswer(qi) {
+  const q = activeQuestions[qi];
+  const letters = ['A','B','C','D'];
+  const selected = letters.filter(l => {
+    const e = document.getElementById('opt-' + qi + '-' + l);
+    return e && e.classList.contains('selected');
+  });
+
+  if (selected.length === 0) return;
+
+  const correctSet = q.reponse.split('');
+  const isCorrect = (selected.length === correctSet.length) && selected.every(s => correctSet.includes(s));
+
+  userAnswers[qi] = { selected: selected, correct: isCorrect };
+  answered++;
+  if (isCorrect) score++;
+
+  document.getElementById('curScore').textContent = score;
+  document.getElementById('answeredCount').textContent = answered;
+
+  applyCard(qi, q, selected);
+
+  const btn = document.getElementById('validateBtn-' + qi);
+  btn.disabled = true;
+
+  const card = document.querySelector('.card');
+  const explDiv = document.createElement('div');
+  explDiv.innerHTML = renderExplication(qi);
+  card.appendChild(explDiv.firstChild);
+
+  const nextBtn = document.createElement('button');
+  if (qi < activeQuestions.length - 1) {
+    nextBtn.className = 'next-btn';
+    nextBtn.textContent = 'Question suivante';
+    nextBtn.onclick = nextQuestion;
+  } else {
+    nextBtn.className = 'next-btn';
+    nextBtn.textContent = 'Voir le récapitulatif';
+    nextBtn.onclick = showRecap;
+  }
+  card.appendChild(nextBtn);
+}
+
+function applyCard(qi, q, selected) {
+  const letters = ['A','B','C','D'];
+  const correctSet = q.reponse.split('');
+  letters.forEach(l => {
+    const el = document.getElementById('opt-' + qi + '-' + l);
+    if (!el) return;
+    if (correctSet.includes(l)) {
+      el.style.setProperty('background', 'rgba(80,160,90,0.22)');
+      el.style.setProperty('border-color', '#7fcf8f');
+    } else if (selected.includes(l)) {
+      el.style.setProperty('background', 'rgba(200,80,70,0.22)');
+      el.style.setProperty('border-color', '#e08a7d');
+    } else {
+      el.style.setProperty('opacity', '0.55');
+    }
+  });
+}
+
+function renderExplication(qi) {
+  const q = activeQuestions[qi];
+  const ua = userAnswers[qi];
+  let lead = ua.correct ? 'Bonne réponse' : 'Réponse incorrecte';
+  return '<div class="explication"><div class="lead">' + lead + '</div>' + escapeHtml(q.explication) + '</div>';
+}
+
+function nextQuestion() {
+  currentIndex++;
+  renderQuestion();
+}
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function showRecap() {
+  document.getElementById('quizScreen').classList.add('hidden');
+  document.getElementById('progressBar').style.width = '100%';
+  document.getElementById('curNum').textContent = activeQuestions.length;
+
+  const byChap = {};
+  activeQuestions.forEach((q, i) => {
+    if (!byChap[q.chapitre]) byChap[q.chapitre] = { total: 0, correct: 0 };
+    byChap[q.chapitre].total++;
+    if (userAnswers[i] && userAnswers[i].correct) byChap[q.chapitre].correct++;
+  });
+
+  let html = '<div class="recap">';
+  html += '<h2>Résultat final</h2>';
+  html += '<div class="recap-row"><span>Score global</span><span class="recap-score ' + scoreClass(score, activeQuestions.length) + '">' + score + ' / ' + activeQuestions.length + '</span></div>';
+  html += '</div>';
+
+  html += '<div class="recap"><h2>Détail par chapitre</h2>';
+  Object.keys(byChap).forEach(chap => {
+    const d = byChap[chap];
+    html += '<div class="recap-row"><span>' + escapeHtml(chap) + '</span><span class="recap-score ' + scoreClass(d.correct, d.total) + '">' + d.correct + ' / ' + d.total + '</span></div>';
+  });
+  html += '</div>';
+
+  html += '<button class="restart-btn" onclick="restartQuiz()">Recommencer</button>';
+
+  const recapDiv = document.getElementById('recapScreen');
+  recapDiv.innerHTML = html;
+  recapDiv.classList.remove('hidden');
+}
+
+function scoreClass(correct, total) {
+  if (total === 0) return 'mid';
+  const ratio = correct / total;
+  if (ratio >= 0.7) return 'good';
+  if (ratio >= 0.4) return 'mid';
+  return 'bad';
+}
+
+function restartQuiz() {
+  document.getElementById('recapScreen').classList.add('hidden');
+  document.getElementById('introScreen').classList.remove('hidden');
+  document.getElementById('progressBar').style.width = '0%';
+  document.getElementById('curNum').textContent = '-';
+  document.getElementById('curScore').textContent = '0';
+  document.getElementById('answeredCount').textContent = '0';
+}
+</script>
+
+</body>
+</html>
